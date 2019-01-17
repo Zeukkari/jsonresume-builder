@@ -1,10 +1,10 @@
----
-dist: trusty
 language: node_js
 node_js:
   - 'lts/*'
-cache:
-  yarn: false
-  directories:
-    - .npm
+cache: npm
 install: true
+script:
+  - npm test
+  - npm run build
+on:
+  branch: master
