@@ -1,3 +1,10 @@
+---
+dist: trusty
 language: node_js
 node_js:
   - 'lts/*'
+cache:
+  yarn: false
+  directories:
+    - .npm
+install: true
