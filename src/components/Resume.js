@@ -104,30 +104,17 @@ const PreviewResume = (props) => {
     );
   }
 
-  const actualData = JSON.parse(props.data.value);
-
-  console.log('actualData: ', actualData);
-
+  const actualData = props.data.value;
   const basics = actualData.basics;
-
   const work = actualData.work;
-
   const volunteer = actualData.volunteer;
-
   const education = actualData.education;
-
   const awards = actualData.awards;
-
   const publications = actualData.publications;
-
   const skills = actualData.skills;
-
   const languages = actualData.languages;
-
   const interests = actualData.interests;
-
   const references = actualData.references;
-
   const projects = actualData.projects;
 
   return (

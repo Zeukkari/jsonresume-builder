@@ -15,24 +15,29 @@ class ResumeJsonInput extends Component {
 
   onChange = (event) => {
     const inputValue = event.target.value;
-    let data;
+    let data = {};
     try {
       data = JSON.parse(event.target.value);
     } catch (e) {
       this.props.setData({
         isValid: false,
         message: 'invalid json',
-        value: inputValue,
+        inputValue: inputValue,
+        value: data,
       });
       return;
     }
 
     const cb = (err, valid) => {
       if (err != undefined || valid == undefined) {
-        this.props.setData({ isValid: false, message: err[0].message, value: inputValue });
+        this.props.setData({ isValid: false, message: err[0].message, value: data });
         return;
       }
-      this.props.setData({ isValid: true, value: inputValue });
+      this.props.setData({
+        isValid: true,
+        value: data,
+        inputValue: inputValue
+      });
     };
     this.props.validate(data, cb);
   }
@@ -53,7 +58,7 @@ class ResumeJsonInput extends Component {
         }
         <TextArea
           fill
-          value={data.value}
+          value={data.inputValue}
           onChange={this.onChange}
         />
       </Box>
