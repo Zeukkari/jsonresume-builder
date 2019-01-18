@@ -10,12 +10,14 @@ import Resume from './components/Resume';
 import Header from './components/Header';
 import Editor from './components/Editor';
 import Sidebar from './components/Sidebar';
+import placeholderResume from './defaultResume.json'
 
 const theme = {};
 
 const defaultValue = {
   isValid: true,
-  value: '{}',
+  inputValue: placeholderResume.toString(),
+  value: placeholderResume,
   message: '',
   setData: () => (null),
 };
@@ -27,12 +29,12 @@ class App extends Component {
     super(props, context);
 
     this.state = {
-      showSidebar: false,
+      showSidebar: true,
       showPreview: false,
-      showEditor: true,
       data: {
         isValid: true,
-        value: '{}',
+        value: placeholderResume,
+        inputValue: JSON.stringify(placeholderResume, null, 4),
         message: '',
       },
     };
@@ -85,18 +87,14 @@ class App extends Component {
         <Grommet theme={theme} full>
           <Box fill>
             <Header showSidebar={this.state.showSidebar} toggleSidebar={this.toggleSidebar} togglePreview={this.togglePreview} />
+              <Sidebar
+                content={schemaString}
+                isOpen={this.state.showSidebar}
+              />
             <AppContext.Consumer>
               {({ data, setData }) => (
-                <Stack>
-                <Sidebar
-                    content={schemaString}
-                    isOpen={this.state.showSidebar}
-                  />
-                  <Editor {...this.props} data={data} setData={setData} validate={validate} />
 
-
-
-                </Stack>
+                <Editor {...this.props} data={data} setData={setData} validate={validate} />
               )}
             </AppContext.Consumer>
 

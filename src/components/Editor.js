@@ -7,8 +7,10 @@ import {
 } from 'grommet';
 
 class ResumeJsonInput extends Component {
+
   state = {
     value: '{}',
+    inputValue: '{asdasd}',
     isValid: true,
     message: '',
   };
@@ -50,7 +52,7 @@ class ResumeJsonInput extends Component {
     const statusMessage = data && data.message ? data.message : 'seems legit'
 
     return (
-      <Box flex width="100%" border={{ color: 'brand', size: 'medium' }}>
+      <Box flex fill>
 
         {data && data.isValid ? (
           <Text style={{ color: 'green' }}>{statusMessage}</Text>
@@ -59,7 +61,9 @@ class ResumeJsonInput extends Component {
           )
         }
         <TextArea
+          id="editor"
           fill
+          resize={false}
           value={data.inputValue}
           onChange={this.onChange}
         />

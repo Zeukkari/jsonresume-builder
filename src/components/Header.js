@@ -27,6 +27,7 @@ const Header = props => (
       <Button
         icon={props.showSidebar ? (<Contract color="white" />) : (<Expand color="white" />)}
         onClick={props.toggleSidebar}
+        disabled
       />
       <Button
         icon={<Code color="white" />}
