@@ -21,7 +21,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "resume-schema": "file:resume-schema",
+    "resume-schema": "github:Zeukkari/resume-schema#greenkeeper/z-schema-3.24.2",
     "styled-components": "^4.1.3"
   },
   "devDependencies": {
