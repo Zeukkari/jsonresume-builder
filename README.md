@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/jsonresume/resume-schema.svg)](https://david-dm.org/jsonresume/resume-schema)
 
 
-React resume builder app using (https://jsonresume.org/)[JSON Resume].
+React resume builder app using [https://jsonresume.org/](jsonresume).
 
 ## Demo
 
