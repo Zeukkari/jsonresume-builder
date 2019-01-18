@@ -83,24 +83,19 @@ class App extends Component {
       >
         <Grommet theme={theme} full>
           <Box fill>
-            <Header showSidebar={this.state.showSidebar} toggleSidebar={this.toggleSidebar} togglePreview={this.togglePreview} />
-
             <AppContext.Consumer>
               {({ data, setData }) => (
+                <div>
+                <Header showSidebar={this.state.showSidebar} toggleSidebar={this.toggleSidebar} togglePreview={this.togglePreview} />
                 <Editor {...this.props} data={data} setData={setData} validate={validate} />
+                <Sidebar
+                  content={schemaString}
+                  isOpen={this.state.showSidebar}
+                />
+                <Resume visible={this.state.showPreview} onClickOutside={this.togglePreview} {...this.props} data={data} />
+                </div>
               )}
             </AppContext.Consumer>
-
-            <Sidebar
-              content={schemaString}
-              isOpen={this.state.showSidebar}
-            />
-
-              <AppContext.Consumer>
-                {({ data }) => (
-                  <Resume visible={this.state.showPreview} onClickOutside={this.togglePreview} {...this.props} data={data} />
-                )}
-              </AppContext.Consumer>
           </Box>
         </Grommet>
       </AppContext.Provider>
