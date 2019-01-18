@@ -27,3 +27,11 @@ To run this application, execute the following commands:
     ```
     $ npm run start
     ```
+
+3. Deploy
+
+    ```
+    $ npm run build
+    $ cd dist
+    $ npx surge
+    ```
