@@ -88,7 +88,7 @@ const Work = ({ worklist }) => (
         startDate={item.startDate}
         endDate={item.endDate}
         summary={item.summary}
-        highlights={item.highlights}
+        highlights={item.highlights || []}
       />
     ))}
   </div>
