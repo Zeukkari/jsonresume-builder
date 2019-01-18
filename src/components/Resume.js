@@ -90,6 +90,12 @@ const Skills = ({ skills }) => (
 const PreviewResume = (props) => {
   if (!props.data.isValid) {
     return (
+      <Layer
+        full
+        margin="large"
+        position={props.visible ? 'center' : 'hidden'}
+        onClickOutside={props.onClickOutside}
+      >
       <Box
         flex
         full
@@ -101,6 +107,7 @@ const PreviewResume = (props) => {
       >
         <Heading>Error rendering</Heading>
       </Box>
+      </Layer>
     );
   }
 

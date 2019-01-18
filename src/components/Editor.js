@@ -14,6 +14,8 @@ class ResumeJsonInput extends Component {
   };
 
   onChange = (event) => {
+    console.log("onChange ", event)
+
     const inputValue = event.target.value;
     let data = {};
     try {
@@ -48,7 +50,7 @@ class ResumeJsonInput extends Component {
     const statusMessage = data && data.message ? data.message : 'seems legit'
 
     return (
-      <Box width="large" height="medium" border={{ color: 'brand', size: 'medium' }}>
+      <Box flex width="100%" border={{ color: 'brand', size: 'medium' }}>
 
         {data && data.isValid ? (
           <Text style={{ color: 'green' }}>{statusMessage}</Text>

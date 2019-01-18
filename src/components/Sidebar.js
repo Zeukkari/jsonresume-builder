@@ -11,12 +11,11 @@ const SchemaReference = props => <TextArea value={props.value} {...props} fill r
 const Sidebar = props => (
   <Collapsible direction="horizontal" open={props.isOpen}>
     <Box
-      flex
-      width="large"
+      direction="row-responsive"
+      height="100%"
+      width="width"
       background="light-2"
       elevation="small"
-      align="stretch"
-      justify="between"
     >
       <SchemaReference value={props.content} />
     </Box>

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {
   Box,
   Grommet,
+  Stack,
 } from 'grommet';
 
 import Resume from './components/Resume';
@@ -83,19 +84,33 @@ class App extends Component {
       >
         <Grommet theme={theme} full>
           <Box fill>
+            <Header showSidebar={this.state.showSidebar} toggleSidebar={this.toggleSidebar} togglePreview={this.togglePreview} />
             <AppContext.Consumer>
               {({ data, setData }) => (
-                <div>
-                <Header showSidebar={this.state.showSidebar} toggleSidebar={this.toggleSidebar} togglePreview={this.togglePreview} />
-                <Editor {...this.props} data={data} setData={setData} validate={validate} />
+                <Stack>
                 <Sidebar
-                  content={schemaString}
-                  isOpen={this.state.showSidebar}
-                />
-                <Resume visible={this.state.showPreview} onClickOutside={this.togglePreview} {...this.props} data={data} />
-                </div>
+                    content={schemaString}
+                    isOpen={this.state.showSidebar}
+                  />
+                  <Editor {...this.props} data={data} setData={setData} validate={validate} />
+
+
+
+                </Stack>
               )}
             </AppContext.Consumer>
+
+            <AppContext.Consumer>
+              {({ data }) => (
+                <Resume
+                  visible={this.state.showPreview}
+                  onClickOutside={this.togglePreview} {...this.props}
+                  data={data}
+                />
+              )}
+            </AppContext.Consumer>
+
+
           </Box>
         </Grommet>
       </AppContext.Provider>
