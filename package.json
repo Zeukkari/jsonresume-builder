@@ -1,5 +1,5 @@
 {
-  "name": "portfolio2019",
+  "name": "jsonresume-builder",
   "version": "0.1.0",
   "main": "src/index.js",
   "description": "JSON Resume Builder",
