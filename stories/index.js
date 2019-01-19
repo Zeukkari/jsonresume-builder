@@ -18,7 +18,7 @@ import Volunteer from '../src/components/Resume/Volunteer'
 import Work from '../src/components/Resume/Work'
 
 
-import defaultResume from '../src/util/defaultResume';
+import defaultResume from './resume';
 
 storiesOf('Editor', module)
   .add('Default', () => (
