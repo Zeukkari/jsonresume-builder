@@ -63,7 +63,7 @@ storiesOf('Resume', module)
 
 storiesOf('Resume/Basics', module)
   .add('Default', () => (
-    <Basics basics={defaultResume.basics} />
+    <Basics {...defaultResume.basics} />
   ))
 
 storiesOf('Resume/Awards', module)
@@ -73,7 +73,7 @@ storiesOf('Resume/Awards', module)
 
 storiesOf('Resume/Education', module)
   .add('Default', () => (
-    <Education educations={defaultResume.education}/>
+    <Education education={defaultResume.education}/>
   ))
 
 storiesOf('Resume/Interests', module)
