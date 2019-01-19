@@ -1,6 +1,6 @@
 # JSON Resume Builder
 
-[![Build Status](https://api.travis-ci.org/jsonresume/resume-schema.svg)](http://travis-ci.org/jsonresume/resume-schema) [![codecov](https://codecov.io/gh/Zeukkari/jsonresume-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/Zeukkari/jsonresume-builder)
+[![Build Status](https://api.travis-ci.org/jsonresume/resume-schema.svg)](http://travis-ci.org/jsonresume/resume-schema) [![codecov](https://codecov.io/gh/Zeukkari/jsonresume-builder/branch/master/graph/badge.svg?token=MAJMdmTjOA)](https://codecov.io/gh/Zeukkari/jsonresume-builder)
 
 React resume/CV builder app using [jsonresume](https://jsonresume.org/).
 
