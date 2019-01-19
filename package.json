@@ -8,6 +8,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack --mode production",
+    "build:storybook": "build-storybook -c .storybook -o dist/storybook",
     "check": "npm run lint && npm test",
     "lint": "eslint src",
     "start": "webpack-dev-server --mode development",
