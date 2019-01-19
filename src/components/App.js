@@ -9,7 +9,7 @@ import {
 import Resume from './Resume';
 import Header from './Header';
 import Editor from './Editor';
-import placeholderResume from '../util/defaultResume.json'
+import defaultResume from '../util/defaultResume.json'
 
 const theme = {
   global: {
@@ -23,9 +23,7 @@ const theme = {
 
 const defaultValue = {
   isValid: true,
-  inputValue: placeholderResume.toString(),
-  value: placeholderResume,
-  message: '',
+  value: defaultResume,
   setData: () => (null),
 };
 
@@ -36,18 +34,12 @@ class App extends Component {
     super(props, context);
 
     this.state = {
-      showSidebar: true,
-      showPreview: false,
       data: {
         isValid: true,
-        value: placeholderResume,
-        inputValue: JSON.stringify(placeholderResume, null, 4),
+        value: defaultResume,
         message: '',
       },
     };
-
-    this.togglePreview = this.togglePreview.bind(this);
-    this.toggleSidebar = this.toggleSidebar.bind(this);
 
     this.setData = (data) => {
       this.setState({
@@ -55,28 +47,6 @@ class App extends Component {
         data,
       });
     };
-  }
-
-  toggleSidebar() {
-    const oldState = this.state;
-    if (oldState.showSidebar) {
-      this.setState({ ...oldState, showSidebar: false });
-      return;
-    }
-    this.setState({
-      ...oldState, showPreview: false, showSidebar: true, showEditor: true,
-    });
-  }
-
-  togglePreview() {
-    const oldState = this.state;
-    if (oldState.showPreview) {
-      this.setState({ ...oldState, showPreview: false, showEditor: true });
-      return;
-    }
-    this.setState({
-      ...oldState, showPreview: true, showSidebar: false, showEditor: false,
-    });
   }
 
   render() {
@@ -106,7 +76,7 @@ class App extends Component {
               pad={{ horizontal: "none", vertical: "none" }}
               background="light-3"
             >
-              <Header showSidebar={this.state.showSidebar} toggleSidebar={this.toggleSidebar} togglePreview={this.togglePreview} />
+              <Header />
             </Box>
 
               <Box gridArea="editor" direction="row" flex fill>
@@ -119,13 +89,26 @@ class App extends Component {
               </Box>
               <Box gridArea="preview" justify="center" align="center">
                 <AppContext.Consumer>
-                  {({ data }) => (
-                    <Resume
-                      visible={this.state.showPreview}
-                      onClickOutside={this.togglePreview} {...this.props}
-                      data={data}
-                    />
-                  )}
+                  {({ data }) => {
+                    const { basics, work, volunteer, education, awards, publications, skills, languages, interests, references, projects } = data.value;
+                    const isValid = data.isValid;
+                    return (
+                      <Resume
+                        basics={basics}
+                        work={work}
+                        volunteer={volunteer}
+                        educations={education}
+                        awards={awards}
+                        publications={publications}
+                        skills={skills}
+                        languages={languages}
+                        interests={interests}
+                        references={references}
+                        projects={projects}
+                        isValid={isValid}
+                      />
+                    )
+                  }}
                 </AppContext.Consumer>
               </Box>
           </Grid>
