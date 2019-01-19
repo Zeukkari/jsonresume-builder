@@ -90,12 +90,6 @@ const Skills = ({ skills }) => (
 const PreviewResume = (props) => {
   if (!props.data.isValid) {
     return (
-      <Layer
-        full
-        margin="large"
-        position={props.visible ? 'center' : 'hidden'}
-        onClickOutside={props.onClickOutside}
-      >
       <Box
         flex
         full
@@ -107,7 +101,6 @@ const PreviewResume = (props) => {
       >
         <Heading>Error rendering</Heading>
       </Box>
-      </Layer>
     );
   }
 
@@ -125,13 +118,7 @@ const PreviewResume = (props) => {
   const projects = actualData.projects;
 
   return (
-    <Layer
-      full
-      margin="large"
-      position={props.visible ? 'center' : 'hidden'}
-      onClickOutside={props.onClickOutside}
-    >
-      <Box flex overflow="scroll" border={{ color: 'brand', size: 'medium' }}>
+      <Box flex fill overflow="scroll" border={{ color: 'brand', size: 'medium' }}>
         <Heading size="xlarge">Preview Resume</Heading>
 
         <Heading> Basics </Heading>
@@ -191,7 +178,6 @@ const PreviewResume = (props) => {
         && <div>volunteer</div>
       }
       </Box>
-    </Layer>
   );
 };
 

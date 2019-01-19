@@ -6,7 +6,30 @@ import {
   TextArea,
 } from 'grommet';
 
+import Ajv from 'ajv';
+import JsonSchemaDraft4 from 'ajv/lib/refs/json-schema-draft-04';
+import JSONInput from 'react-json-editor-ajrm';
+import locale    from 'react-json-editor-ajrm/locale/en';
+
+
+import defaultResume from '../util/defaultResume'
+
+
+
 class ResumeJsonInput extends Component {
+
+  constructor(props, context){
+    super(props, context);
+
+    const ajv = new Ajv({schemaId: 'auto', format: 'full'});
+    ajv.addMetaSchema(JsonSchemaDraft4);
+
+    const validate = ajv.compile(props.schema)
+
+    this.validate = validate;
+
+    this.onChange = this.onChange.bind(this);
+  }
 
   state = {
     value: '{}',
@@ -16,58 +39,42 @@ class ResumeJsonInput extends Component {
   };
 
   onChange = (event) => {
-    console.log("onChange ", event)
-
-    const inputValue = event.target.value;
-    let data = {};
-    try {
-      data = JSON.parse(event.target.value);
-    } catch (e) {
+    if(event.error !== false) {
+      console.log("onChange error", event.error);
       this.props.setData({
         isValid: false,
         message: 'invalid json',
-        inputValue: inputValue,
+        inputValue: event.plainText,
         value: data,
       });
-      return;
+      return
     }
 
-    const cb = (err, valid) => {
-      if (err != undefined || valid == undefined) {
-        this.props.setData({ isValid: false, message: err[0].message, value: data });
-        return;
-      }
+    const data = event.jsObject;
+    const isValid = this.validate(data)
+
+    if(isValid) {
       this.props.setData({
         isValid: true,
+        message: 'all good',
+        inputValue: event.plainText,
         value: data,
-        inputValue: inputValue
       });
-    };
-    this.props.validate(data, cb);
+      return
+    }
+    return;
   }
 
   render() {
-    const data = this.props.data || { isValid: false, message: 'foobar', value: 'foo' };
-
-    const statusMessage = data && data.message ? data.message : 'seems legit'
-
     return (
-      <Box flex fill>
-
-        {data && data.isValid ? (
-          <Text style={{ color: 'green' }}>{statusMessage}</Text>
-          ) : (
-            <Text style={{ color: 'red' }}>{statusMessage}</Text>
-          )
-        }
-        <TextArea
-          id="editor"
-          fill
-          resize={false}
-          value={data.inputValue}
-          onChange={this.onChange}
-        />
-      </Box>
+      <JSONInput
+        id='editor-input'
+        placeholder={defaultResume}
+        locale={locale}
+        height='100%'
+        width='100%'
+        onChange={this.onChange}
+      />
     );
   }
 }

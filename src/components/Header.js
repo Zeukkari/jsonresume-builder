@@ -10,7 +10,7 @@ import { Code, Contract, Expand } from 'grommet-icons';
 
 const Header = props => (
   <Box
-    tag="header"
+    fill
     direction="row"
     align="center"
     gridArea="header"
