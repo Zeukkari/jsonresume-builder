@@ -4,12 +4,13 @@
 
 [![Dependency Status](https://david-dm.org/jsonresume/resume-schema.svg)](https://david-dm.org/jsonresume/resume-schema)
 
+[![codecov](https://codecov.io/github/codecov/example-r/branch/master/graphs/badge.svg)](https://codecov.io/github/codecov/example-r)
 
-React resume builder app using [jsonresume](https://jsonresume.org/).
+React resume/CV builder app using [jsonresume](https://jsonresume.org/).
 
 ## Demo
 
-[http://resume-builder.surge.sh/](http://resume-builder.surge.sh/)
+[https://resume-builder.surge.sh/](https://resume-builder.surge.sh/)
 
 
 ## Setup
@@ -26,12 +27,4 @@ To run this application, execute the following commands:
 
     ```
     $ npm run start
-    ```
-
-3. Deploy
-
-    ```
-    $ npm run build
-    $ cd dist
-    $ npx surge
     ```

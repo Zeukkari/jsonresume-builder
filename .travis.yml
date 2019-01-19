@@ -20,5 +20,5 @@ on:
 deploy:
   provider: surge
   skip_cleanup: true
-  domain: resume-builder.surge.sh
+  domain: https://resume-builder.surge.sh
   project: ./dist/
