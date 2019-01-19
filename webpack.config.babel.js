@@ -1,6 +1,5 @@
 import path from 'path';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import MiniCssExtractPlugin  from 'mini-css-extract-plugin';
 
 export default {
