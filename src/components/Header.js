@@ -4,7 +4,6 @@ import {
   Box,
   Button,
   Heading,
-  Text
 } from 'grommet';
 
 import { Code, Contract, Expand } from 'grommet-icons';

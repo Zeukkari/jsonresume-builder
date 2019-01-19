@@ -9,7 +9,6 @@ import {
 import Resume from './Resume';
 import Header from './Header';
 import Editor from './Editor';
-import Sidebar from './Sidebar';
 import placeholderResume from '../util/defaultResume.json'
 
 const theme = {

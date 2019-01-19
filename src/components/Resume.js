@@ -4,7 +4,6 @@ import {
   Box,
   Heading,
   Paragraph,
-  Text,
 } from 'grommet';
 
 const Basics = ({ basics }) => {
