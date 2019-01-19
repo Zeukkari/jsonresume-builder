@@ -97,7 +97,7 @@ class App extends Component {
                         basics={basics}
                         work={work}
                         volunteer={volunteer}
-                        educations={education}
+                        education={education}
                         awards={awards}
                         publications={publications}
                         skills={skills}

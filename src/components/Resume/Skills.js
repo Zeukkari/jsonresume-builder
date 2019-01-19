@@ -2,35 +2,46 @@ import React from 'react';
 
 import {
   Box,
-  Paragraph,
+  DataTable,
+  Text,
 } from 'grommet';
 
-const SkillsEntry = ({ name, level, keywords }) => (
-  <Box key={name}>
-    <Paragraph>
-name:
-      {name}
-    </Paragraph>
-    <Paragraph>
-level:
-      {level}
-    </Paragraph>
-    <ul>
-      {keywords.map(item => <li key={item}>{item}</li>)}
-    </ul>
-  </Box>
-);
 
-const Skills = ({ skills }) => (
-  <Box>
-    {skills.map(item => (
-      <SkillsEntry
-        key={item.name}
-        level={item.level}
-        keywords={item.keywords}
-      />
-    ))}
-  </Box>
-);
+const columns = [
+  {
+    property: "name",
+    header: <Text>Skill</Text>,
+    primary: true,
+  },
+  {
+    property: "level",
+    header: "Level"
+  },
+  {
+    property: "keywords",
+    header: "Keywords"
+  }
+];
+
+const Skills = ({ skills }) => {
+
+  const renderSkills = skills.map(skill => {
+    const name = skill.name;
+    const level = skill.level;
+    const keywords = skill.keywords.join();
+
+    return {name, level, keywords};
+  });
+
+  return (
+    <Box align="center" pad="large">
+      <DataTable columns={columns} data={renderSkills} />
+    </Box>
+  );
+};
+
+Skills.defaultProps = {
+  skills: []
+}
 
 export default Skills;

@@ -2,15 +2,36 @@ import React from 'react';
 
 import {
   Box,
-  Heading,
+  DataTable,
+  Text,
 } from 'grommet';
 
 
-const Item = () => (
-  <Box>
-    <Heading>References</Heading>
-  </Box>
-);
+const columns = [
+  {
+    property: "name",
+    header: <Text>Name</Text>,
+    primary: true,
+  },
+  {
+    property: "reference",
+    header: "Reference"
+  }
+];
+
+const References = ({ references }) => {
+  const renderItems = references;
 
 
-export default Item;
+  return(
+    <Box align="center" pad="large">
+      <DataTable columns={columns} data={renderItems} />
+    </Box>
+  )
+};
+
+References.defaultProps = {
+  references: []
+}
+
+export default References;

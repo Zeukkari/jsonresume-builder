@@ -2,47 +2,217 @@
 
 exports[`renders work section 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 IRSNj"
+  className="StyledBox-sc-13pk1d4-0 DOiol"
 >
-  <div
-    className="StyledBox-sc-13pk1d4-0 IRSNj"
+  <table
+    className="StyledDataTable-xrlyjm-0 kTrXKK"
   >
-    <p
-      className="StyledParagraph-tbetod-0 kxFtnQ"
+    <thead
+      className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
     >
-      company: 
-      Company
-       
-    </p>
-    <p
-      className="StyledParagraph-tbetod-0 kxFtnQ"
+      <tr
+        className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+      >
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Company
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Website
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Position
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Start
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              End
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Summary
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Highlights
+            </span>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
     >
-      position: 
-      President
-    </p>
-    <p
-      className="StyledParagraph-tbetod-0 kxFtnQ"
-    >
-      startDate: 
-      2013-01-01
-    </p>
-    <p
-      className="StyledParagraph-tbetod-0 kxFtnQ"
-    >
-      endDate: 
-      2014-01-01
-    </p>
-    <p
-      className="StyledParagraph-tbetod-0 kxFtnQ"
-    >
-      summary: 
-      Description...
-    </p>
-    <ul>
-      <li>
-        Started the company
-      </li>
-    </ul>
-  </div>
+      <tr
+        className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+      >
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          scope="row"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 dndifk"
+            >
+              Company
+            </span>
+          </div>
+        </th>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              http://company.com
+            </span>
+          </div>
+        </td>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              President
+            </span>
+          </div>
+        </td>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              2013-01-01
+            </span>
+          </div>
+        </td>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              2014-01-01
+            </span>
+          </div>
+        </td>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Description...
+            </span>
+          </div>
+        </td>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Started the company
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;

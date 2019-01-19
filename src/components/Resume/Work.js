@@ -2,40 +2,59 @@ import React from 'react';
 
 import {
   Box,
-  Paragraph,
+  DataTable,
+  Text,
 } from 'grommet';
 
 
-const WorkEntry = ({
-  company, position, startDate, endDate, summary, highlights,
-}) => (
-  <Box>
-    <Paragraph>company: {company} </Paragraph>
-    <Paragraph>position: {position}</Paragraph>
-    <Paragraph>startDate: {startDate}</Paragraph>
-    <Paragraph>endDate: {endDate}
-    </Paragraph>
-    <Paragraph>summary: {summary}</Paragraph>
-    <ul>
-      {highlights.map(item => <li key={item}>{item}</li>)}
-    </ul>
-  </Box>
-);
+const columns = [
+  {
+    property: "company",
+    header: <Text>Company</Text>,
+    primary: true,
+  },
+  {
+    property: "website",
+    header: "Website"
+  },
+  {
+    property: "position",
+    header: "Position"
+  },
+  {
+    property: "startDate",
+    header: "Start"
+  },
+  {
+    property: "endDate",
+    header: "End"
+  },
+  {
+    property: "summary",
+    header: "Summary"
+  },
+  {
+    property: "highlights",
+    header: "Highlights"
+  }
+];
 
-const Work = ({ work }) => (
-  <Box>
-    {work.map(item => (
-      <WorkEntry
-        key={`${item.startDate}-${item.endDate}`}
-        company={item.company}
-        position={item.position}
-        startDate={item.startDate}
-        endDate={item.endDate}
-        summary={item.summary}
-        highlights={item.highlights || []}
-      />
-    ))}
-  </Box>
-);
+const Work = ({ work }) => {
+  const renderItems = work.map(item => {
+    const highlights = item.highlights.join();
+    return {...item, highlights };
+  });
+
+
+  return(
+    <Box align="center" pad="large">
+      <DataTable columns={columns} data={renderItems} />
+    </Box>
+  )
+};
+
+Work.defaultProps = {
+  work: []
+}
 
 export default Work;

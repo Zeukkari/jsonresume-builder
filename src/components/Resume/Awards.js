@@ -2,15 +2,43 @@ import React from 'react';
 
 import {
   Box,
-  Heading,
+  DataTable,
+  Text,
 } from 'grommet';
 
 
-const Item = () => (
-  <Box>
-    <Heading>Awards</Heading>
-  </Box>
-);
+const columns = [
+  {
+    property: "title",
+    header: <Text>Award</Text>,
+    primary: true,
+  },
+  {
+    property: "date",
+    header: "Date"
+  },
+  {
+    property: "awarder",
+    header: "Company"
+  },
+  {
+    property: "summary",
+    header: "Description"
+  }
+];
 
+const Awards = ({ awards }) => {
+  const renderItems = awards;
 
-export default Item;
+  return(
+    <Box align="center" pad="large">
+      <DataTable columns={columns} data={renderItems} />
+    </Box>
+  )
+};
+
+Awards.defaultProps = {
+  language: []
+}
+
+export default Awards;

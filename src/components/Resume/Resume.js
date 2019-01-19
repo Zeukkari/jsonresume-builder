@@ -17,7 +17,7 @@ import Skills from './Skills'
 import Volunteer from './Volunteer'
 import Work from './Work'
 
-const Resume = ({ basics, work, volunteer, education, awards, publications, skills, languages, interests, references, projects, isValid }) => {
+const Resume = ({ work, basics, volunteer, education, awards, publications, skills, languages, interests, references, projects, isValid }) => {
   if (!isValid) {
     return (
       <Box
@@ -35,17 +35,28 @@ const Resume = ({ basics, work, volunteer, education, awards, publications, skil
     );
   }
 
+  const {name, label, picture, email, phone, website, summary, location, profiles } = basics;
+
   return (
       <Box flex fill overflow="scroll" border={{ color: 'status-ok', size: 'xlarge' }}>
         <Heading size="xlarge">Preview Resume</Heading>
-        <Basics basics={basics} />
-        <Work work={work}/>
+        <Basics
+          name={name}
+          label={label}
+          picture={picture}
+          email={email}
+          phone={phone}
+          website={website}
+          summary={summary}
+          location={location}
+          profiles={profiles}
+        />
+        <Work work={work} />
         <Skills skills={skills} />
-        <Interests interests={interests}/>
+        <Interests interests={interests} />
         <Education education={education}/>
         <Languages languages={languages}/>
         <Awards awards={awards}/>
-        <Projects projects={projects}/>
         <Publications publications={publications}/>
         <References references={references}/>
         <Volunteer volunteer={volunteer}/>

@@ -2,15 +2,59 @@ import React from 'react';
 
 import {
   Box,
-  Heading,
+  DataTable,
+  Text,
 } from 'grommet';
 
 
-const Item = () => (
-  <Box>
-    <Heading>Education</Heading>
-  </Box>
-);
+const columns = [
+  {
+    property: "institution",
+    header: <Text>University</Text>,
+    primary: true,
+  },
+  {
+    property: "area",
+    header: "Department"
+  },
+  {
+    property: "studyType",
+    header: "Degree"
+  },
+  {
+    property: "startDate",
+    header: "Start"
+  },
+  {
+    property: "endDate",
+    header: "End"
+  },
+  {
+    property: "gpa",
+    header: "GPA"
+  },
+  {
+    property: "courses",
+    header: "Courses"
+  }
+];
 
+const Education = ({ education }) => {
+  const renderItems = education.map(item => {
+    const courses = item.courses.join();
 
-export default Item;
+    return {...item, courses: courses};
+  });
+
+  return(
+    <Box align="center" pad="large">
+      <DataTable columns={columns} data={renderItems} />
+    </Box>
+  )
+};
+
+Education.defaultProps = {
+  education: []
+}
+
+export default Education;

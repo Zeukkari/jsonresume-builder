@@ -13,32 +13,158 @@ exports[`renders basics section 1`] = `
     className="StyledParagraph-tbetod-0 kxFtnQ"
   >
     name: 
-    John Doe
+    N/A
   </p>
   <p
     className="StyledParagraph-tbetod-0 kxFtnQ"
   >
     label: 
-    Programmer
+    N/A
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    Summary: 
+    N/A
   </p>
   <p
     className="StyledParagraph-tbetod-0 kxFtnQ"
   >
     summary: 
-    A summary of John Doe...
+    N/A
   </p>
   <p
     className="StyledParagraph-tbetod-0 kxFtnQ"
   >
     email: 
-    john@gmail.com
+    N/A
      
   </p>
   <p
     className="StyledParagraph-tbetod-0 kxFtnQ"
   >
     website: 
-    http://johndoe.com
+    N/A
   </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    Location: 
+    No address 0 N/A FI N/A
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    Picture: 
+    N/A
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    Phone: 
+    N/A
+  </p>
+  <table
+    className="StyledDataTable-xrlyjm-0 kTrXKK"
+  >
+    <thead
+      className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+    >
+      <tr
+        className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+      >
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Network
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Username
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              URL
+            </span>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
+    >
+      <tr
+        className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+      >
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          scope="row"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 dndifk"
+            >
+              Twitter
+            </span>
+          </div>
+        </th>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              john
+            </span>
+          </div>
+        </td>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              about:blank
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;

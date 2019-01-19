@@ -2,33 +2,109 @@
 
 exports[`renders skills section 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 IRSNj"
+  className="StyledBox-sc-13pk1d4-0 DOiol"
 >
-  <div
-    className="StyledBox-sc-13pk1d4-0 IRSNj"
+  <table
+    className="StyledDataTable-xrlyjm-0 kTrXKK"
   >
-    <p
-      className="StyledParagraph-tbetod-0 kxFtnQ"
+    <thead
+      className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
     >
-      name:
-    </p>
-    <p
-      className="StyledParagraph-tbetod-0 kxFtnQ"
+      <tr
+        className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+      >
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Skill
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Level
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Keywords
+            </span>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
     >
-      level:
-      Master
-    </p>
-    <ul>
-      <li>
-        HTML
-      </li>
-      <li>
-        CSS
-      </li>
-      <li>
-        Javascript
-      </li>
-    </ul>
-  </div>
+      <tr
+        className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+      >
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          scope="row"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 dndifk"
+            >
+              Web Development
+            </span>
+          </div>
+        </th>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Master
+            </span>
+          </div>
+        </td>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              HTML,CSS,Javascript
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;

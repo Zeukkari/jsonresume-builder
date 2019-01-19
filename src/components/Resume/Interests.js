@@ -2,15 +2,39 @@ import React from 'react';
 
 import {
   Box,
-  Heading,
+  DataTable,
+  Text,
 } from 'grommet';
 
 
-const Item = () => (
-  <Box>
-    <Heading>Interests</Heading>
-  </Box>
-);
+const columns = [
+  {
+    property: "name",
+    header: <Text>Name</Text>,
+    primary: true,
+  },
+  {
+    property: "keywords",
+    header: "Keywords"
+  }
+];
 
+const Interests = ({ interests }) => {
+  const renderItems = interests.map(item => {
+    const keywords = item.keywords.join();
 
-export default Item;
+    return {...item, keywords};
+  });
+
+  return(
+    <Box align="center" pad="large">
+      <DataTable columns={columns} data={renderItems} />
+    </Box>
+  )
+};
+
+Interests.defaultProps = {
+  language: []
+}
+
+export default Interests;

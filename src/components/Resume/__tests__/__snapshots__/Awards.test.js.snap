@@ -2,12 +2,136 @@
 
 exports[`renders awards section 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 IRSNj"
+  className="StyledBox-sc-13pk1d4-0 DOiol"
 >
-  <h1
-    className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+  <table
+    className="StyledDataTable-xrlyjm-0 kTrXKK"
   >
-    Awards
-  </h1>
+    <thead
+      className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+    >
+      <tr
+        className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+      >
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Award
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Date
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Company
+            </span>
+          </div>
+        </th>
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+          scope="col"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 folWQp"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Description
+            </span>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
+    >
+      <tr
+        className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+      >
+        <th
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+          scope="row"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 dndifk"
+            >
+              Award
+            </span>
+          </div>
+        </th>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              2014-11-01
+            </span>
+          </div>
+        </td>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Company
+            </span>
+          </div>
+        </td>
+        <td
+          className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+        >
+          <div
+            className="StyledBox-sc-13pk1d4-0 eAAZJM"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              There is no spoon.
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;

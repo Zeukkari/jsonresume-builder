@@ -1361,6 +1361,12 @@ exports[`renders main app 1`] = `
           <p
             className="StyledParagraph-tbetod-0 kxFtnQ"
           >
+            Summary: 
+            A summary of John Doe...
+          </p>
+          <p
+            className="StyledParagraph-tbetod-0 kxFtnQ"
+          >
             summary: 
             A summary of John Doe...
           </p>
@@ -1377,152 +1383,1333 @@ exports[`renders main app 1`] = `
             website: 
             http://johndoe.com
           </p>
-        </div>
-        <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
-        >
-          <div
-            className="StyledBox-sc-13pk1d4-0 IRSNj"
+          <p
+            className="StyledParagraph-tbetod-0 kxFtnQ"
           >
-            <p
-              className="StyledParagraph-tbetod-0 kxFtnQ"
+            Location: 
+            2712 Broadway St CA 94115 San Francisco US California
+          </p>
+          <p
+            className="StyledParagraph-tbetod-0 kxFtnQ"
+          >
+            Picture: 
+            
+          </p>
+          <p
+            className="StyledParagraph-tbetod-0 kxFtnQ"
+          >
+            Phone: 
+            (912) 555-4321
+          </p>
+          <table
+            className="StyledDataTable-xrlyjm-0 kTrXKK"
+          >
+            <thead
+              className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
             >
-              company: 
-              Company
-               
-            </p>
-            <p
-              className="StyledParagraph-tbetod-0 kxFtnQ"
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Network
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Username
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      URL
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
             >
-              position: 
-              President
-            </p>
-            <p
-              className="StyledParagraph-tbetod-0 kxFtnQ"
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                  scope="row"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 dndifk"
+                    >
+                      Twitter
+                    </span>
+                  </div>
+                </th>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      john
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      http://twitter.com/john
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          className="StyledBox-sc-13pk1d4-0 DOiol"
+        >
+          <table
+            className="StyledDataTable-xrlyjm-0 kTrXKK"
+          >
+            <thead
+              className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
             >
-              startDate: 
-              2013-01-01
-            </p>
-            <p
-              className="StyledParagraph-tbetod-0 kxFtnQ"
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Company
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Website
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Position
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Start
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      End
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Summary
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Highlights
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
             >
-              endDate: 
-              2014-01-01
-            </p>
-            <p
-              className="StyledParagraph-tbetod-0 kxFtnQ"
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                  scope="row"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 dndifk"
+                    >
+                      Company
+                    </span>
+                  </div>
+                </th>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      http://company.com
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      President
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      2013-01-01
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      2014-01-01
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Description...
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Started the company
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          className="StyledBox-sc-13pk1d4-0 DOiol"
+        >
+          <table
+            className="StyledDataTable-xrlyjm-0 kTrXKK"
+          >
+            <thead
+              className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
             >
-              summary: 
-              Description...
-            </p>
-            <ul>
-              <li>
-                Started the company
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
-        >
-          <div
-            className="StyledBox-sc-13pk1d4-0 IRSNj"
-          >
-            <p
-              className="StyledParagraph-tbetod-0 kxFtnQ"
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Skill
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Level
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Keywords
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
             >
-              name:
-            </p>
-            <p
-              className="StyledParagraph-tbetod-0 kxFtnQ"
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                  scope="row"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 dndifk"
+                    >
+                      Web Development
+                    </span>
+                  </div>
+                </th>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Master
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      HTML,CSS,Javascript
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          className="StyledBox-sc-13pk1d4-0 DOiol"
+        >
+          <table
+            className="StyledDataTable-xrlyjm-0 kTrXKK"
+          >
+            <thead
+              className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
             >
-              level:
-              Master
-            </p>
-            <ul>
-              <li>
-                HTML
-              </li>
-              <li>
-                CSS
-              </li>
-              <li>
-                Javascript
-              </li>
-            </ul>
-          </div>
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Name
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Keywords
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                  scope="row"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 dndifk"
+                    >
+                      Wildlife
+                    </span>
+                  </div>
+                </th>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Ferrets,Unicorns
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
+          className="StyledBox-sc-13pk1d4-0 DOiol"
         >
-          <h1
-            className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+          <table
+            className="StyledDataTable-xrlyjm-0 kTrXKK"
           >
-            Interests
-          </h1>
+            <thead
+              className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      University
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Department
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Degree
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Start
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      End
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      GPA
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Courses
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                  scope="row"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 dndifk"
+                    >
+                      University
+                    </span>
+                  </div>
+                </th>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Software Development
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Bachelor
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      2011-01-01
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      2013-01-01
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      4.0
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      DB1101 - Basic SQL
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
+          className="StyledBox-sc-13pk1d4-0 DOiol"
         >
-          <h1
-            className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+          <table
+            className="StyledDataTable-xrlyjm-0 kTrXKK"
           >
-            Education
-          </h1>
+            <thead
+              className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Language
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Fluency
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                  scope="row"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 dndifk"
+                    >
+                      English
+                    </span>
+                  </div>
+                </th>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Native speaker
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
+          className="StyledBox-sc-13pk1d4-0 DOiol"
         >
-          <h1
-            className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+          <table
+            className="StyledDataTable-xrlyjm-0 kTrXKK"
           >
-            Languages
-          </h1>
+            <thead
+              className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Award
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Date
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Company
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Description
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                  scope="row"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 dndifk"
+                    >
+                      Award
+                    </span>
+                  </div>
+                </th>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      2014-11-01
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Company
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      There is no spoon.
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
+          className="StyledBox-sc-13pk1d4-0 DOiol"
         >
-          <h1
-            className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+          <table
+            className="StyledDataTable-xrlyjm-0 kTrXKK"
           >
-            Awards
-          </h1>
+            <thead
+              className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Publication
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Company
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Release Date
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Website
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Summary
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
+            />
+          </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
+          className="StyledBox-sc-13pk1d4-0 DOiol"
         >
-          <h1
-            className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+          <table
+            className="StyledDataTable-xrlyjm-0 kTrXKK"
           >
-            Projects
-          </h1>
+            <thead
+              className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Name
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Reference
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                  scope="row"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 dndifk"
+                    >
+                      Jane Doe
+                    </span>
+                  </div>
+                </th>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Reference...
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
+          className="StyledBox-sc-13pk1d4-0 DOiol"
         >
-          <h1
-            className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+          <table
+            className="StyledDataTable-xrlyjm-0 kTrXKK"
           >
-            Publications
-          </h1>
-        </div>
-        <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
-        >
-          <h1
-            className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
-          >
-            References
-          </h1>
-        </div>
-        <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
-        >
-          <h1
-            className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
-          >
-            Volunteer
-          </h1>
+            <thead
+              className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Organization
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Website
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Position
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Start
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      End
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Summary
+                    </span>
+                  </div>
+                </th>
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
+                  scope="col"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 folWQp"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Highlights
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
+            >
+              <tr
+                className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
+              >
+                <th
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                  scope="row"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 dndifk"
+                    >
+                      Organization
+                    </span>
+                  </div>
+                </th>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      http://organization.com/
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Volunteer
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      2012-01-01
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      2013-01-01
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Description...
+                    </span>
+                  </div>
+                </td>
+                <td
+                  className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
+                >
+                  <div
+                    className="StyledBox-sc-13pk1d4-0 eAAZJM"
+                  >
+                    <span
+                      className="StyledText-sc-1sadyjn-0 fWSbXS"
+                    >
+                      Awarded 'Volunteer of the Month'
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

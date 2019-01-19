@@ -2,15 +2,35 @@ import React from 'react';
 
 import {
   Box,
-  Heading,
+  DataTable,
+  Text,
 } from 'grommet';
 
 
-const Item = () => (
-  <Box>
-    <Heading>Languages</Heading>
-  </Box>
-);
+const columns = [
+  {
+    property: "language",
+    header: <Text>Language</Text>,
+    primary: true,
+  },
+  {
+    property: "fluency",
+    header: "Fluency"
+  }
+];
 
+const Languages = ({ languages }) => {
+  const renderItems = languages;
 
-export default Item;
+  return(
+    <Box align="center" pad="large">
+      <DataTable columns={columns} data={renderItems} />
+    </Box>
+  )
+};
+
+Languages.defaultProps = {
+  language: []
+}
+
+export default Languages;
