@@ -1,17 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders awards section 1`] = `
-<div
-  className="StyledBox-sc-13pk1d4-0 IRSNj"
->
-  <h1
-    className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
-  >
-    Education
-  </h1>
-</div>
-`;
-
 exports[`renders education section 1`] = `
 <div
   className="StyledBox-sc-13pk1d4-0 IRSNj"

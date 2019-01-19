@@ -2,16 +2,16 @@
   "name": "portfolio2019",
   "version": "0.1.0",
   "main": "src/index.js",
-  "description": "",
-  "repository": "",
-  "license": "",
+  "description": "JSON Resume Builder",
+  "repository": "https://github.com/Zeukkari/jsonresume-builder.git",
+  "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
-    "check": "npm run lint",
+    "check": "npm run lint && npm test",
     "lint": "eslint src",
-    "test": "jest",
-    "start": "webpack-dev-server --mode development --open",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "start": "webpack-dev-server --mode development",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": "react-app"
