@@ -12,7 +12,15 @@ import Editor from './Editor';
 import Sidebar from './Sidebar';
 import placeholderResume from '../util/defaultResume.json'
 
-const theme = {};
+const theme = {
+  global: {
+    font: {
+      family: 'Roboto',
+      size: '14px',
+      height: '20px',
+    }
+  },
+};
 
 const defaultValue = {
   isValid: true,
@@ -74,86 +82,54 @@ class App extends Component {
 
   render() {
     const { validate, schema } = this.props;
-    const schemaString = JSON.stringify(schema, null, 4);
 
     const { setData } = this;
     const data = this.state.data;
 
     return (
-
-      <AppContext.Provider
-        value={{ data, setData }}
-      >
+      <AppContext.Provider value={{ data, setData }}>
         <Grommet theme={theme} full>
-
-        <Grid
-          fill
-          rows={["auto", "flex"]}
-          columns={["1/2", "1/2"]}
-          areas={[
-            { name: "header", start: [0, 0], end: [2, 0] },
-            { name: "editor", start: [0, 1], end: [1, 1] },
-            { name: "preview", start: [1, 1], end: [2, 1] }
-          ]}
-        >
-          <Box
-            gridArea="header"
-            direction="row"
-            align="center"
-            justify="between"
-            pad={{ horizontal: "medium", vertical: "small" }}
-            background="dark-2"
+          <Grid
+            fill
+            rows={["auto", "flex"]}
+            columns={["1/2", "1/2"]}
+            areas={[
+              { name: "header", start: [0, 0], end: [2, 0] },
+              { name: "editor", start: [0, 1], end: [1, 1] },
+              { name: "preview", start: [1, 1], end: [2, 1] }
+            ]}
           >
-            <Header showSidebar={this.state.showSidebar} toggleSidebar={this.toggleSidebar} togglePreview={this.togglePreview} />
-          </Box>
-
-          {/*
-          <Box
-              gridArea="sidebar"
-              background="dark-3"
-              width="small"
-              animation={[
-                { type: "fadeIn", duration: 300 },
-                { type: "slideRight", size: "xlarge", duration: 150 }
-              ]}
+            <Box
+              gridArea="header"
+              direction="row"
+              align="center"
+              justify="between"
+              pad={{ horizontal: "none", vertical: "none" }}
+              background="light-3"
             >
-            <Sidebar
-              content={schemaString}
-            />
-            </Box>
-            */}
-
-
-            <Box gridArea="editor" direction="row" flex fill>
-
-              {/*
-              <Sidebar
-                content={schemaString}
-              />
-              */}
-
-              <AppContext.Consumer>
-                {({ data, setData }) => (
-                  <Editor {...this.props} data={data} setData={setData} validate={validate} schema={schema} />
-                )}
-              </AppContext.Consumer>
-            </Box>
-            <Box gridArea="preview" justify="center" align="center">
-              <AppContext.Consumer>
-                {({ data }) => (
-                  <Resume
-                    visible={this.state.showPreview}
-                    onClickOutside={this.togglePreview} {...this.props}
-                    data={data}
-                  />
-                )}
-              </AppContext.Consumer>
+              <Header showSidebar={this.state.showSidebar} toggleSidebar={this.toggleSidebar} togglePreview={this.togglePreview} />
             </Box>
 
+              <Box gridArea="editor" direction="row" flex fill>
 
-        </Grid>
-
-
+                <AppContext.Consumer>
+                  {({ data, setData }) => (
+                    <Editor {...this.props} data={data} setData={setData} validate={validate} schema={schema} />
+                  )}
+                </AppContext.Consumer>
+              </Box>
+              <Box gridArea="preview" justify="center" align="center">
+                <AppContext.Consumer>
+                  {({ data }) => (
+                    <Resume
+                      visible={this.state.showPreview}
+                      onClickOutside={this.togglePreview} {...this.props}
+                      data={data}
+                    />
+                  )}
+                </AppContext.Consumer>
+              </Box>
+          </Grid>
         </Grommet>
       </AppContext.Provider>
     );

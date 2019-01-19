@@ -6,29 +6,14 @@ import {
   TextArea,
 } from 'grommet';
 
-import Ajv from 'ajv';
-import JsonSchemaDraft4 from 'ajv/lib/refs/json-schema-draft-04';
 import JSONInput from 'react-json-editor-ajrm';
-import locale    from 'react-json-editor-ajrm/locale/en';
-
+import locale from 'react-json-editor-ajrm/locale/en';
 
 import defaultResume from '../util/defaultResume'
-
-
-
 class ResumeJsonInput extends Component {
 
   constructor(props, context){
     super(props, context);
-
-    const ajv = new Ajv({schemaId: 'auto', format: 'full'});
-    ajv.addMetaSchema(JsonSchemaDraft4);
-
-    const validate = ajv.compile(props.schema)
-
-    this.validate = validate;
-
-    this.onChange = this.onChange.bind(this);
   }
 
   state = {
@@ -43,25 +28,27 @@ class ResumeJsonInput extends Component {
       console.log("onChange error", event.error);
       this.props.setData({
         isValid: false,
-        message: 'invalid json',
-        inputValue: event.plainText,
-        value: data,
+        value: {},
       });
       return
     }
 
-    const data = event.jsObject;
-    const isValid = this.validate(data)
+    const resumeObject = event.jsObject;
 
-    if(isValid) {
+    const cb = (err, valid) => {
+      if (err != undefined || valid == undefined) {
+        const message = err && err.message ? err.message : 'Generic error message';
+        this.props.setData({ isValid: false, value: { error: message } });
+        return;
+      }
       this.props.setData({
         isValid: true,
-        message: 'all good',
-        inputValue: event.plainText,
-        value: data,
+        value: resumeObject
       });
-      return
-    }
+    };
+
+    this.props.validate(resumeObject, cb);
+
     return;
   }
 

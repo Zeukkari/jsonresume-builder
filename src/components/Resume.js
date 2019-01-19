@@ -3,7 +3,8 @@ import React from 'react';
 import {
   Box,
   Heading,
-  Layer,
+  Paragraph,
+  Text,
 } from 'grommet';
 
 const Basics = ({ basics }) => {
@@ -17,34 +18,34 @@ const Basics = ({ basics }) => {
 
 
   return (
-    <div>
-      <p>name: {name}</p>
-      <p>label: {label}</p>
-      <p>summary: {summary}</p>
-      <p>email: {email} </p>
-      <p>website: {website}</p>
-    </div>
+    <Box>
+      <Paragraph>name: {name}</Paragraph>
+      <Paragraph>label: {label}</Paragraph>
+      <Paragraph>summary: {summary}</Paragraph>
+      <Paragraph>email: {email} </Paragraph>
+      <Paragraph>website: {website}</Paragraph>
+    </Box>
   );
 };
 
 const WorkEntry = ({
   company, position, startDate, endDate, summary, highlights,
 }) => (
-  <div>
-    <p>company: {company} </p>
-    <p>position: {position}</p>
-    <p>startDate: {startDate}</p>
-    <p>endDate: {endDate}
-    </p>
-    <p>summary: {summary}</p>
+  <Box>
+    <Paragraph>company: {company} </Paragraph>
+    <Paragraph>position: {position}</Paragraph>
+    <Paragraph>startDate: {startDate}</Paragraph>
+    <Paragraph>endDate: {endDate}
+    </Paragraph>
+    <Paragraph>summary: {summary}</Paragraph>
     <ul>
       {highlights.map(item => <li key={item}>{item}</li>)}
     </ul>
-  </div>
+  </Box>
 );
 
 const Work = ({ worklist }) => (
-  <div>
+  <Box>
     {worklist.map(item => (
       <WorkEntry
         key={`${item.startDate}-${item.endDate}`}
@@ -56,27 +57,27 @@ const Work = ({ worklist }) => (
         highlights={item.highlights || []}
       />
     ))}
-  </div>
+  </Box>
 );
 
 const SkillsEntry = ({ name, level, keywords }) => (
-  <div key={name}>
-    <p>
+  <Box key={name}>
+    <Paragraph>
 name:
       {name}
-    </p>
-    <p>
+    </Paragraph>
+    <Paragraph>
 level:
       {level}
-    </p>
+    </Paragraph>
     <ul>
       {keywords.map(item => <li key={item}>{item}</li>)}
     </ul>
-  </div>
+  </Box>
 );
 
 const Skills = ({ skills }) => (
-  <div>
+  <Box>
     {skills.map(item => (
       <SkillsEntry
         key={item.name}
@@ -84,7 +85,7 @@ const Skills = ({ skills }) => (
         keywords={item.keywords}
       />
     ))}
-  </div>
+  </Box>
 );
 
 const PreviewResume = (props) => {
@@ -93,11 +94,12 @@ const PreviewResume = (props) => {
       <Box
         flex
         full
+        fill
         justify="center"
-        wrap={false}
+        wrap={true}
         height="medium"
         overflow="scroll"
-        border={{ color: 'brand', size: 'medium' }}
+        border={{ color: 'status-error', size: 'large' }}
       >
         <Heading>Error rendering</Heading>
       </Box>
@@ -118,7 +120,7 @@ const PreviewResume = (props) => {
   const projects = actualData.projects;
 
   return (
-      <Box flex fill overflow="scroll" border={{ color: 'brand', size: 'medium' }}>
+      <Box flex fill overflow="scroll" border={{ color: 'status-ok', size: 'xlarge' }}>
         <Heading size="xlarge">Preview Resume</Heading>
 
         <Heading> Basics </Heading>

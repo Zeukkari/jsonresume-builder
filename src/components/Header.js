@@ -3,7 +3,8 @@ import React from 'react';
 import {
   Box,
   Button,
-  Heading
+  Heading,
+  Text
 } from 'grommet';
 
 import { Code, Contract, Expand } from 'grommet-icons';
@@ -15,23 +16,23 @@ const Header = props => (
     align="center"
     gridArea="header"
     justify="between"
-    background="brand"
-    pad={{ left: 'medium', right: 'small', vertical: 'small' }}
+    background="dark-1"
+    pad={{ left: 'medium', right: 'medium', vertical: 'small' }}
     elevation="medium"
     style={{ zIndex: '1' }}
   >
-    <Heading level="3" margin="none">
+    <Heading level="3" margin="none" color="light-2">
       Resume Builder
     </Heading>
     <div>
       <Button
         icon={props.showSidebar ? (<Contract color="white" />) : (<Expand color="white" />)}
-        onClick={props.toggleSidebar}
+        onClick={() => alert('foo') }
         disabled
       />
       <Button
         icon={<Code color="white" />}
-        onClick={props.togglePreview}
+        onClick={() => alert('foo') }
       />
     </div>
   </Box>
