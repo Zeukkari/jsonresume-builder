@@ -4,6 +4,21 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
+  "plugins": [
+    "react"
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "detect"
+    },
+    "propWrapperFunctions": [
+        "forbidExtraProps",
+        {"property": "freeze", "object": "Object"},
+        {"property": "myFavoriteWrapper"}
+    ]
+  },
   "env": {
     "node": true,
     "es6": true
