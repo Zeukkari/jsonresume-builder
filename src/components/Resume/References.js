@@ -24,7 +24,7 @@ const References = ({ references }) => {
 
 
   return(
-    <Box align="center" pad="large">
+    <Box align="center" pad="large" border={{side: 'bottom', color: 'border', size: 'xsmall', style: 'dashed'}}>
       <DataTable columns={columns} data={renderItems} />
     </Box>
   )

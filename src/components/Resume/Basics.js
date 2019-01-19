@@ -31,7 +31,7 @@ const Basics = ({ name, label, picture, email, phone, website, summary, location
   const locationString = `${location.address} ${location.postalCode} ${location.city} ${location.countryCode} ${location.region}`
 
   return (
-    <Box>
+    <Box border={{side: 'bottom', color: 'border', size: 'xsmall', style: 'dashed'}}>
       <Heading> Basics </Heading>
       <Paragraph>name: {name}</Paragraph>
       <Paragraph>label: {label}</Paragraph>

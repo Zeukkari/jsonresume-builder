@@ -9,14 +9,12 @@ import Awards from '../src/components/Resume/Awards'
 import Basics from '../src/components/Resume/Basics'
 import Education from '../src/components/Resume/Education'
 import Interests from '../src/components/Resume/Interests'
-import Projects from '../src/components/Resume/Projects'
 import Languages from '../src/components/Resume/Languages'
 import Publications from '../src/components/Resume/Publications'
 import References from '../src/components/Resume/References'
 import Skills from '../src/components/Resume/Skills'
 import Volunteer from '../src/components/Resume/Volunteer'
 import Work from '../src/components/Resume/Work'
-
 
 import defaultResume from '../src/util/defaultResume.json';
 
@@ -42,15 +40,19 @@ storiesOf('Header', module)
 storiesOf('Resume', module)
   .add('Default', () => (
     <Resume
-      visible={true}
-      onClickOutside={() => alert('foo')}
-      data={{
-        isValid: true,
-        value: defaultResume
-      }}
+      basics={defaultResume.basics}
+      work={defaultResume.work}
+      volunteer={defaultResume.volunteer}
+      education={defaultResume.education}
+      awards={defaultResume.awards}
+      publications={defaultResume.publications}
+      skills={defaultResume.skills}
+      languages={defaultResume.languages}
+      interests={defaultResume.interests}
+      references={defaultResume.references}
+      isValid={true}
     />
   ))
-
   .add('Invalid', () => (
     <Resume
       visible={true}
@@ -86,32 +88,27 @@ storiesOf('Resume/Languages', module)
     <Languages languages={defaultResume.languages} />
   ))
 
-  storiesOf('Resume/Projects', module)
-  .add('Default', () => (
-    <Projects projects={defaultResume.projects} />
-  ))
-
-  storiesOf('Resume/Publications', module)
+storiesOf('Resume/Publications', module)
   .add('Default', () => (
     <Publications publications={defaultResume.publications} />
   ))
 
-  storiesOf('Resume/References', module)
+storiesOf('Resume/References', module)
   .add('Default', () => (
     <References references={defaultResume.references} />
   ))
 
-  storiesOf('Resume/Skills', module)
+storiesOf('Resume/Skills', module)
   .add('Default', () => (
     <Skills skills={defaultResume.skills} />
   ))
 
-  storiesOf('Resume/Volunteer', module)
+storiesOf('Resume/Volunteer', module)
   .add('Default', () => (
     <Volunteer volunteer={defaultResume.volunteer}/>
   ))
 
-  storiesOf('Resume/Work', module)
+storiesOf('Resume/Work', module)
   .add('Default', () => (
     <Work work={defaultResume.work}/>
   ))

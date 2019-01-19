@@ -11,13 +11,12 @@ import Education from './Education'
 import Interests from './Interests'
 import Languages from './Languages'
 import Publications from './Publications'
-import Projects from './Projects'
 import References from './References'
 import Skills from './Skills'
 import Volunteer from './Volunteer'
 import Work from './Work'
 
-const Resume = ({ work, basics, volunteer, education, awards, publications, skills, languages, interests, references, projects, isValid }) => {
+const Resume = ({ work, basics, volunteer, education, awards, publications, skills, languages, interests, references, isValid }) => {
   if (!isValid) {
     return (
       <Box
