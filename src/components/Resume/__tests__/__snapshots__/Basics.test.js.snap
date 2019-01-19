@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders awards section 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 IRSNj"
+>
+  <h1
+    className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+  >
+     Basics 
+  </h1>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    name: 
+    John Doe
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    label: 
+    Programmer
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    summary: 
+    A summary of John Doe...
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    email: 
+    john@gmail.com
+     
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    website: 
+    http://johndoe.com
+  </p>
+</div>
+`;
+
+exports[`renders basics section 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 IRSNj"
+>
+  <h1
+    className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+  >
+     Basics 
+  </h1>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    name: 
+    John Doe
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    label: 
+    Programmer
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    summary: 
+    A summary of John Doe...
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    email: 
+    john@gmail.com
+     
+  </p>
+  <p
+    className="StyledParagraph-tbetod-0 kxFtnQ"
+  >
+    website: 
+    http://johndoe.com
+  </p>
+</div>
+`;

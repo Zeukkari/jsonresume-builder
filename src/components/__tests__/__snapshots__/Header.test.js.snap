@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders header 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 QGweH"
+  style={
+    Object {
+      "zIndex": "1",
+    }
+  }
+>
+  <h3
+    className="StyledHeading-sc-1rdh4aw-0 dSoaQZ"
+  >
+    Resume Builder
+  </h3>
+  <div>
+    <button
+      className="StyledButton-sc-323bzc-0 hCxsCJ"
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      type="button"
+    >
+      <svg
+        aria-label="Expand"
+        className="StyledIcon-ofa7kd-0 liAzLb"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M10,14 L2,22 M1,15 L1,23 L9,23 M22,2 L14,10 M15,1 L23,1 L23,9"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
+    <button
+      className="StyledButton-sc-323bzc-0 dcpWVY"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      type="button"
+    >
+      <svg
+        aria-label="Code"
+        className="StyledIcon-ofa7kd-0 liAzLb"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M9,22 L15,2 M17,17 L22,12 L17,7 M7,17 L2,12 L7,7"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;

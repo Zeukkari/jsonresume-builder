@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders awards section 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 IRSNj"
+>
+  <div
+    className="StyledBox-sc-13pk1d4-0 IRSNj"
+  >
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      company: 
+      Company
+       
+    </p>
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      position: 
+      President
+    </p>
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      startDate: 
+      2013-01-01
+    </p>
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      endDate: 
+      2014-01-01
+    </p>
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      summary: 
+      Description...
+    </p>
+    <ul>
+      <li>
+        Started the company
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`renders work section 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 IRSNj"
+>
+  <div
+    className="StyledBox-sc-13pk1d4-0 IRSNj"
+  >
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      company: 
+      Company
+       
+    </p>
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      position: 
+      President
+    </p>
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      startDate: 
+      2013-01-01
+    </p>
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      endDate: 
+      2014-01-01
+    </p>
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      summary: 
+      Description...
+    </p>
+    <ul>
+      <li>
+        Started the company
+      </li>
+    </ul>
+  </div>
+</div>
+`;

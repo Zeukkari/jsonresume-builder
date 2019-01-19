@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders awards section 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 IRSNj"
+>
+  <div
+    className="StyledBox-sc-13pk1d4-0 IRSNj"
+  >
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      name:
+    </p>
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      level:
+      Master
+    </p>
+    <ul>
+      <li>
+        HTML
+      </li>
+      <li>
+        CSS
+      </li>
+      <li>
+        Javascript
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`renders skills section 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 IRSNj"
+>
+  <div
+    className="StyledBox-sc-13pk1d4-0 IRSNj"
+  >
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      name:
+    </p>
+    <p
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+    >
+      level:
+      Master
+    </p>
+    <ul>
+      <li>
+        HTML
+      </li>
+      <li>
+        CSS
+      </li>
+      <li>
+        Javascript
+      </li>
+    </ul>
+  </div>
+</div>
+`;
