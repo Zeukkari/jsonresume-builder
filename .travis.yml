@@ -12,10 +12,11 @@ before_install:
 install:
 - npm install
 script:
-  - npm test
-  - npm run test:coverage
+  - npm run clean
   - npm run build
   - npm run build:storybook
+  - npm test
+  - npm run test:coverage
 on:
   branch: master
 deploy:
