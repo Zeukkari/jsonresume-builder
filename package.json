@@ -29,7 +29,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-json-editor-ajrm": "^2.5.9",
-    "resume-schema": "github:Zeukkari/resume-schema#greenkeeper/z-schema-3.24.2",
+    "resume-schema": "github:Zeukkari/resume-schema#zeukkari/update-deps",
     "styled-components": "^4.1.3"
   },
   "devDependencies": {
