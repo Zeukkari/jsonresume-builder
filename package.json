@@ -8,7 +8,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "build:storybook": "build-storybook -c .storybook -o dist/storybook",
+    "build:storybook": "cross-env NODE_ENV=development build-storybook -c .storybook -s build -o dist/storybook",
     "check": "npm run lint && npm test",
     "lint": "eslint src",
     "start": "webpack-dev-server --mode development",
@@ -48,6 +48,7 @@
     "codecov": "^3.1.0",
     "copy-webpack-plugin": "^4.5.1",
     "coveralls": "^3.0.2",
+    "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.12.1",
     "eslint-config-airbnb": "^17.0.0",

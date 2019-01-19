@@ -1,4 +1,4 @@
-{
+export default {
   "basics": {
     "name": "John Doe",
     "label": "Programmer",
