@@ -4,9 +4,11 @@
 
 React resume/CV builder app using [jsonresume](https://jsonresume.org/).
 
-## Demo
+[https://resume-builder.surge.sh](https://resume-builder.surge.sh)
 
-[https://resume-builder.surge.sh/](https://resume-builder.surge.sh/)
+## Storybook
+
+[https://resume-builder.surge.sh/storybook](https://resume-builder.surge.sh/storybook)
 
 
 ## Setup
