@@ -1339,7 +1339,7 @@ exports[`renders main app 1`] = `
           Preview Resume
         </h1>
         <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
+          className="StyledBox-sc-13pk1d4-0 dCmVAK"
         >
           <h1
             className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
@@ -1505,7 +1505,7 @@ exports[`renders main app 1`] = `
           </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 DOiol"
+          className="StyledBox-sc-13pk1d4-0 wNgwY"
         >
           <table
             className="StyledDataTable-xrlyjm-0 kTrXKK"
@@ -1719,7 +1719,7 @@ exports[`renders main app 1`] = `
           </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 DOiol"
+          className="StyledBox-sc-13pk1d4-0 wNgwY"
         >
           <table
             className="StyledDataTable-xrlyjm-0 kTrXKK"
@@ -1825,7 +1825,7 @@ exports[`renders main app 1`] = `
           </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 DOiol"
+          className="StyledBox-sc-13pk1d4-0 wNgwY"
         >
           <table
             className="StyledDataTable-xrlyjm-0 kTrXKK"
@@ -1904,7 +1904,7 @@ exports[`renders main app 1`] = `
           </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 DOiol"
+          className="StyledBox-sc-13pk1d4-0 wNgwY"
         >
           <table
             className="StyledDataTable-xrlyjm-0 kTrXKK"
@@ -2118,7 +2118,7 @@ exports[`renders main app 1`] = `
           </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 DOiol"
+          className="StyledBox-sc-13pk1d4-0 wNgwY"
         >
           <table
             className="StyledDataTable-xrlyjm-0 kTrXKK"
@@ -2330,7 +2330,7 @@ exports[`renders main app 1`] = `
           </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 DOiol"
+          className="StyledBox-sc-13pk1d4-0 wNgwY"
         >
           <table
             className="StyledDataTable-xrlyjm-0 kTrXKK"
@@ -2419,7 +2419,7 @@ exports[`renders main app 1`] = `
           </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 DOiol"
+          className="StyledBox-sc-13pk1d4-0 wNgwY"
         >
           <table
             className="StyledDataTable-xrlyjm-0 kTrXKK"
@@ -2498,7 +2498,7 @@ exports[`renders main app 1`] = `
           </table>
         </div>
         <div
-          className="StyledBox-sc-13pk1d4-0 DOiol"
+          className="StyledBox-sc-13pk1d4-0 wNgwY"
         >
           <table
             className="StyledDataTable-xrlyjm-0 kTrXKK"
