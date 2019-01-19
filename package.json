@@ -13,7 +13,7 @@
     "start": "webpack-dev-server --mode development",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest",
-    "test:coverage": "jest --coverage && cat ./coverage/lcov.info"
+    "test:coverage": "jest --coverage && codecov"
   },
   "eslintConfig": {
     "extends": "react-app"
