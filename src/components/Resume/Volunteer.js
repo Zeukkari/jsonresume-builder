@@ -1,60 +1,63 @@
-import React from 'react';
+import React from 'react'
 
-import {
-  Box,
-  DataTable,
-  Text,
-} from 'grommet';
+import { Grommet, Box, DataTable, Heading, Text } from 'grommet'
 
+import { SubSection } from './common'
 
 const columns = [
   {
-    property: "organization",
-    header: <Text>Organization</Text>,
+    property: 'organization',
+    header: <Text> Organization </Text>,
     primary: true,
   },
   {
-    property: "website",
-    header: "Website"
+    property: 'website',
+    header: 'Website',
   },
   {
-    property: "position",
-    header: "Position"
+    property: 'position',
+    header: 'Position',
   },
   {
-    property: "startDate",
-    header: "Start"
+    property: 'startDate',
+    header: 'Start',
   },
   {
-    property: "endDate",
-    header: "End"
+    property: 'endDate',
+    header: 'End',
   },
   {
-    property: "summary",
-    header: "Summary"
+    property: 'summary',
+    header: 'Summary',
   },
   {
-    property: "highlights",
-    header: "Highlights"
-  }
-];
+    property: 'highlights',
+    header: 'Highlights',
+  },
+]
 
 const Volunteer = ({ volunteer }) => {
   const renderItems = volunteer.map(item => {
-    const highlights = item.highlights.join();
-    return {...item, highlights };
-  });
+    const highlights = item.highlights.join()
+    return { ...item, highlights }
+  })
 
-
-  return(
-    <Box align="center" pad="large" border={{side: 'bottom', color: 'border', size: 'xsmall', style: 'dashed'}}>
-      <DataTable columns={columns} data={renderItems} />
+  return (
+    <Box flex fill justify="between" direction="column">
+      <SubSection>
+        <Heading> Volunteer </Heading>
+      </SubSection>
+      <Grommet>
+        <SubSection>
+          <DataTable columns={columns} data={renderItems} />
+        </SubSection>
+      </Grommet>
     </Box>
   )
-};
-
-Volunteer.defaultProps = {
-  volunteer: []
 }
 
-export default Volunteer;
+Volunteer.defaultProps = {
+  volunteer: [],
+}
+
+export default Volunteer

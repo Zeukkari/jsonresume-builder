@@ -1,40 +1,44 @@
-import React from 'react';
+import React from 'react'
 
-import {
-  Box,
-  DataTable,
-  Text,
-} from 'grommet';
+import { Grommet, Box, DataTable, Heading, Text } from 'grommet'
 
+import { ResumeSection, SubSection } from './common'
 
 const columns = [
   {
-    property: "name",
+    property: 'name',
     header: <Text>Name</Text>,
     primary: true,
   },
   {
-    property: "keywords",
-    header: "Keywords"
-  }
-];
+    property: 'keywords',
+    header: 'Keywords',
+  },
+]
 
 const Interests = ({ interests }) => {
   const renderItems = interests.map(item => {
-    const keywords = item.keywords.join();
+    const keywords = item.keywords.join()
 
-    return {...item, keywords};
-  });
+    return { ...item, keywords }
+  })
 
-  return(
-    <Box align="center" pad="large" border={{side: 'bottom', color: 'border', size: 'xsmall', style: 'dashed'}}>
-      <DataTable columns={columns} data={renderItems} />
+  return (
+    <Box flex fill justify="between" direction="column">
+      <SubSection>
+        <Heading> Interests </Heading>
+      </SubSection>
+      <Grommet>
+        <SubSection>
+          <DataTable columns={columns} data={renderItems} />
+        </SubSection>
+      </Grommet>
     </Box>
   )
-};
-
-Interests.defaultProps = {
-  language: []
 }
 
-export default Interests;
+Interests.defaultProps = {
+  language: [],
+}
+
+export default Interests

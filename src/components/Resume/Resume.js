@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import {
-  Box,
-  Heading,
-} from 'grommet';
+import { Box, Heading, Grid } from 'grommet'
+
+import { SubSection, ResumeSection } from './common'
 
 import Awards from './Awards'
 import Basics from './Basics'
@@ -16,12 +15,23 @@ import Skills from './Skills'
 import Volunteer from './Volunteer'
 import Work from './Work'
 
-const Resume = ({ work, basics, volunteer, education, awards, publications, skills, languages, interests, references, isValid }) => {
+const Resume = ({
+  work,
+  basics,
+  volunteer,
+  education,
+  awards,
+  publications,
+  skills,
+  languages,
+  interests,
+  references,
+  isValid,
+}) => {
   if (!isValid) {
     return (
       <Box
         flex
-        full
         fill
         justify="center"
         wrap={true}
@@ -31,14 +41,36 @@ const Resume = ({ work, basics, volunteer, education, awards, publications, skil
       >
         <Heading>Error rendering</Heading>
       </Box>
-    );
+    )
   }
 
-  const {name, label, picture, email, phone, website, summary, location, profiles } = basics;
+  const {
+    name,
+    label,
+    picture,
+    email,
+    phone,
+    website,
+    summary,
+    location,
+    profiles,
+  } = basics
 
   return (
-      <Box flex fill overflow="scroll" border={{ color: 'status-ok', size: 'xlarge' }}>
-        <Heading size="xlarge">Preview Resume</Heading>
+    <Box
+      background="dark-2"
+      elevation="small"
+      align="center"
+      justify="center"
+      overflow="scroll"
+      border={{
+        side: 'all',
+        color: 'border',
+        size: 'xsmall',
+        style: 'solid',
+      }}
+    >
+      <ResumeSection>
         <Basics
           name={name}
           label={label}
@@ -50,17 +82,36 @@ const Resume = ({ work, basics, volunteer, education, awards, publications, skil
           location={location}
           profiles={profiles}
         />
+      </ResumeSection>
+      <ResumeSection>
         <Work work={work} />
+      </ResumeSection>
+      <ResumeSection>
         <Skills skills={skills} />
+      </ResumeSection>
+      <ResumeSection>
         <Interests interests={interests} />
-        <Education education={education}/>
-        <Languages languages={languages}/>
-        <Awards awards={awards}/>
-        <Publications publications={publications}/>
-        <References references={references}/>
-        <Volunteer volunteer={volunteer}/>
-      </Box>
-  );
-};
+      </ResumeSection>
+      <ResumeSection>
+        <Education education={education} />
+      </ResumeSection>
+      <ResumeSection>
+        <Languages languages={languages} />
+      </ResumeSection>
+      <ResumeSection>
+        <Awards awards={awards} />
+      </ResumeSection>
+      <ResumeSection>
+        <Publications publications={publications} />
+      </ResumeSection>
+      <ResumeSection>
+        <References references={references} />
+      </ResumeSection>
+      <ResumeSection>
+        <Volunteer volunteer={volunteer} />
+      </ResumeSection>
+    </Box>
+  )
+}
 
-export default Resume;
+export default Resume

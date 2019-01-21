@@ -1,49 +1,52 @@
-import React from 'react';
+import React from 'react'
 
-import {
-  Box,
-  DataTable,
-  Text,
-} from 'grommet';
+import { Grommet, Box, DataTable, Heading, Text } from 'grommet'
 
+import { ResumeSection, SubSection } from './common'
 
 const columns = [
   {
-    property: "name",
+    property: 'name',
     header: <Text>Publication</Text>,
     primary: true,
   },
   {
-    property: "publisher",
-    header: "Company"
+    property: 'publisher',
+    header: 'Company',
   },
   {
-    property: "releaseDate",
-    header: "Release Date"
+    property: 'releaseDate',
+    header: 'Release Date',
   },
   {
-    property: "website",
-    header: "Website"
+    property: 'website',
+    header: 'Website',
   },
   {
-    property: "summary",
-    header: "Summary"
-  }
-];
+    property: 'summary',
+    header: 'Summary',
+  },
+]
 
-const References = ({ volunteer }) => {
-  const renderItems = volunteer;
+const References = ({ publications }) => {
+  const renderItems = publications
 
-
-  return(
-    <Box align="center" pad="large" border={{side: 'bottom', color: 'border', size: 'xsmall', style: 'dashed'}}>
-      <DataTable columns={columns} data={renderItems} />
+  return (
+    <Box flex fill justify="between" direction="column">
+      <SubSection>
+        <Heading> Publications </Heading>
+      </SubSection>
+      <Grommet>
+        <SubSection>
+          <DataTable columns={columns} data={renderItems} />
+        </SubSection>
+      </Grommet>
     </Box>
   )
-};
-
-References.defaultProps = {
-  volunteer: []
 }
 
-export default References;
+References.defaultProps = {
+  volunteer: [],
+}
+
+export default References

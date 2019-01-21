@@ -1,60 +1,64 @@
-import React from 'react';
+import React from 'react'
 
-import {
-  Box,
-  DataTable,
-  Text,
-} from 'grommet';
+import { Grommet, Box, DataTable, Heading, Text } from 'grommet'
 
+import { SubSection, ResumeSection } from './common'
 
 const columns = [
   {
-    property: "company",
+    property: 'company',
     header: <Text>Company</Text>,
     primary: true,
   },
   {
-    property: "website",
-    header: "Website"
+    property: 'website',
+    header: 'Website',
   },
   {
-    property: "position",
-    header: "Position"
+    property: 'position',
+    header: 'Position',
   },
   {
-    property: "startDate",
-    header: "Start"
+    property: 'startDate',
+    header: 'Start',
   },
   {
-    property: "endDate",
-    header: "End"
+    property: 'endDate',
+    header: 'End',
   },
   {
-    property: "summary",
-    header: "Summary"
+    property: 'summary',
+    header: 'Summary',
   },
   {
-    property: "highlights",
-    header: "Highlights"
-  }
-];
+    property: 'highlights',
+    header: 'Highlights',
+  },
+]
 
 const Work = ({ work }) => {
   const renderItems = work.map(item => {
-    const highlights = item.highlights.join();
-    return {...item, highlights };
-  });
+    const highlights = item.highlights.join()
+    return { ...item, highlights }
+  })
+  console.log('renderItems: ', renderItems)
 
-
-  return(
-    <Box align="center" pad="large" border={{side: 'bottom', color: 'border', size: 'xsmall', style: 'dashed'}}>
-      <DataTable columns={columns} data={renderItems} />
+  return (
+    <Box flex fill justify="between" direction="column">
+      <SubSection>
+        <Heading> Work </Heading>
+      </SubSection>
+      <Grommet>
+        <SubSection>
+          <DataTable columns={columns} data={renderItems} />
+        </SubSection>
+      </Grommet>
     </Box>
   )
-};
-
-Work.defaultProps = {
-  work: []
 }
 
-export default Work;
+Work.defaultProps = {
+  work: [],
+}
+
+export default Work
