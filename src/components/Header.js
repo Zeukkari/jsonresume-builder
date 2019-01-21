@@ -6,15 +6,17 @@ import { Code, Contract, Expand } from 'grommet-icons'
 
 const Header = props => (
   <Box
-    fill
-    direction="row"
-    align="center"
-    gridArea="header"
     justify="between"
+    alignContent="stretch"
+    tag="header"
+    direction="row"
+    fill
+    align="center"
     background="dark-1"
-    pad={{ left: 'medium', right: 'medium', vertical: 'small' }}
+    pad={{ left: 'medium', right: 'small', vertical: 'large' }}
     elevation="medium"
     style={{ zIndex: '1' }}
+    {...props}
   >
     <Heading level="3" margin="none" color="light-2">
       Resume Builder

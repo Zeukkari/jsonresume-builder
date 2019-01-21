@@ -65,10 +65,13 @@ class App extends Component {
             ]}
           >
             <Box
+              flex
               gridArea="header"
+              elevation="large"
               direction="row"
               align="center"
               justify="between"
+              alignContent="stretch"
               pad={{ horizontal: 'none', vertical: 'large' }}
               background="light-3"
             >
