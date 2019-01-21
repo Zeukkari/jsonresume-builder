@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Button, Heading } from 'grommet'
 
-import { Code, Contract, Expand } from 'grommet-icons'
+import { Code, Contract, Expand, Download } from 'grommet-icons'
 
 const Header = props => (
   <Box
@@ -30,10 +30,10 @@ const Header = props => (
             <Expand color="white" />
           )
         }
-        onClick={() => alert('foo')}
+        onClick={() => props.onClick}
         disabled
       />
-      <Button icon={<Code color="white" />} onClick={() => alert('foo')} />
+      <Button icon={<Download color="white" />} onClick={props.onClick} />
     </div>
   </Box>
 )

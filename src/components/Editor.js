@@ -17,6 +17,8 @@ class ResumeJsonInput extends Component {
   }
 
   onChange = event => {
+    console.log('onChange: ', event)
+
     if (event.error !== false) {
       this.props.setData({
         isValid: false,
@@ -50,6 +52,7 @@ class ResumeJsonInput extends Component {
       <JSONInput
         id="editor-input"
         placeholder={defaultResume}
+        confirmGood={false}
         locale={locale}
         height="100%"
         width="100%"

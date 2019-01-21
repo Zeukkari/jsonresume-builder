@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import { Box, Grid, Grommet } from 'grommet'
 
+import toPDF from './Printable/PrintButton'
+
 import Resume from './Resume'
 import Header from './Header'
 import Editor from './Editor'
@@ -28,6 +30,8 @@ export const AppContext = React.createContext(defaultValue)
 class App extends Component {
   constructor(props, context) {
     super(props, context)
+
+    this.resumeRef = React.createRef()
 
     this.state = {
       data: {
@@ -75,7 +79,7 @@ class App extends Component {
               pad={{ horizontal: 'none', vertical: 'large' }}
               background="light-3"
             >
-              <Header />
+              <Header onClick={() => toPDF(this.resumeRef, 'Resume')} />
             </Box>
 
             <Box gridArea="editor" direction="row" flex fill>
@@ -91,7 +95,12 @@ class App extends Component {
                 )}
               </AppContext.Consumer>
             </Box>
-            <Box gridArea="preview" justify="center" align="center">
+            <Box
+              gridArea="preview"
+              justify="center"
+              align="center"
+              ref={this.resumeRef}
+            >
               <AppContext.Consumer>
                 {({ data }) => {
                   const {
