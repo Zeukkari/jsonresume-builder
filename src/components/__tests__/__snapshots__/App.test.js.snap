@@ -8,10 +8,10 @@ exports[`renders main app 1`] = `
     className="StyledGrid-sc-1wofa1l-0 bLZnPC"
   >
     <div
-      className="StyledBox-sc-13pk1d4-0 bjRqbs"
+      className="StyledBox-sc-13pk1d4-0 cDJRno"
     >
-      <div
-        className="StyledBox-sc-13pk1d4-0 QGweH"
+      <header
+        className="StyledBox-sc-13pk1d4-0 isBanS"
         style={
           Object {
             "zIndex": "1",
@@ -74,7 +74,7 @@ exports[`renders main app 1`] = `
             </svg>
           </button>
         </div>
-      </div>
+      </header>
     </div>
     <div
       className="StyledBox-sc-13pk1d4-0 bYdKyT"
