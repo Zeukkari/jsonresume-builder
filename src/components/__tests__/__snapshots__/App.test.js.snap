@@ -12,6 +12,7 @@ exports[`renders main app 1`] = `
     >
       <header
         className="StyledBox-sc-13pk1d4-0 isBanS"
+        onClick={[Function]}
         style={
           Object {
             "zIndex": "1",
@@ -57,7 +58,7 @@ exports[`renders main app 1`] = `
             type="button"
           >
             <svg
-              aria-label="Code"
+              aria-label="Download"
               className="StyledIcon-ofa7kd-0 liAzLb"
               height="24px"
               role="img"
@@ -66,7 +67,7 @@ exports[`renders main app 1`] = `
               width="24px"
             >
               <path
-                d="M9,22 L15,2 M17,17 L22,12 L17,7 M7,17 L2,12 L7,7"
+                d="M1,17 L1,23 L23,23 L23,17 M12,2 L12,19 M5,12 L12,19 L19,12"
                 fill="none"
                 stroke="#000"
                 strokeWidth="2"
@@ -94,36 +95,6 @@ exports[`renders main app 1`] = `
           }
         }
       >
-        <div
-          style={
-            Object {
-              "height": "30px",
-              "opacity": 1,
-              "pointerEvents": "none",
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-              "transform": "translate(-25%,25%)",
-              "transitionDuration": "0.2s",
-              "transitionTimingFunction": "cubic-bezier(0, 1, 0.5, 1)",
-              "width": "30px",
-            }
-          }
-        >
-          <svg
-            height="30px"
-            viewBox="0 0 100 100"
-            width="30px"
-          >
-            <path
-              clipRule="evenodd"
-              d="M39.363,79L16,55.49l11.347-11.419L39.694,56.49L72.983,23L84,34.085L39.363,79z"
-              fill="green"
-              fillRule="evenodd"
-              opacity="0.85"
-            />
-          </svg>
-        </div>
         <div
           id="editor-input-container"
           name="container"

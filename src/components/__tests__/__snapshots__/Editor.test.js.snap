@@ -17,36 +17,6 @@ exports[`renders editor 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "height": "30px",
-        "opacity": 1,
-        "pointerEvents": "none",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-        "transform": "translate(-25%,25%)",
-        "transitionDuration": "0.2s",
-        "transitionTimingFunction": "cubic-bezier(0, 1, 0.5, 1)",
-        "width": "30px",
-      }
-    }
-  >
-    <svg
-      height="30px"
-      viewBox="0 0 100 100"
-      width="30px"
-    >
-      <path
-        clipRule="evenodd"
-        d="M39.363,79L16,55.49l11.347-11.419L39.694,56.49L72.983,23L84,34.085L39.363,79z"
-        fill="green"
-        fillRule="evenodd"
-        opacity="0.85"
-      />
-    </svg>
-  </div>
-  <div
     id="editor-input-container"
     name="container"
     onClick={[Function]}
