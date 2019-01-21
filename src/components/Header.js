@@ -1,12 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import {
-  Box,
-  Button,
-  Heading,
-} from 'grommet';
+import { Box, Button, Heading } from 'grommet'
 
-import { Code, Contract, Expand } from 'grommet-icons';
+import { Code, Contract, Expand } from 'grommet-icons'
 
 const Header = props => (
   <Box
@@ -25,16 +21,19 @@ const Header = props => (
     </Heading>
     <div>
       <Button
-        icon={props.showSidebar ? (<Contract color="white" />) : (<Expand color="white" />)}
-        onClick={() => alert('foo') }
+        icon={
+          props.showSidebar ? (
+            <Contract color="white" />
+          ) : (
+            <Expand color="white" />
+          )
+        }
+        onClick={() => alert('foo')}
         disabled
       />
-      <Button
-        icon={<Code color="white" />}
-        onClick={() => alert('foo') }
-      />
+      <Button icon={<Code color="white" />} onClick={() => alert('foo')} />
     </div>
   </Box>
 )
 
-export default Header;
+export default Header

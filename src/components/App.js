@@ -69,7 +69,7 @@ class App extends Component {
               direction="row"
               align="center"
               justify="between"
-              pad={{ horizontal: 'none', vertical: 'none' }}
+              pad={{ horizontal: 'none', vertical: 'large' }}
               background="light-3"
             >
               <Header />
