@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Button, Heading } from 'grommet'
 
-import { Code, Contract, Expand, Download } from 'grommet-icons'
+import { Contract, Expand, Download } from 'grommet-icons'
 
 const Header = props => (
   <Box
