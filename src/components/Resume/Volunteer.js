@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Grommet, Box, DataTable, Heading, Text } from 'grommet'
+import { Grommet, DataTable, Heading, Text } from 'grommet'
 
-import { SubSection } from './common'
+import { ResumeSection, SubSection } from './common'
 
 const columns = [
   {
@@ -43,7 +43,7 @@ const Volunteer = ({ volunteer }) => {
   })
 
   return (
-    <Box flex fill justify="between" direction="column">
+    <ResumeSection>
       <SubSection>
         <Heading> Volunteer </Heading>
       </SubSection>
@@ -52,7 +52,7 @@ const Volunteer = ({ volunteer }) => {
           <DataTable columns={columns} data={renderItems} />
         </SubSection>
       </Grommet>
-    </Box>
+    </ResumeSection>
   )
 }
 

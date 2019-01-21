@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Grommet, Box, DataTable, Heading, Text } from 'grommet'
+import { Grommet, DataTable, Heading, Text } from 'grommet'
 
 import { SubSection, ResumeSection } from './common'
 
@@ -41,10 +41,9 @@ const Work = ({ work }) => {
     const highlights = item.highlights.join()
     return { ...item, highlights }
   })
-  console.log('renderItems: ', renderItems)
 
   return (
-    <Box flex fill justify="between" direction="column">
+    <ResumeSection>
       <SubSection>
         <Heading> Work </Heading>
       </SubSection>
@@ -53,7 +52,7 @@ const Work = ({ work }) => {
           <DataTable columns={columns} data={renderItems} />
         </SubSection>
       </Grommet>
-    </Box>
+    </ResumeSection>
   )
 }
 

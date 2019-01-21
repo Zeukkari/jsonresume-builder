@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, DataTable, Grid, Heading, Paragraph, Text } from 'grommet'
+import { DataTable, Heading, Paragraph, Text } from 'grommet'
 
 import { SubSection, ResumeSection } from './common'
 
@@ -36,13 +36,9 @@ const Basics = ({
   } ${location.countryCode} ${location.region}`
 
   return (
-    <Box flex fill justify='between' direction='column'>
+    <ResumeSection>
       <SubSection>
         <Heading> Basics </Heading>
-      </SubSection>
-
-      <SubSection>
-        <DataTable columns={columns} data={profiles} />
       </SubSection>
 
       <SubSection>
@@ -69,7 +65,10 @@ const Basics = ({
       <SubSection>
         <Paragraph> Phone: {phone} </Paragraph>{' '}
       </SubSection>
-    </Box>
+      <SubSection>
+        <DataTable columns={columns} data={profiles} />
+      </SubSection>
+    </ResumeSection>
   )
 }
 

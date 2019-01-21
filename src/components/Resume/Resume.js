@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Box, Heading, Grid } from 'grommet'
+import { Box, Heading } from 'grommet'
 
-import { SubSection, ResumeSection } from './common'
+import { ResumeSection } from './common'
 
 import Awards from './Awards'
 import Basics from './Basics'

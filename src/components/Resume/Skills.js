@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Grommet, Box, DataTable, Heading, Text } from 'grommet'
+import { Grommet, DataTable, Heading, Text } from 'grommet'
 
 import { ResumeSection, SubSection } from './common'
 
@@ -30,7 +30,7 @@ const Skills = ({ skills }) => {
   })
 
   return (
-    <Box flex fill justify="between" direction="column">
+    <ResumeSection>
       <SubSection>
         <Heading> Skills </Heading>
       </SubSection>
@@ -39,7 +39,7 @@ const Skills = ({ skills }) => {
           <DataTable columns={columns} data={renderItems} />
         </SubSection>
       </Grommet>
-    </Box>
+    </ResumeSection>
   )
 }
 

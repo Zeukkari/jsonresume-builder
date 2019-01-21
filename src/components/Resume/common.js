@@ -3,15 +3,7 @@ import React from 'react'
 import { Box } from 'grommet'
 
 export const ResumeSection = ({ children }) => (
-  <Box
-    fill
-    direction="column"
-    elevation="small"
-    align="center"
-    alignContent="center"
-    background="dark-4"
-    border={{ side: 'all', color: 'border', size: 'xsmall', style: 'solid' }}
-  >
+  <Box flex fill justify="between" direction="column">
     {children}
   </Box>
 )
