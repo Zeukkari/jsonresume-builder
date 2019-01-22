@@ -24,7 +24,6 @@ import References from '../src/components/Resume/References'
 import Skills from '../src/components/Resume/Skills'
 import Volunteer from '../src/components/Resume/Volunteer'
 import Work from '../src/components/Resume/Work'
-import '../src/components/fixAce.css'
 import defaultResume from '../src/util/defaultResume.json'
 
 storiesOf('Editor', module).add('Default', () => (

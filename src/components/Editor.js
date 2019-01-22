@@ -9,7 +9,6 @@ import draft4 from 'ajv/lib/refs/json-schema-draft-04.json'
 
 import { JsonEditor as Editor } from 'jsoneditor-react'
 import 'jsoneditor-react/es/editor.min.css'
-import './fixAce.css'
 
 import defaultResume from '../util/defaultResume'
 

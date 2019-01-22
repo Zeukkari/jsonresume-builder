@@ -8,7 +8,6 @@ import Resume from './Resume'
 import Header from './Header'
 import EditorComponent from './Editor'
 import defaultResume from '../util/defaultResume.json'
-import './fixAce.css'
 
 const theme = {
   global: {

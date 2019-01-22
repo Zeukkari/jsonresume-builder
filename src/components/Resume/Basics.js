@@ -43,42 +43,42 @@ const Basics = ({
 
       <SubSection>
         <SubSection>
-          <Paragraph alignSelf="stretch"> name: {name} </Paragraph>{' '}
+          <Paragraph alignSelf="stretch"> name: {name} </Paragraph>
         </SubSection>
       </SubSection>
       <SubSection>
         <SubSection>
-          <Paragraph alignSelf="stretch"> label: {label} </Paragraph>{' '}
+          <Paragraph alignSelf="stretch"> label: {label} </Paragraph>
         </SubSection>
       </SubSection>
       <SubSection>
         <SubSection>
-          <Paragraph alignSelf="stretch"> summary: {summary} </Paragraph>{' '}
+          <Paragraph alignSelf="stretch"> summary: {summary} </Paragraph>
         </SubSection>
       </SubSection>
       <SubSection>
         <SubSection alignSelf="stretch">
-          <Paragraph> email: {email} </Paragraph>{' '}
+          <Paragraph> email: {email} </Paragraph>
         </SubSection>
       </SubSection>
       <SubSection>
         <SubSection alignSelf="stretch">
-          <Paragraph> website: {website} </Paragraph>{' '}
+          <Paragraph> website: {website} </Paragraph>
         </SubSection>
       </SubSection>
       <SubSection>
         <SubSection alignSelf="stretch">
-          <Paragraph> Location: {locationString} </Paragraph>{' '}
+          <Paragraph> Location: {locationString} </Paragraph>
         </SubSection>
       </SubSection>
       <SubSection>
         <SubSection alignSelf="stretch">
-          <Paragraph> Picture: {picture} </Paragraph>{' '}
+          <Paragraph> Picture: {picture} </Paragraph>
         </SubSection>
       </SubSection>
       <SubSection>
         <SubSection alignSelf="stretch">
-          <Paragraph> Phone: {phone} </Paragraph>{' '}
+          <Paragraph> Phone: {phone} </Paragraph>
         </SubSection>
       </SubSection>
       <Grommet>
