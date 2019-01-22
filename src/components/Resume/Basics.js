@@ -41,51 +41,49 @@ const Basics = ({
         <Heading> Basics </Heading>
       </SubSection>
 
+      <SubSection>
+        <SubSection>
+          <Paragraph alignSelf="stretch"> name: {name} </Paragraph>{' '}
+        </SubSection>
+      </SubSection>
+      <SubSection>
+        <SubSection>
+          <Paragraph alignSelf="stretch"> label: {label} </Paragraph>{' '}
+        </SubSection>
+      </SubSection>
+      <SubSection>
+        <SubSection>
+          <Paragraph alignSelf="stretch"> summary: {summary} </Paragraph>{' '}
+        </SubSection>
+      </SubSection>
+      <SubSection>
+        <SubSection alignSelf="stretch">
+          <Paragraph> email: {email} </Paragraph>{' '}
+        </SubSection>
+      </SubSection>
+      <SubSection>
+        <SubSection alignSelf="stretch">
+          <Paragraph> website: {website} </Paragraph>{' '}
+        </SubSection>
+      </SubSection>
+      <SubSection>
+        <SubSection alignSelf="stretch">
+          <Paragraph> Location: {locationString} </Paragraph>{' '}
+        </SubSection>
+      </SubSection>
+      <SubSection>
+        <SubSection alignSelf="stretch">
+          <Paragraph> Picture: {picture} </Paragraph>{' '}
+        </SubSection>
+      </SubSection>
+      <SubSection>
+        <SubSection alignSelf="stretch">
+          <Paragraph> Phone: {phone} </Paragraph>{' '}
+        </SubSection>
+      </SubSection>
       <Grommet>
         <SubSection>
-          <SubSection>
-            <Paragraph alignSelf="stretch"> name: {name} </Paragraph>{' '}
-          </SubSection>
-        </SubSection>
-        <SubSection>
-          <SubSection>
-            <Paragraph alignSelf="stretch"> label: {label} </Paragraph>{' '}
-          </SubSection>
-        </SubSection>
-        <SubSection>
-          <SubSection>
-            <Paragraph alignSelf="stretch"> summary: {summary} </Paragraph>{' '}
-          </SubSection>
-        </SubSection>
-        <SubSection>
-          <SubSection alignSelf="stretch">
-            <Paragraph> email: {email} </Paragraph>{' '}
-          </SubSection>
-        </SubSection>
-        <SubSection>
-          <SubSection alignSelf="stretch">
-            <Paragraph> website: {website} </Paragraph>{' '}
-          </SubSection>
-        </SubSection>
-        <SubSection>
-          <SubSection alignSelf="stretch">
-            <Paragraph> Location: {locationString} </Paragraph>{' '}
-          </SubSection>
-        </SubSection>
-        <SubSection>
-          <SubSection alignSelf="stretch">
-            <Paragraph> Picture: {picture} </Paragraph>{' '}
-          </SubSection>
-        </SubSection>
-        <SubSection>
-          <SubSection alignSelf="stretch">
-            <Paragraph> Phone: {phone} </Paragraph>{' '}
-          </SubSection>
-        </SubSection>
-        <SubSection>
-          <SubSection alignSelf="stretch">
-            <DataTable columns={columns} data={profiles} />
-          </SubSection>
+          <DataTable columns={columns} data={profiles} />
         </SubSection>
       </Grommet>
     </ResumeSection>
