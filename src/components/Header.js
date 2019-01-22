@@ -1,27 +1,64 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-import { Box, Button, Heading } from 'grommet'
+import { Box, Button, Heading, FormField, Select } from 'grommet'
 
-import { Contract, Expand, Download } from 'grommet-icons'
+import { Contract, Expand, Download, Menu } from 'grommet-icons'
+
+const dummyThemes = ['default', 'elegant', 'paper', 'flat', 'modern']
+const typeOptions = ['html', 'png', 'pdf']
+
+class FormFieldSelect extends Component {
+  state = { value: '', options: dummyThemes, typeOptions: typeOptions }
+
+  render() {
+    const { value, options } = this.state
+    return (
+      <Box
+        gridArea="header"
+        flex
+        direction="row"
+        align="center"
+        justify="between"
+        alignContent="between"
+        margin={{ vertical: 'none' }}
+        pad={{ horizontal: 'none', vertical: 'none' }}
+        background="light-3"
+      >
+        <FormField label="Theme" htmlFor="select" {...this.props}>
+          <Select
+            id="select"
+            placeholder="placeholder"
+            options={options}
+            value={value}
+            onChange={({ option }) => this.setState({ value: option })}
+          />
+        </FormField>
+        <FormField label="Output type" htmlFor="select" {...this.props}>
+          <Select
+            id="select"
+            placeholder="placeholder"
+            options={typeOptions}
+            value={value}
+            onChange={({ option }) => this.setState({ value: option })}
+          />
+        </FormField>
+      </Box>
+    )
+  }
+}
 
 const Header = props => (
   <Box
-    justify="between"
-    alignContent="stretch"
-    tag="header"
+    background="dark-2"
     direction="row"
-    fill
-    align="center"
-    background="dark-1"
-    pad={{ left: 'medium', right: 'small', vertical: 'large' }}
-    elevation="medium"
-    style={{ zIndex: '1' }}
-    {...props}
+    justify="between"
+    pad={{ top: 'medium', horizontal: 'large' }}
   >
-    <Heading level="3" margin="none" color="light-2">
-      Resume Builder
-    </Heading>
-    <div>
+    <Box direction="row">
+      <Button icon={<Menu color="white" />} onClick={props.toggleMenu} />
+      <Heading level="3">Resume Builder</Heading>
+    </Box>
+    <Box direction="row">
       <Button
         icon={
           props.showSidebar ? (
@@ -33,8 +70,18 @@ const Header = props => (
         onClick={() => props.onClick}
         disabled
       />
-      <Button icon={<Download color="white" />} onClick={props.onClick} />
-    </div>
+
+      <Button icon={<Download color="white" />} onClick={props.generatePDF} />
+    </Box>
+
+    {props.showMenu && (
+      <Box position={props.showMenu ? 'center' : 'hidden'}>
+        <FormFieldSelect
+          onClickOutside={props.toggleMenu}
+          onEsc={props.toggleMenu}
+        />
+      </Box>
+    )}
   </Box>
 )
 

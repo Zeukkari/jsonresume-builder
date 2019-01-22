@@ -30,6 +30,7 @@ export const AppContext = React.createContext(defaultValue)
 class App extends Component {
   constructor(props, context) {
     super(props, context)
+    this.toggleMenu = this.toggleMenu.bind(this)
 
     this.resumeRef = React.createRef()
 
@@ -39,6 +40,7 @@ class App extends Component {
         value: defaultResume,
         message: '',
       },
+      showMenu: false,
     }
 
     this.setData = data => {
@@ -47,6 +49,13 @@ class App extends Component {
         data,
       })
     }
+  }
+
+  toggleMenu() {
+    this.setState({
+      ...this.state,
+      showMenu: !this.state.showMenu,
+    })
   }
 
   render() {
@@ -58,85 +67,83 @@ class App extends Component {
     return (
       <AppContext.Provider value={{ data, setData }}>
         <Grommet theme={theme} full>
-          <Grid
-            fill
-            rows={['auto', 'flex']}
-            columns={['1/2', '1/2']}
-            areas={[
-              { name: 'header', start: [0, 0], end: [2, 0] },
-              { name: 'editor', start: [0, 1], end: [1, 1] },
-              { name: 'preview', start: [1, 1], end: [2, 1] },
-            ]}
-          >
-            <Box
+          <Box flex direction="column">
+            <Header
               flex
-              gridArea="header"
-              elevation="large"
-              direction="row"
-              align="center"
-              justify="between"
-              alignContent="stretch"
-              pad={{ horizontal: 'none', vertical: 'large' }}
-              background="light-3"
-            >
-              <Header onClick={() => toPDF(this.resumeRef, 'Resume')} />
-            </Box>
-
-            <Box gridArea="editor" direction="row" flex fill>
-              <AppContext.Consumer>
-                {({ data, setData }) => (
-                  <Editor
-                    {...this.props}
-                    data={data}
-                    setData={setData}
-                    validate={validate}
-                    schema={schema}
-                  />
-                )}
-              </AppContext.Consumer>
-            </Box>
-            <Box
-              gridArea="preview"
+              fill
               justify="center"
-              align="center"
-              ref={this.resumeRef}
+              generatePDF={() => toPDF(this.resumeRef, 'Resume')}
+              toggleMenu={this.toggleMenu}
+              showMenu={this.state.showMenu}
+            />
+            <Grid
+              flex
+              fill
+              rows={['flex']}
+              columns={['1/2', '1/2']}
+              areas={[
+                { name: 'editor', start: [0, 0], end: [1, 0] },
+                { name: 'preview', start: [1, 0], end: [2, 0] },
+              ]}
             >
-              <AppContext.Consumer>
-                {({ data }) => {
-                  const {
-                    basics,
-                    work,
-                    volunteer,
-                    education,
-                    awards,
-                    publications,
-                    skills,
-                    languages,
-                    interests,
-                    references,
-                    projects,
-                  } = data.value
-                  const isValid = data.isValid
-                  return (
-                    <Resume
-                      basics={basics}
-                      work={work}
-                      volunteer={volunteer}
-                      education={education}
-                      awards={awards}
-                      publications={publications}
-                      skills={skills}
-                      languages={languages}
-                      interests={interests}
-                      references={references}
-                      projects={projects}
-                      isValid={isValid}
+              <Box gridArea="editor" direction="row" flex fill>
+                <AppContext.Consumer>
+                  {({ data, setData }) => (
+                    <Editor
+                      {...this.props}
+                      data={data}
+                      setData={setData}
+                      validate={validate}
+                      schema={schema}
                     />
-                  )
-                }}
-              </AppContext.Consumer>
-            </Box>
-          </Grid>
+                  )}
+                </AppContext.Consumer>
+              </Box>
+              <Box
+                flex
+                fill
+                gridArea="preview"
+                pad={{ horizontal: 'none', vertical: 'none' }}
+                margin={{ horizontal: 'none', vertical: 'none' }}
+                ref={this.resumeRef}
+              >
+                <AppContext.Consumer>
+                  {({ data }) => {
+                    const {
+                      basics,
+                      work,
+                      volunteer,
+                      education,
+                      awards,
+                      publications,
+                      skills,
+                      languages,
+                      interests,
+                      references,
+                      projects,
+                    } = data.value
+                    const isValid = data.isValid
+                    return (
+                      <Resume
+                        basics={basics}
+                        work={work}
+                        volunteer={volunteer}
+                        education={education}
+                        awards={awards}
+                        publications={publications}
+                        skills={skills}
+                        languages={languages}
+                        interests={interests}
+                        references={references}
+                        projects={projects}
+                        isValid={isValid}
+                      />
+                    )
+                  }}
+                </AppContext.Consumer>
+              </Box>
+            </Grid>
+          </Box>
         </Grommet>
       </AppContext.Provider>
     )

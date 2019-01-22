@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { DataTable, Heading, Paragraph, Text } from 'grommet'
+import { Grommet, DataTable, Heading, Paragraph, Text } from 'grommet'
 
 import { SubSection, ResumeSection } from './common'
 
@@ -41,33 +41,53 @@ const Basics = ({
         <Heading> Basics </Heading>
       </SubSection>
 
-      <SubSection>
-        <Paragraph> name: {name} </Paragraph>{' '}
-      </SubSection>
-      <SubSection>
-        <Paragraph> label: {label} </Paragraph>{' '}
-      </SubSection>
-      <SubSection>
-        <Paragraph> summary: {summary} </Paragraph>{' '}
-      </SubSection>
-      <SubSection>
-        <Paragraph> email: {email} </Paragraph>{' '}
-      </SubSection>
-      <SubSection>
-        <Paragraph> website: {website} </Paragraph>{' '}
-      </SubSection>
-      <SubSection>
-        <Paragraph> Location: {locationString} </Paragraph>{' '}
-      </SubSection>
-      <SubSection>
-        <Paragraph> Picture: {picture} </Paragraph>{' '}
-      </SubSection>
-      <SubSection>
-        <Paragraph> Phone: {phone} </Paragraph>{' '}
-      </SubSection>
-      <SubSection>
-        <DataTable columns={columns} data={profiles} />
-      </SubSection>
+      <Grommet>
+        <SubSection>
+          <SubSection>
+            <Paragraph alignSelf="stretch"> name: {name} </Paragraph>{' '}
+          </SubSection>
+        </SubSection>
+        <SubSection>
+          <SubSection>
+            <Paragraph alignSelf="stretch"> label: {label} </Paragraph>{' '}
+          </SubSection>
+        </SubSection>
+        <SubSection>
+          <SubSection>
+            <Paragraph alignSelf="stretch"> summary: {summary} </Paragraph>{' '}
+          </SubSection>
+        </SubSection>
+        <SubSection>
+          <SubSection alignSelf="stretch">
+            <Paragraph> email: {email} </Paragraph>{' '}
+          </SubSection>
+        </SubSection>
+        <SubSection>
+          <SubSection alignSelf="stretch">
+            <Paragraph> website: {website} </Paragraph>{' '}
+          </SubSection>
+        </SubSection>
+        <SubSection>
+          <SubSection alignSelf="stretch">
+            <Paragraph> Location: {locationString} </Paragraph>{' '}
+          </SubSection>
+        </SubSection>
+        <SubSection>
+          <SubSection alignSelf="stretch">
+            <Paragraph> Picture: {picture} </Paragraph>{' '}
+          </SubSection>
+        </SubSection>
+        <SubSection>
+          <SubSection alignSelf="stretch">
+            <Paragraph> Phone: {phone} </Paragraph>{' '}
+          </SubSection>
+        </SubSection>
+        <SubSection>
+          <SubSection alignSelf="stretch">
+            <DataTable columns={columns} data={profiles} />
+          </SubSection>
+        </SubSection>
+      </Grommet>
     </ResumeSection>
   )
 }

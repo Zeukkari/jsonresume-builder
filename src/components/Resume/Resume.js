@@ -58,17 +58,23 @@ const Resume = ({
 
   return (
     <Box
-      background="dark-2"
-      elevation="small"
+      flex
+      fill
+      direction="column"
+      background="dark-4"
       align="center"
       justify="center"
       overflow="scroll"
+      pad={{ horizontal: 'none', vertical: 'none' }}
+      margin={{ horizontal: 'none', vertical: 'none' }}
       border={{
         side: 'all',
         color: 'border',
         size: 'xsmall',
         style: 'solid',
       }}
+      elevation="medium"
+      style={{ zIndex: '-11' }}
     >
       <ResumeSection>
         <Basics
@@ -83,6 +89,7 @@ const Resume = ({
           profiles={profiles}
         />
       </ResumeSection>
+
       <ResumeSection>
         <Work work={work} />
       </ResumeSection>
