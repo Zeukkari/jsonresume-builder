@@ -14,8 +14,8 @@
     "lint": "eslint src",
     "start": "webpack-dev-server --mode development",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest",
-    "test:coverage": "jest --coverage && codecov"
+    "test": "jest src",
+    "test:coverage": "jest src --coverage && codecov"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -87,7 +87,8 @@
     ],
     "modulePathIgnorePatterns": [
       "<rootDir>/dist/",
-      "<rootDir>/templates/"
+      "<rootDir>/templates/",
+      "<rootDir>/node_modules/"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>[/\\\\](dist|templates|node_modules)[/\\\\]"

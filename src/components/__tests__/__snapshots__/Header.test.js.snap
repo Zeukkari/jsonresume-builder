@@ -1,20 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders header 1`] = `
-<header
-  className="StyledBox-sc-13pk1d4-0 isBanS"
-  style={
-    Object {
-      "zIndex": "1",
-    }
-  }
+<div
+  className="StyledBox-sc-13pk1d4-0 fEwhex"
 >
-  <h3
-    className="StyledHeading-sc-1rdh4aw-0 dSoaQZ"
+  <div
+    className="StyledBox-sc-13pk1d4-0 ffeAql"
   >
-    Resume Builder
-  </h3>
-  <div>
+    <button
+      className="StyledButton-sc-323bzc-0 dcpWVY"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      type="button"
+    >
+      <svg
+        aria-label="Menu"
+        className="StyledIcon-ofa7kd-0 liAzLb"
+        height="24px"
+        role="img"
+        version="1.1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M2,19 L22,19 M2,5 L22,5 M2,12 L22,12"
+          fill="none"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
+    <h3
+      className="StyledHeading-sc-1rdh4aw-0 gRvHvF"
+    >
+      Resume Builder
+    </h3>
+  </div>
+  <div
+    className="StyledBox-sc-13pk1d4-0 ffeAql"
+  >
     <button
       className="StyledButton-sc-323bzc-0 hCxsCJ"
       disabled={true}
@@ -64,5 +88,5 @@ exports[`renders header 1`] = `
       </svg>
     </button>
   </div>
-</header>
+</div>
 `;

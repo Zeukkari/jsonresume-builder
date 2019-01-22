@@ -2,10 +2,20 @@
 
 exports[`renders education section 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 LVeHq"
+  className="StyledBox-sc-13pk1d4-0 dZFMXT"
+  style={
+    Object {
+      "zIndex": "99",
+    }
+  }
 >
   <div
-    className="StyledBox-sc-13pk1d4-0 jgwjva"
+    className="StyledBox-sc-13pk1d4-0 ccfOkW"
+    style={
+      Object {
+        "zIndex": "100",
+      }
+    }
   >
     <h1
       className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
@@ -17,7 +27,12 @@ exports[`renders education section 1`] = `
     className="StyledGrommet-sc-19lkkz7-0 lkVXQD"
   >
     <div
-      className="StyledBox-sc-13pk1d4-0 jgwjva"
+      className="StyledBox-sc-13pk1d4-0 ccfOkW"
+      style={
+        Object {
+          "zIndex": "100",
+        }
+      }
     >
       <table
         className="StyledDataTable-xrlyjm-0 kTrXKK"
@@ -33,7 +48,7 @@ exports[`renders education section 1`] = `
               scope="col"
             >
               <div
-                className="StyledBox-sc-13pk1d4-0 folWQp"
+                className="StyledBox-sc-13pk1d4-0 kPycKq"
               >
                 <span
                   className="StyledText-sc-1sadyjn-0 fWSbXS"
@@ -47,7 +62,7 @@ exports[`renders education section 1`] = `
               scope="col"
             >
               <div
-                className="StyledBox-sc-13pk1d4-0 folWQp"
+                className="StyledBox-sc-13pk1d4-0 kPycKq"
               >
                 <span
                   className="StyledText-sc-1sadyjn-0 fWSbXS"
@@ -61,7 +76,7 @@ exports[`renders education section 1`] = `
               scope="col"
             >
               <div
-                className="StyledBox-sc-13pk1d4-0 folWQp"
+                className="StyledBox-sc-13pk1d4-0 kPycKq"
               >
                 <span
                   className="StyledText-sc-1sadyjn-0 fWSbXS"
@@ -75,7 +90,7 @@ exports[`renders education section 1`] = `
               scope="col"
             >
               <div
-                className="StyledBox-sc-13pk1d4-0 folWQp"
+                className="StyledBox-sc-13pk1d4-0 kPycKq"
               >
                 <span
                   className="StyledText-sc-1sadyjn-0 fWSbXS"
@@ -89,7 +104,7 @@ exports[`renders education section 1`] = `
               scope="col"
             >
               <div
-                className="StyledBox-sc-13pk1d4-0 folWQp"
+                className="StyledBox-sc-13pk1d4-0 kPycKq"
               >
                 <span
                   className="StyledText-sc-1sadyjn-0 fWSbXS"
@@ -103,7 +118,7 @@ exports[`renders education section 1`] = `
               scope="col"
             >
               <div
-                className="StyledBox-sc-13pk1d4-0 folWQp"
+                className="StyledBox-sc-13pk1d4-0 kPycKq"
               >
                 <span
                   className="StyledText-sc-1sadyjn-0 fWSbXS"
@@ -117,7 +132,7 @@ exports[`renders education section 1`] = `
               scope="col"
             >
               <div
-                className="StyledBox-sc-13pk1d4-0 folWQp"
+                className="StyledBox-sc-13pk1d4-0 kPycKq"
               >
                 <span
                   className="StyledText-sc-1sadyjn-0 fWSbXS"
