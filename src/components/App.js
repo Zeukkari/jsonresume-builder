@@ -31,7 +31,6 @@ export const AppContext = React.createContext(defaultValue)
 class App extends Component {
   constructor(props, context) {
     super(props, context)
-    this.toggleMenu = this.toggleMenu.bind(this)
 
     this.resumeRef = React.createRef()
 
@@ -39,31 +38,22 @@ class App extends Component {
       data: {
         isValid: true,
         value: defaultResume,
-        message: '',
       },
-      showMenu: false,
     }
 
     this.setData = data => {
-      this.setState({
-        ...this.state,
-        data,
-      })
+      console.log('setData: ', data)
+      this.setState(state => ({
+        ...data,
+      }))
     }
-  }
-
-  toggleMenu() {
-    this.setState({
-      ...this.state,
-      showMenu: !this.state.showMenu,
-    })
   }
 
   render() {
     const { validate, schema } = this.props
 
-    const { setData } = this
-    const data = this.state.data
+    const { data } = this.state
+    const setData = this.setData
 
     return (
       <AppContext.Provider value={{ data, setData }}>
@@ -74,8 +64,8 @@ class App extends Component {
               fill
               justify="center"
               generatePDF={() => toPDF(this.resumeRef, 'Resume')}
-              toggleMenu={this.toggleMenu}
-              showMenu={this.state.showMenu}
+              toggleMenu={() => console.log('foo')}
+              showMenu={false}
             />
             <Grid
               flex
@@ -91,7 +81,7 @@ class App extends Component {
                 <AppContext.Consumer>
                   {({ data, setData }) => (
                     <EditorComponent
-                      schema={this.props.schema}
+                      schema={schema}
                       data={data}
                       setData={setData}
                     />
@@ -147,6 +137,20 @@ class App extends Component {
       </AppContext.Provider>
     )
   }
+}
+
+App.defaultProps = {
+  basics: {},
+  awards: [],
+  education: [],
+  interests: [],
+  languages: [],
+  publications: [],
+  references: [],
+  skills: [],
+  volunteer: [],
+  work: [],
+  isValid: false,
 }
 
 export default App

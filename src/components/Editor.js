@@ -25,73 +25,89 @@ export function Decorator({ children }) {
 class ResumeJsonInput extends Component {
   constructor(props, context) {
     super(props, context)
+
+    const ajv = new Ajv({
+      schemaId: 'id',
+      allErrors: true,
+      verbose: true,
+      format: 'full',
+      extendRefs: 'fail',
+    })
+    ajv.addMetaSchema(draft4)
+    this.validate = ajv.compile(props.schema)
+
+    this.onChange = this.onChange.bind(this)
+    this.onError = this.onError.bind(this)
+    this.onValidate = this.onValidate.bind(this)
+    this.validate = this.validate.bind(this)
   }
 
-  state = {
-    value: '{}',
-    inputValue: '{asdasd}',
-    isValid: true,
-    message: '',
+  onError(event) {
+    console.log('onError: ', event)
+    return
   }
 
-  onChange = event => {
-    console.log('onChange: ', event)
-
-    if (event.error !== false) {
+  onValidate(error, valid) {
+    console.log('onValidate: ', error, valid, this)
+    if (valid) {
+      console.log('probably valid')
       this.props.setData({
-        isValid: false,
-        value: {},
+        isValid: true,
+        error: [],
+        value: this.state.current,
+        ...this.props.data,
       })
       return
     }
 
-    const resumeObject = event.jsObject
-
-    const cb = (err, valid) => {
-      if (err != undefined || valid == undefined) {
-        const message =
-          err && err.message ? err.message : 'Generic error message'
-        this.props.setData({ isValid: false, value: { error: message } })
-        return
-      }
+    if (error != undefined) {
+      console.log('totally not valid')
       this.props.setData({
-        isValid: true,
-        value: resumeObject,
+        isValid: false,
+        error: error,
+        ...this.props.data,
       })
+      return
     }
 
-    this.props.validate(resumeObject, cb)
-
+    console.log('not valid')
+    this.props.setData({
+      isValid: false,
+      ...this.props.data,
+    })
     return
   }
 
+  onChange(newState) {
+    console.log('onChange: ', newState)
+    console.log('this: ', this)
+    this.state.currentState = newState
+    this.props.validate(newState, this.onValidate)
+  }
+
   render() {
-    const ajv = new Ajv({ schemaId: 'id' })
-    ajv.addMetaSchema(draft4)
-
-    /*
-    <Editor
-      value={defaultResume}
-      theme="ace/theme/monokai"
-      mode={Editor.modes.code}
-      onChange={this.onChange}
-      ace={ace}
-      {...this.props}
-    />
-    */
-
-    console.log('data: ', this.props.data)
-    console.log('setData: ', this.props.setData)
+    // console.log('data: ', this.props.data)
+    // console.log('setData: ', this.props.setData)
 
     return (
       <Decorator>
         <Editor
-          value={defaultResume}
+          key={1}
+          value={this.props.data.value}
           onChange={this.onChange}
+          onError={this.onError}
           mode={Editor.modes.code}
-          ajv={ajv}
+          allowedModes={[
+            Editor.modes.code,
+            Editor.modes.tree,
+            Editor.modes.view,
+          ]}
           ace={ace}
-          schema={this.props.schema}
+          schemaRefs={this.props.schema}
+          statusBar={true}
+          history={true}
+          theme="ace/theme/monokai"
+          search={true}
         />
       </Decorator>
     )
