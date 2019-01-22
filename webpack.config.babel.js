@@ -4,7 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 export default {
   entry: './src/index.js',
-  devtool: 'eval-source-map',
+  devtool: 'cheap-source-map',
   output: {
     path: path.resolve('./dist'),
     filename: 'index.js',

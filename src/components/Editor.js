@@ -11,6 +11,8 @@ import { JsonEditor as Editor } from 'jsoneditor-react'
 import 'jsoneditor-react/es/editor.min.css'
 import './fixAce.css'
 
+import defaultResume from '../util/defaultResume'
+
 const style = {
   width: '100%',
   height: '100%',
@@ -38,11 +40,9 @@ class ResumeJsonInput extends Component {
         return
       }
       this.props.setData({
-        isValid: false,
-        error: err,
-        ...this.props.data,
+        isValid: true,
+        value: resumeObject,
       })
-      return
     }
 
     this.props.validate(resumeObject, cb)
@@ -53,19 +53,13 @@ class ResumeJsonInput extends Component {
     return (
       <Decorator>
         <Editor
-          key={1}
-          value={this.props.data.value}
+          value={defaultResume}
           onChange={this.onChange}
-          onError={this.onError}
           mode={Editor.modes.code}
           ajv={ajv}
           validate
           ace={ace}
-          schemaRefs={this.props.schema}
-          statusBar={true}
-          history={true}
-          theme="ace/theme/monokai"
-          search={true}
+          schema={this.props.schema}
         />
       </Decorator>
     )
