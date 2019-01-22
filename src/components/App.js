@@ -45,6 +45,7 @@ class App extends Component {
     }
 
     this.setData = data => {
+      console.log('set state: ', data)
       this.setState({
         ...this.state,
         data,
@@ -91,7 +92,8 @@ class App extends Component {
                 <AppContext.Consumer>
                   {({ data, setData }) => (
                     <EditorComponent
-                      schema={this.props.schema}
+                      schema={schema}
+                      validate={validate}
                       data={data}
                       setData={setData}
                     />

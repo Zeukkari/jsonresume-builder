@@ -22,31 +22,16 @@ export function Decorator({ children }) {
   return <div style={style}>{children}</div>
 }
 
+const ajv = new Ajv({ schemaId: 'id' })
+ajv.addMetaSchema(draft4)
+
 class ResumeJsonInput extends Component {
-  constructor(props, context) {
-    super(props, context)
+  constructor(props) {
+    super(props)
   }
 
-  state = {
-    value: '{}',
-    inputValue: '{asdasd}',
-    isValid: true,
-    message: '',
-  }
-
-  onChange = event => {
-    console.log('onChange: ', event)
-
-    if (event.error !== false) {
-      this.props.setData({
-        isValid: false,
-        value: {},
-      })
-      return
-    }
-
-    const resumeObject = event.jsObject
-
+  onChange = resumeObject => {
+    this.setState(resumeObject)
     const cb = (err, valid) => {
       if (err != undefined || valid == undefined) {
         const message =
@@ -61,28 +46,10 @@ class ResumeJsonInput extends Component {
     }
 
     this.props.validate(resumeObject, cb)
-
     return
   }
 
   render() {
-    const ajv = new Ajv({ schemaId: 'id' })
-    ajv.addMetaSchema(draft4)
-
-    /*
-    <Editor
-      value={defaultResume}
-      theme="ace/theme/monokai"
-      mode={Editor.modes.code}
-      onChange={this.onChange}
-      ace={ace}
-      {...this.props}
-    />
-    */
-
-    console.log('data: ', this.props.data)
-    console.log('setData: ', this.props.setData)
-
     return (
       <Decorator>
         <Editor
@@ -90,6 +57,7 @@ class ResumeJsonInput extends Component {
           onChange={this.onChange}
           mode={Editor.modes.code}
           ajv={ajv}
+          validate
           ace={ace}
           schema={this.props.schema}
         />
