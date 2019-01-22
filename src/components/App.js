@@ -45,7 +45,6 @@ class App extends Component {
     }
 
     this.setData = data => {
-      console.log('set state: ', data)
       this.setState({
         ...this.state,
         data,
