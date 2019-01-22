@@ -1,10 +1,10 @@
-import path from 'path';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
-import MiniCssExtractPlugin  from 'mini-css-extract-plugin';
+import path from 'path'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 export default {
   entry: './src/index.js',
-  devtool: 'cheap-source-map ',
+  devtool: 'cheap-source-map',
   output: {
     path: path.resolve('./dist'),
     filename: 'index.js',
@@ -14,7 +14,7 @@ export default {
     new CopyWebpackPlugin([{ from: './public' }]),
     new MiniCssExtractPlugin({
       filename: 'style.css',
-    })
+    }),
   ],
   module: {
     rules: [
@@ -25,12 +25,12 @@ export default {
       },
       {
         test: /\.css$/,
-        use:  [ 'style-loader', MiniCssExtractPlugin.loader, 'css-loader']
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       {
         test: /\.svg$/,
-        use: "file-loader",
-      }
+        use: 'file-loader',
+      },
     ],
   },
-};
+}

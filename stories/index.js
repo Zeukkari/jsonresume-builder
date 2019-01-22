@@ -1,8 +1,17 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+import ace from 'brace'
+import 'brace/mode/json'
+import 'brace/theme/monokai'
+
+import { schema, validate } from 'resume-schema'
+import Ajv from 'ajv'
+
+import { JsonEditor as Editor } from 'jsoneditor-react'
+
 import Header from '../src/components/Header'
-import Editor from '../src/components/Editor'
+import EditorComponent from '../src/components/Editor'
 import Resume from '../src/components/Resume'
 
 import Awards from '../src/components/Resume/Awards'
@@ -15,15 +24,15 @@ import References from '../src/components/Resume/References'
 import Skills from '../src/components/Resume/Skills'
 import Volunteer from '../src/components/Resume/Volunteer'
 import Work from '../src/components/Resume/Work'
-
+import '../src/components/fixAce.css'
 import defaultResume from '../src/util/defaultResume.json'
 
 storiesOf('Editor', module).add('Default', () => (
-  <Editor
-    data={{}}
-    setData={() => console.log('foo')}
-    validate={() => console.log('foo')}
-    schema={{}}
+  <EditorComponent
+    value={defaultResume}
+    mode={Editor.modes.code}
+    ajv={Ajv({ allErrors: true, verbose: true })}
+    schema={schema}
   />
 ))
 

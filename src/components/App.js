@@ -6,8 +6,9 @@ import toPDF from './Printable/PrintButton'
 
 import Resume from './Resume'
 import Header from './Header'
-import Editor from './Editor'
+import EditorComponent from './Editor'
 import defaultResume from '../util/defaultResume.json'
+import './fixAce.css'
 
 const theme = {
   global: {
@@ -89,12 +90,10 @@ class App extends Component {
               <Box gridArea="editor" direction="row" flex fill>
                 <AppContext.Consumer>
                   {({ data, setData }) => (
-                    <Editor
-                      {...this.props}
+                    <EditorComponent
+                      schema={this.props.schema}
                       data={data}
                       setData={setData}
-                      validate={validate}
-                      schema={schema}
                     />
                   )}
                 </AppContext.Consumer>

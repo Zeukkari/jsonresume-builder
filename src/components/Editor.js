@@ -1,9 +1,27 @@
 import React, { Component } from 'react'
 
-import JSONInput from 'react-json-editor-ajrm'
-import locale from 'react-json-editor-ajrm/locale/en'
+import ace from 'brace'
+import 'brace/mode/json'
+import 'brace/theme/monokai'
+
+import Ajv from 'ajv'
+import draft4 from 'ajv/lib/refs/json-schema-draft-04.json'
+
+import { JsonEditor as Editor } from 'jsoneditor-react'
+import 'jsoneditor-react/es/editor.min.css'
+import './fixAce.css'
 
 import defaultResume from '../util/defaultResume'
+
+const style = {
+  width: '100%',
+  height: '100%',
+}
+
+export function Decorator({ children }) {
+  return <div style={style}>{children}</div>
+}
+
 class ResumeJsonInput extends Component {
   constructor(props, context) {
     super(props, context)
@@ -48,16 +66,34 @@ class ResumeJsonInput extends Component {
   }
 
   render() {
+    const ajv = new Ajv({ schemaId: 'id' })
+    ajv.addMetaSchema(draft4)
+
+    /*
+    <Editor
+      value={defaultResume}
+      theme="ace/theme/monokai"
+      mode={Editor.modes.code}
+      onChange={this.onChange}
+      ace={ace}
+      {...this.props}
+    />
+    */
+
+    console.log('data: ', this.props.data)
+    console.log('setData: ', this.props.setData)
+
     return (
-      <JSONInput
-        id="editor-input"
-        placeholder={defaultResume}
-        confirmGood={false}
-        locale={locale}
-        height="100%"
-        width="100%"
-        onChange={this.onChange}
-      />
+      <Decorator>
+        <Editor
+          value={defaultResume}
+          onChange={this.onChange}
+          mode={Editor.modes.code}
+          ajv={ajv}
+          ace={ace}
+          schema={this.props.schema}
+        />
+      </Decorator>
     )
   }
 }
