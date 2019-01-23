@@ -1,342 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders basics section 1`] = `
+exports[`renders basics section contact info 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 dZFMXT"
-  style={
-    Object {
-      "zIndex": "99",
-    }
-  }
+  className="StyledBox-sc-13pk1d4-0 eIRueg"
+>
+  <span
+    className="StyledText-sc-1sadyjn-0 fWSbXS"
+  >
+     email: 
+    john@gmail.com
+     
+  </span>
+  <span
+    className="StyledText-sc-1sadyjn-0 fWSbXS"
+  >
+     website: 
+    http://johndoe.com
+     
+  </span>
+  <span
+    className="StyledText-sc-1sadyjn-0 fWSbXS"
+  >
+     Location: 
+    2712 Broadway St CA 94115 San Francisco US California
+     
+  </span>
+  <span
+    className="StyledText-sc-1sadyjn-0 fWSbXS"
+  >
+     Phone: 
+    (912) 555-4321
+     
+  </span>
+  <div
+    className="StyledBox-sc-13pk1d4-0 ffeAql"
+  >
+    <button
+      className="StyledButton-sc-323bzc-0 gNaNNI"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      type="button"
+    >
+      Twitter
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders basics section picture 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 hhTAko"
+>
+  <button
+    className="StyledButton-sc-323bzc-0 gNaNNI"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    type="button"
+  >
+    PUT FACE HERE
+  </button>
+</div>
+`;
+
+exports[`renders basics section summary 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 lhNMsi"
 >
   <div
-    className="StyledBox-sc-13pk1d4-0 ccfOkW"
-    style={
-      Object {
-        "zIndex": "100",
-      }
-    }
+    className="StyledBox-sc-13pk1d4-0 hfQuxz"
   >
     <h1
-      className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+      className="StyledHeading-sc-1rdh4aw-0 jsirCP"
+      size="small"
     >
-       Basics 
+      John Doe
     </h1>
-  </div>
-  <div
-    className="StyledBox-sc-13pk1d4-0 ccfOkW"
-    style={
-      Object {
-        "zIndex": "100",
-      }
-    }
-  >
-    <div
-      className="StyledBox-sc-13pk1d4-0 ccfOkW"
-      style={
-        Object {
-          "zIndex": "100",
-        }
-      }
+    <h2
+      className="StyledHeading-sc-1rdh4aw-0 gBAiLn"
+      size="small"
     >
-      <p
-        className="StyledParagraph-tbetod-0 dqghrx"
-      >
-         name: 
-        N/A
-         
-      </p>
-    </div>
-  </div>
-  <div
-    className="StyledBox-sc-13pk1d4-0 ccfOkW"
-    style={
-      Object {
-        "zIndex": "100",
-      }
-    }
-  >
-    <div
-      className="StyledBox-sc-13pk1d4-0 ccfOkW"
-      style={
-        Object {
-          "zIndex": "100",
-        }
-      }
+      Programmer
+    </h2>
+    <p
+      className="StyledParagraph-tbetod-0 JlbWj"
+      size="small"
     >
-      <p
-        className="StyledParagraph-tbetod-0 dqghrx"
-      >
-         label: 
-        N/A
-         
-      </p>
-    </div>
-  </div>
-  <div
-    className="StyledBox-sc-13pk1d4-0 ccfOkW"
-    style={
-      Object {
-        "zIndex": "100",
-      }
-    }
-  >
-    <div
-      className="StyledBox-sc-13pk1d4-0 ccfOkW"
-      style={
-        Object {
-          "zIndex": "100",
-        }
-      }
-    >
-      <p
-        className="StyledParagraph-tbetod-0 dqghrx"
-      >
-         summary: 
-        N/A
-         
-      </p>
-    </div>
-  </div>
-  <div
-    className="StyledBox-sc-13pk1d4-0 ccfOkW"
-    style={
-      Object {
-        "zIndex": "100",
-      }
-    }
-  >
-    <div
-      className="StyledBox-sc-13pk1d4-0 ccfOkW"
-      style={
-        Object {
-          "zIndex": "100",
-        }
-      }
-    >
-      <p
-        className="StyledParagraph-tbetod-0 kxFtnQ"
-      >
-         email: 
-        N/A
-         
-      </p>
-    </div>
-  </div>
-  <div
-    className="StyledBox-sc-13pk1d4-0 ccfOkW"
-    style={
-      Object {
-        "zIndex": "100",
-      }
-    }
-  >
-    <div
-      className="StyledBox-sc-13pk1d4-0 ccfOkW"
-      style={
-        Object {
-          "zIndex": "100",
-        }
-      }
-    >
-      <p
-        className="StyledParagraph-tbetod-0 kxFtnQ"
-      >
-         website: 
-        N/A
-         
-      </p>
-    </div>
-  </div>
-  <div
-    className="StyledBox-sc-13pk1d4-0 ccfOkW"
-    style={
-      Object {
-        "zIndex": "100",
-      }
-    }
-  >
-    <div
-      className="StyledBox-sc-13pk1d4-0 ccfOkW"
-      style={
-        Object {
-          "zIndex": "100",
-        }
-      }
-    >
-      <p
-        className="StyledParagraph-tbetod-0 kxFtnQ"
-      >
-         Location: 
-        No address 0 N/A FI N/A
-         
-      </p>
-    </div>
-  </div>
-  <div
-    className="StyledBox-sc-13pk1d4-0 ccfOkW"
-    style={
-      Object {
-        "zIndex": "100",
-      }
-    }
-  >
-    <div
-      className="StyledBox-sc-13pk1d4-0 ccfOkW"
-      style={
-        Object {
-          "zIndex": "100",
-        }
-      }
-    >
-      <p
-        className="StyledParagraph-tbetod-0 kxFtnQ"
-      >
-         Picture: 
-        N/A
-         
-      </p>
-    </div>
-  </div>
-  <div
-    className="StyledBox-sc-13pk1d4-0 ccfOkW"
-    style={
-      Object {
-        "zIndex": "100",
-      }
-    }
-  >
-    <div
-      className="StyledBox-sc-13pk1d4-0 ccfOkW"
-      style={
-        Object {
-          "zIndex": "100",
-        }
-      }
-    >
-      <p
-        className="StyledParagraph-tbetod-0 kxFtnQ"
-      >
-         Phone: 
-        N/A
-         
-      </p>
-    </div>
-  </div>
-  <div
-    className="StyledGrommet-sc-19lkkz7-0 lkVXQD"
-  >
-    <div
-      className="StyledBox-sc-13pk1d4-0 ccfOkW"
-      style={
-        Object {
-          "zIndex": "100",
-        }
-      }
-    >
-      <table
-        className="StyledDataTable-xrlyjm-0 kTrXKK"
-      >
-        <thead
-          className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
-        >
-          <tr
-            className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
-          >
-            <th
-              className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
-              scope="col"
-            >
-              <div
-                className="StyledBox-sc-13pk1d4-0 kPycKq"
-              >
-                <span
-                  className="StyledText-sc-1sadyjn-0 fWSbXS"
-                >
-                   Network 
-                </span>
-              </div>
-            </th>
-            <th
-              className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
-              scope="col"
-            >
-              <div
-                className="StyledBox-sc-13pk1d4-0 kPycKq"
-              >
-                <span
-                  className="StyledText-sc-1sadyjn-0 fWSbXS"
-                >
-                  Username
-                </span>
-              </div>
-            </th>
-            <th
-              className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
-              scope="col"
-            >
-              <div
-                className="StyledBox-sc-13pk1d4-0 kPycKq"
-              >
-                <span
-                  className="StyledText-sc-1sadyjn-0 fWSbXS"
-                >
-                  URL
-                </span>
-              </div>
-            </th>
-          </tr>
-        </thead>
-        <tbody
-          className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
-        >
-          <tr
-            className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
-          >
-            <th
-              className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
-              scope="row"
-            >
-              <div
-                className="StyledBox-sc-13pk1d4-0 eAAZJM"
-              >
-                <span
-                  className="StyledText-sc-1sadyjn-0 dndifk"
-                >
-                  Twitter
-                </span>
-              </div>
-            </th>
-            <td
-              className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
-            >
-              <div
-                className="StyledBox-sc-13pk1d4-0 eAAZJM"
-              >
-                <span
-                  className="StyledText-sc-1sadyjn-0 fWSbXS"
-                >
-                  john
-                </span>
-              </div>
-            </td>
-            <td
-              className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
-            >
-              <div
-                className="StyledBox-sc-13pk1d4-0 eAAZJM"
-              >
-                <span
-                  className="StyledText-sc-1sadyjn-0 fWSbXS"
-                >
-                  about:blank
-                </span>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      A summary of John Doe...
+    </p>
   </div>
 </div>
 `;

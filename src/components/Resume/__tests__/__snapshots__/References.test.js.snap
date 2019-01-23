@@ -2,113 +2,38 @@
 
 exports[`renders references section 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 dZFMXT"
-  style={
-    Object {
-      "zIndex": "99",
-    }
-  }
+  className="StyledBox-sc-13pk1d4-0 eRCNqM"
 >
   <div
-    className="StyledBox-sc-13pk1d4-0 ccfOkW"
-    style={
-      Object {
-        "zIndex": "100",
-      }
-    }
+    className="StyledBox-sc-13pk1d4-0 lhNMsi"
   >
-    <h1
-      className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+    <h3
+      className="StyledHeading-sc-1rdh4aw-0 gBSFmC"
+      size="medium"
     >
-       References 
-    </h1>
-  </div>
-  <div
-    className="StyledGrommet-sc-19lkkz7-0 lkVXQD"
-  >
-    <div
-      className="StyledBox-sc-13pk1d4-0 ccfOkW"
-      style={
-        Object {
-          "zIndex": "100",
-        }
-      }
-    >
-      <table
-        className="StyledDataTable-xrlyjm-0 kTrXKK"
+      <span
+        className="StyledText-sc-1sadyjn-0 fWSbXS"
       >
-        <thead
-          className="StyledDataTable__StyledDataTableHeader-xrlyjm-3 bAIczD StyledTable__StyledTableHeader-sc-1m3u5g-4 dHaGyd"
+        References
+      </span>
+    </h3>
+    <div
+      className="StyledBox-sc-13pk1d4-0 IRSNj"
+    >
+      <div
+        className="StyledBox-sc-13pk1d4-0 IRSNj"
+      >
+        <span
+          className="StyledText-sc-1sadyjn-0 fWSbXS"
         >
-          <tr
-            className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws StyledTable__StyledTableRow-sc-1m3u5g-2 kXgizX"
-          >
-            <th
-              className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
-              scope="col"
-            >
-              <div
-                className="StyledBox-sc-13pk1d4-0 kPycKq"
-              >
-                <span
-                  className="StyledText-sc-1sadyjn-0 fWSbXS"
-                >
-                  Name
-                </span>
-              </div>
-            </th>
-            <th
-              className="StyledTable__StyledTableCell-sc-1m3u5g-0 hNAgVv"
-              scope="col"
-            >
-              <div
-                className="StyledBox-sc-13pk1d4-0 kPycKq"
-              >
-                <span
-                  className="StyledText-sc-1sadyjn-0 fWSbXS"
-                >
-                  Reference
-                </span>
-              </div>
-            </th>
-          </tr>
-        </thead>
-        <tbody
-          className="StyledDataTable__StyledDataTableBody-xrlyjm-2 hbZQKY"
+          Jane Doe
+        </span>
+        <p
+          className="StyledParagraph-tbetod-0 kxFtnQ"
         >
-          <tr
-            className="StyledDataTable__StyledDataTableRow-xrlyjm-1 ezpFws"
-          >
-            <th
-              className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
-              scope="row"
-            >
-              <div
-                className="StyledBox-sc-13pk1d4-0 eAAZJM"
-              >
-                <span
-                  className="StyledText-sc-1sadyjn-0 dndifk"
-                >
-                  Jane Doe
-                </span>
-              </div>
-            </th>
-            <td
-              className="StyledTable__StyledTableCell-sc-1m3u5g-0 ezepRo"
-            >
-              <div
-                className="StyledBox-sc-13pk1d4-0 eAAZJM"
-              >
-                <span
-                  className="StyledText-sc-1sadyjn-0 fWSbXS"
-                >
-                  Reference...
-                </span>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          Reference...
+        </p>
+      </div>
     </div>
   </div>
 </div>
