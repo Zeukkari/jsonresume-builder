@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Box, Heading, Text } from 'grommet'
 
+import { ResumeSection } from './common'
+
 const Languages = ({ languages }) => {
   const renderItems = languages.map(item => {
     return (
@@ -14,16 +16,7 @@ const Languages = ({ languages }) => {
 
   return (
     <Box margin="none" pad="none" border="all">
-      <Box
-        border={{
-          side: 'all',
-          color: 'red',
-          size: 'xsmall',
-          style: 'dashed',
-        }}
-        margin="none"
-        pad="none"
-      >
+      <ResumeSection>
         <Heading
           level={3}
           size="medium"
@@ -36,7 +29,7 @@ const Languages = ({ languages }) => {
           <Text>Languages</Text>
         </Heading>
         <Box>{renderItems}</Box>
-      </Box>
+      </ResumeSection>
     </Box>
   )
 }

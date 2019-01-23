@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Box, Heading, Text } from 'grommet'
 
+import { ResumeSection } from './common'
+
 const Interests = ({ interests }) => {
   const renderItems = interests.map(item => {
     return (
@@ -19,16 +21,7 @@ const Interests = ({ interests }) => {
 
   return (
     <Box margin="none" pad="none" border="all">
-      <Box
-        border={{
-          side: 'all',
-          color: 'red',
-          size: 'xsmall',
-          style: 'dashed',
-        }}
-        margin="none"
-        pad="none"
-      >
+      <ResumeSection>
         <Heading
           level={3}
           size="medium"
@@ -41,7 +34,7 @@ const Interests = ({ interests }) => {
           <Text>Interests</Text>
         </Heading>
         <Box>{renderItems}</Box>
-      </Box>
+      </ResumeSection>
     </Box>
   )
 }

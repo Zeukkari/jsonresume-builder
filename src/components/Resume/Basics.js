@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Box, Button, Heading, Paragraph, Text } from 'grommet'
 
+import { ResumeSection } from './common'
+
 export const Picture = ({ picture }) => (
   <Box align="center" justify="center" background="neutral-4">
     <Button label={`${picture}`} primary />

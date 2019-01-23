@@ -1,38 +1,8 @@
 import React from 'react'
 
-import { Box, DataTable, Heading, Text } from 'grommet'
+import { Box, Heading, Text } from 'grommet'
 
-const columns = [
-  {
-    property: 'institution',
-    header: <Text> University </Text>,
-    primary: true,
-  },
-  {
-    property: 'area',
-    header: 'Department',
-  },
-  {
-    property: 'studyType',
-    header: 'Degree',
-  },
-  {
-    property: 'startDate',
-    header: 'Start',
-  },
-  {
-    property: 'endDate',
-    header: 'End',
-  },
-  {
-    property: 'gpa',
-    header: 'GPA',
-  },
-  {
-    property: 'courses',
-    header: 'Courses',
-  },
-]
+import { ResumeSection } from './common'
 
 const Education = ({ education }) => {
   const renderItems = education.map(item => {
@@ -56,16 +26,7 @@ const Education = ({ education }) => {
 
   return (
     <Box margin="none" pad="none" border="all">
-      <Box
-        border={{
-          side: 'all',
-          color: 'red',
-          size: 'xsmall',
-          style: 'dashed',
-        }}
-        margin="none"
-        pad="none"
-      >
+      <ResumeSection>
         <Heading
           level={3}
           size="medium"
@@ -78,7 +39,7 @@ const Education = ({ education }) => {
           <Text>Education</Text>
         </Heading>
         <Box>{renderItems}</Box>
-      </Box>
+      </ResumeSection>
     </Box>
   )
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { Button, Box, Heading } from 'grommet'
+import { Box, Heading } from 'grommet'
+
+import { ResumeSection } from './common'
 
 import Awards from './Awards'
 import { Summary, Picture, Contact } from './Basics'
@@ -33,13 +35,6 @@ const Placeholder = ({
   references,
   isValid,
 }) => {
-  console.log(awards)
-  console.log(languages)
-  console.log(interests)
-  console.log(references)
-  console.log(publications)
-  console.log(volunteer)
-
   if (!isValid) {
     return (
       <Box
