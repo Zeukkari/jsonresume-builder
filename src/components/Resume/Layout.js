@@ -14,15 +14,15 @@ export const TopLayout = ({ children }) => {
       rows={['auto', 'xsmall']}
       gap="small"
     >
-      <Box gridArea="left" background="red" margin="auto">
+      <Box gridArea="left" background="accent-1" margin="auto">
         {children[0]}
       </Box>
 
-      <Box gridArea="right" background="brand">
+      <Box gridArea="right" background="accent-2">
         {children[1]}
       </Box>
 
-      <Box gridArea="footer" background="green">
+      <Box gridArea="footer" background="accent-3">
         {children[2]}
       </Box>
     </Grid>
@@ -50,18 +50,18 @@ export const ResumeLayout = ({ children }) => {
         { name: 'right', start: [1, 1], end: [2, 1] },
       ]}
       columns={['1/2', '1/2']}
-      rows={['small', 'large']}
+      rows={['small', 'auto']}
       gap="small"
     >
-      <Box gridArea="header" background="red">
+      <Box gridArea="header" background="neutral-3">
         {children[0]}
       </Box>
 
-      <Box gridArea="left" background="brand">
+      <Box gridArea="left" background="accent-3">
         {children[1]}
       </Box>
 
-      <Box gridArea="right" background="green">
+      <Box gridArea="right" background="accent-4">
         {children[2]}
       </Box>
     </Grid>

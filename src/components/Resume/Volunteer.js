@@ -1,58 +1,52 @@
 import React from 'react'
 
-import { Grommet, DataTable, Heading, Text } from 'grommet'
-
-import { ResumeSection, SubSection } from './common'
-
-const columns = [
-  {
-    property: 'organization',
-    header: <Text> Organization </Text>,
-    primary: true,
-  },
-  {
-    property: 'website',
-    header: 'Website',
-  },
-  {
-    property: 'position',
-    header: 'Position',
-  },
-  {
-    property: 'startDate',
-    header: 'Start',
-  },
-  {
-    property: 'endDate',
-    header: 'End',
-  },
-  {
-    property: 'summary',
-    header: 'Summary',
-  },
-  {
-    property: 'highlights',
-    header: 'Highlights',
-  },
-]
+import { Box, Paragraph, Heading, Text } from 'grommet'
 
 const Volunteer = ({ volunteer }) => {
   const renderItems = volunteer.map(item => {
-    const highlights = item.highlights.join()
-    return { ...item, highlights }
+    return (
+      <Box key="item.company">
+        <Heading>{item.company}</Heading>
+        <Heading>{item.position}</Heading>
+        <Box direction="row">
+          {item.startDate} - {item.endDate}
+        </Box>
+        <Paragraph>{item.summary}</Paragraph>
+        <Text>Highlights</Text>
+        <Box direction="column">
+          {item.highlights.map(highlight => (
+            <Text key={highlight}>{highlight}</Text>
+          ))}
+        </Box>
+      </Box>
+    )
   })
-
   return (
-    <ResumeSection>
-      <SubSection>
-        <Heading> Volunteer </Heading>
-      </SubSection>
-      <Grommet>
-        <SubSection>
-          <DataTable columns={columns} data={renderItems} />
-        </SubSection>
-      </Grommet>
-    </ResumeSection>
+    <Box margin="none" pad="none" border="all">
+      <Box
+        border={{
+          side: 'all',
+          color: 'red',
+          size: 'xsmall',
+          style: 'dashed',
+        }}
+        margin="none"
+        pad="none"
+      >
+        <Heading
+          level={3}
+          size="medium"
+          align="center"
+          alignSelf="center"
+          textAlign="center"
+          margin="none"
+          pad="none"
+        >
+          <Text>Volunteer</Text>
+        </Heading>
+        <Box>{renderItems}</Box>
+      </Box>
+    </Box>
   )
 }
 

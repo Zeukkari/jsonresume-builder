@@ -1,34 +1,10 @@
 import React from 'react'
 
-import {
-  Box,
-  Button,
-  Grommet,
-  DataTable,
-  Heading,
-  Paragraph,
-  Text,
-} from 'grommet'
-
-const columns = [
-  {
-    property: 'network',
-    header: <Text> Network </Text>,
-    primary: true,
-  },
-  {
-    property: 'username',
-    header: 'Username',
-  },
-  {
-    property: 'url',
-    header: 'URL',
-  },
-]
+import { Box, Button, Heading, Paragraph, Text } from 'grommet'
 
 export const Picture = ({ picture }) => (
-  <Box align="center" justify="center">
-    <Button label={`KUVA ${picture}`} onClick={() => {}} primary />
+  <Box align="center" justify="center" background="neutral-4">
+    <Button label={`${picture}`} primary />
   </Box>
 )
 Picture.defaultProps = {
@@ -53,8 +29,14 @@ export const Contact = ({ email, phone, location, website, profiles }) => {
       align="center"
       justify="between"
       direction="row"
-      background="brand"
+      background="neutral-2"
       pad={{ vertical: 'small', horizontal: 'large' }}
+      border={{
+        side: 'all',
+        color: 'red',
+        size: 'xsmall',
+        style: 'dashed',
+      }}
     >
       <Text> email: {email} </Text>
 
@@ -91,7 +73,7 @@ Contact.defaultProps = {
 
 export const Summary = ({ name, label, summary }) => {
   return (
-    <Box flex wrap background={{ color: 'light-2' }}>
+    <Box flex wrap background={{ color: 'accent-1' }}>
       <Heading level={1} size="small" margin="xsmall">
         {name}
       </Heading>

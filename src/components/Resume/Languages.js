@@ -1,35 +1,43 @@
 import React from 'react'
 
-import { Grommet, DataTable, Heading, Text } from 'grommet'
-
-import { ResumeSection, SubSection } from './common'
-
-const columns = [
-  {
-    property: 'language',
-    header: <Text>Language</Text>,
-    primary: true,
-  },
-  {
-    property: 'fluency',
-    header: 'Fluency',
-  },
-]
+import { Box, Heading, Text } from 'grommet'
 
 const Languages = ({ languages }) => {
-  const renderItems = languages
+  const renderItems = languages.map(item => {
+    return (
+      <Box key="item.language">
+        <Heading>{item.language}</Heading>
+        <Heading>{item.fluency}</Heading>
+      </Box>
+    )
+  })
 
   return (
-    <ResumeSection>
-      <SubSection>
-        <Heading> Languages </Heading>
-      </SubSection>
-      <Grommet>
-        <SubSection>
-          <DataTable columns={columns} data={renderItems} />
-        </SubSection>
-      </Grommet>
-    </ResumeSection>
+    <Box margin="none" pad="none" border="all">
+      <Box
+        border={{
+          side: 'all',
+          color: 'red',
+          size: 'xsmall',
+          style: 'dashed',
+        }}
+        margin="none"
+        pad="none"
+      >
+        <Heading
+          level={3}
+          size="medium"
+          align="center"
+          alignSelf="center"
+          textAlign="center"
+          margin="none"
+          pad="none"
+        >
+          <Text>Languages</Text>
+        </Heading>
+        <Box>{renderItems}</Box>
+      </Box>
+    </Box>
   )
 }
 

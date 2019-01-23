@@ -1,42 +1,49 @@
 import React from 'react'
 
-import { Box, Grommet, DataTable, Heading, Text } from 'grommet'
-
-const columns = [
-  {
-    property: 'name',
-    header: <Text>Skill</Text>,
-    primary: true,
-  },
-  {
-    property: 'level',
-    header: 'Level',
-  },
-  {
-    property: 'keywords',
-    header: 'Keywords',
-  },
-]
+import { Box, Heading, Text } from 'grommet'
 
 const Skills = ({ skills }) => {
-  const renderItems = skills.map(skill => {
-    const name = skill.name
-    const level = skill.level
-    const keywords = skill.keywords.join()
+  const renderItems = skills.map(item => {
+    return (
+      <Box key="item.name">
+        <Heading>{item.name}</Heading>
+        <Heading>{item.level}</Heading>
 
-    return { name, level, keywords }
+        <Text>Highlights</Text>
+        <Box direction="column">
+          {item.keywords.map(keyword => (
+            <Text key={keyword}>{keyword}</Text>
+          ))}
+        </Box>
+      </Box>
+    )
   })
 
   return (
-    <Box>
-      <Box>
-        <Heading> Skills </Heading>
+    <Box margin="none" pad="none" border="all">
+      <Box
+        border={{
+          side: 'all',
+          color: 'red',
+          size: 'xsmall',
+          style: 'dashed',
+        }}
+        margin="none"
+        pad="none"
+      >
+        <Heading
+          level={3}
+          size="medium"
+          align="center"
+          alignSelf="center"
+          textAlign="center"
+          margin="none"
+          pad="none"
+        >
+          <Text>Skills</Text>
+        </Heading>
+        <Box direction="column">{renderItems}</Box>
       </Box>
-      <Grommet>
-        <Box>
-          <DataTable columns={columns} data={renderItems} />
-        </Box>
-      </Grommet>
     </Box>
   )
 }

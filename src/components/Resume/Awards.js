@@ -1,48 +1,50 @@
 import React from 'react'
 
-import { Grommet, Heading, DataTable, Text } from 'grommet'
-
-import { ResumeSection, SubSection } from './common'
-
-const columns = [
-  {
-    property: 'title',
-    header: <Text>Award</Text>,
-    primary: true,
-  },
-  {
-    property: 'date',
-    header: 'Date',
-  },
-  {
-    property: 'awarder',
-    header: 'Company',
-  },
-  {
-    property: 'summary',
-    header: 'Description',
-  },
-]
+import { Box, Paragraph, Heading, Text } from 'grommet'
 
 const Awards = ({ awards }) => {
-  const renderItems = awards
+  const renderItems = awards.map(item => {
+    return (
+      <Box key={item.title}>
+        <Heading>{item.title}</Heading>
+        <Heading>{item.awarder}</Heading>
+        <Text>{item.date}</Text>
+        <Paragraph>{item.summary}</Paragraph>
+      </Box>
+    )
+  })
 
   return (
-    <ResumeSection>
-      <SubSection>
-        <Heading> Awards </Heading>
-      </SubSection>
-      <Grommet>
-        <SubSection>
-          <DataTable columns={columns} data={renderItems} />
-        </SubSection>
-      </Grommet>
-    </ResumeSection>
+    <Box margin="none" pad="none" border="all">
+      <Box
+        border={{
+          side: 'all',
+          color: 'xsmall',
+          size: 'large',
+          style: 'dashed',
+        }}
+        margin="none"
+        pad="none"
+      >
+        <Heading
+          level={3}
+          size="medium"
+          align="center"
+          alignSelf="center"
+          textAlign="center"
+          margin="none"
+          pad="none"
+        >
+          <Text>Awards</Text>
+        </Heading>
+        <Box>{renderItems}</Box>
+      </Box>
+    </Box>
   )
 }
 
 Awards.defaultProps = {
-  language: [],
+  awards: [],
 }
 
 export default Awards

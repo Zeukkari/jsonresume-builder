@@ -33,6 +33,13 @@ const Placeholder = ({
   references,
   isValid,
 }) => {
+  console.log(awards)
+  console.log(languages)
+  console.log(interests)
+  console.log(references)
+  console.log(publications)
+  console.log(volunteer)
+
   if (!isValid) {
     return (
       <Box
@@ -93,6 +100,7 @@ const Placeholder = ({
         <Box>
           <Skills skills={skills} />
         </Box>
+
         <Box>
           <Interests interests={interests} />
         </Box>
@@ -108,9 +116,11 @@ const Placeholder = ({
         <Box>
           <Publications publications={publications} />
         </Box>
+
         <Box>
           <Languages languages={languages} />
         </Box>
+
         <Box>
           <References references={references} />
         </Box>

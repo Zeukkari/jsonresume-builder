@@ -60,7 +60,7 @@ const Education = ({ education }) => {
         border={{
           side: 'all',
           color: 'red',
-          size: 'large',
+          size: 'xsmall',
           style: 'dashed',
         }}
         margin="none"

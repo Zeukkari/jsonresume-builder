@@ -22,7 +22,7 @@ class FormFieldSelect extends Component {
         alignContent="between"
         margin={{ vertical: 'none' }}
         pad={{ horizontal: 'none', vertical: 'none' }}
-        background="light-3"
+        background="accent-2"
       >
         <FormField label="Theme" htmlFor="select" {...this.props}>
           <Select
@@ -49,7 +49,7 @@ class FormFieldSelect extends Component {
 
 const Header = props => (
   <Box
-    background="dark-2"
+    background="accent-3"
     direction="row"
     justify="between"
     pad={{ top: 'medium', horizontal: 'large' }}

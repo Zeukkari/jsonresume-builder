@@ -1,49 +1,6 @@
 import React from 'react'
 
-import {
-  Box,
-  TableHeader,
-  TableBody,
-  TableCell,
-  TableFooter,
-  TableRow,
-  Table,
-  Heading,
-  Text,
-  Paragraph,
-} from 'grommet'
-
-const columns = [
-  {
-    property: 'company',
-    header: <Text>Company</Text>,
-    primary: true,
-  },
-  {
-    property: 'website',
-    header: 'Website',
-  },
-  {
-    property: 'position',
-    header: 'Position',
-  },
-  {
-    property: 'startDate',
-    header: 'Start',
-  },
-  {
-    property: 'endDate',
-    header: 'End',
-  },
-  {
-    property: 'summary',
-    header: 'Summary',
-  },
-  {
-    property: 'highlights',
-    header: 'Highlights',
-  },
-]
+import { Box, Heading, Text, Paragraph } from 'grommet'
 
 const Work = ({ work }) => {
   const renderItems = work.map(item => {
@@ -69,7 +26,7 @@ const Work = ({ work }) => {
         border={{
           side: 'all',
           color: 'red',
-          size: 'large',
+          size: 'xsmall',
           style: 'dashed',
         }}
         margin="none"
