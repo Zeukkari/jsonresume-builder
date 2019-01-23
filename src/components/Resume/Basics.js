@@ -35,6 +35,14 @@ Picture.defaultProps = {
   picture: 'N/A',
 }
 
+const Profiles = ({ profiles }) => {
+  const profileButtons = profiles.map(profile => (
+    <Button label={profile.network} key={profile.network} primary />
+  ))
+
+  return <Box direction="row">{profileButtons}</Box>
+}
+
 export const Contact = ({ email, phone, location, website, profiles }) => {
   const locationString = `${location.address} ${location.postalCode} ${
     location.city
@@ -56,13 +64,7 @@ export const Contact = ({ email, phone, location, website, profiles }) => {
 
       <Text> Phone: {phone} </Text>
 
-      {/*
-      <Grommet>
-        <Box>
-          <DataTable columns={columns} data={profiles} />
-        </Box>
-      </Grommet>
-      */}
+      <Profiles profiles={profiles} />
     </Box>
   )
 }

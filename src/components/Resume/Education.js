@@ -1,8 +1,6 @@
 import React from 'react'
 
-import { Grommet, DataTable, Heading, Text } from 'grommet'
-
-import { ResumeSection, SubSection } from './common'
+import { Box, DataTable, Heading, Text } from 'grommet'
 
 const columns = [
   {
@@ -38,22 +36,50 @@ const columns = [
 
 const Education = ({ education }) => {
   const renderItems = education.map(item => {
-    const courses = item.courses.join()
-
-    return { ...item, courses: courses }
+    return (
+      <Box key={item.startDate}>
+        <Heading>{item.institution}</Heading>
+        <Heading>{item.area}</Heading>
+        <Box direction="row">
+          {item.startDate} - {item.endDate}
+        </Box>
+        <Text>{`gpa: ${item.gap}`}</Text>
+        <Text>{`gpa: ${item.studyType}`}</Text>
+        <Box direction="column">
+          {item.courses.map(course => (
+            <Text key={course}>{course}</Text>
+          ))}
+        </Box>
+      </Box>
+    )
   })
 
   return (
-    <ResumeSection>
-      <SubSection>
-        <Heading> Education </Heading>
-      </SubSection>
-      <Grommet>
-        <SubSection>
-          <DataTable columns={columns} data={renderItems} />
-        </SubSection>
-      </Grommet>
-    </ResumeSection>
+    <Box margin="none" pad="none" border="all">
+      <Box
+        border={{
+          side: 'all',
+          color: 'red',
+          size: 'large',
+          style: 'dashed',
+        }}
+        margin="none"
+        pad="none"
+      >
+        <Heading
+          level={3}
+          size="medium"
+          align="center"
+          alignSelf="center"
+          textAlign="center"
+          margin="none"
+          pad="none"
+        >
+          <Text>Education</Text>
+        </Heading>
+        <Box>{renderItems}</Box>
+      </Box>
+    </Box>
   )
 }
 

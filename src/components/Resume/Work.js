@@ -1,8 +1,17 @@
 import React from 'react'
 
-import { Grommet, DataTable, Heading, Text } from 'grommet'
-
-import { SubSection, ResumeSection } from './common'
+import {
+  Box,
+  TableHeader,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableRow,
+  Table,
+  Heading,
+  Text,
+  Paragraph,
+} from 'grommet'
 
 const columns = [
   {
@@ -38,21 +47,48 @@ const columns = [
 
 const Work = ({ work }) => {
   const renderItems = work.map(item => {
-    const highlights = item.highlights.join()
-    return { ...item, highlights }
+    return (
+      <Box key="item.company">
+        <Heading>{item.company}</Heading>
+        <Box direction="row">
+          {item.startDate} - {item.endDate}
+        </Box>
+        <Paragraph>{item.summary}</Paragraph>
+        <Text>Highlights</Text>
+        <Box direction="column">
+          {item.highlights.map(highlight => (
+            <Text key={highlight}>{highlight}</Text>
+          ))}
+        </Box>
+      </Box>
+    )
   })
-
   return (
-    <ResumeSection>
-      <SubSection>
-        <Heading> Work </Heading>
-      </SubSection>
-      <Grommet>
-        <SubSection>
-          <DataTable columns={columns} data={renderItems} />
-        </SubSection>
-      </Grommet>
-    </ResumeSection>
+    <Box margin="none" pad="none" border="all">
+      <Box
+        border={{
+          side: 'all',
+          color: 'red',
+          size: 'large',
+          style: 'dashed',
+        }}
+        margin="none"
+        pad="none"
+      >
+        <Heading
+          level={3}
+          size="medium"
+          align="center"
+          alignSelf="center"
+          textAlign="center"
+          margin="none"
+          pad="none"
+        >
+          <Text>Work</Text>
+        </Heading>
+        <Box>{renderItems}</Box>
+      </Box>
+    </Box>
   )
 }
 
