@@ -40,6 +40,10 @@ Run tests:
 
 ### DevOps pipeline
 
+Trello:
+
+https://trello.com/b/uWKRv9Tl/resume-builder
+
 GitHub:
 
 https://github.com/Zeukkari/jsonresume-builder
