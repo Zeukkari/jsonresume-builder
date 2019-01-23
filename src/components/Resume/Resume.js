@@ -15,7 +15,7 @@ import Skills from './Skills'
 import Volunteer from './Volunteer'
 import Work from './Work'
 
-const Resume = ({
+const Placeholder = ({
   work,
   basics,
   volunteer,
@@ -121,4 +121,4 @@ const Resume = ({
   )
 }
 
-export default Resume
+export default Placeholder

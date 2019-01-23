@@ -1,6 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+import { Box, Button } from 'grommet'
+
 import ace from 'brace'
 import 'brace/mode/json'
 import 'brace/theme/monokai'
@@ -24,6 +26,12 @@ import References from '../src/components/Resume/References'
 import Skills from '../src/components/Resume/Skills'
 import Volunteer from '../src/components/Resume/Volunteer'
 import Work from '../src/components/Resume/Work'
+import {
+  ResumeLayout,
+  TopLayout,
+  LeftColumnLayout,
+  RightColumnLayout,
+} from '../src/components/Resume/Layout'
 import defaultResume from '../src/util/defaultResume.json'
 
 storiesOf('Editor', module).add('Default', () => (
@@ -68,6 +76,94 @@ storiesOf('Resume', module)
       }}
     />
   ))
+
+storiesOf('Layout/Resume', module).add('Default', () => {
+  const Top = () => (
+    <Box align="center" pad="large">
+      <Button label="Header" onClick={() => {}} primary />
+    </Box>
+  )
+
+  const Left = () => (
+    <Box align="center" pad="large">
+      <Button label="Left column" onClick={() => {}} primary />
+    </Box>
+  )
+
+  const Right = () => (
+    <Box align="center" pad="large">
+      <Button label="Right column" onClick={() => {}} primary />
+    </Box>
+  )
+
+  return (
+    <ResumeLayout>
+      <Top />
+      <Left />
+      <Right />
+    </ResumeLayout>
+  )
+})
+
+storiesOf('Layout/Resume/Top', module).add('Default', () => {
+  const Left = () => (
+    <Box align="center" pad="large">
+      <Button label="Avatar" onClick={() => {}} primary />
+    </Box>
+  )
+
+  const Right = () => (
+    <Box align="center" pad="large">
+      <Button label="Name + label + summar" onClick={() => {}} primary />
+    </Box>
+  )
+
+  const Bottom = () => (
+    <Box align="center" pad="large">
+      <Button label="Contact + Profiles" onClick={() => {}} primary />
+    </Box>
+  )
+
+  return (
+    <TopLayout>
+      <Left />
+      <Right />
+      <Bottom />
+    </TopLayout>
+  )
+})
+
+storiesOf('Layout/Resume/LeftColumn', module).add('Default', () => {
+  return (
+    <LeftColumnLayout>
+      <Box align="center" pad="large" border="all">
+        <Button label="Work" onClick={() => {}} primary />
+      </Box>
+      <Box align="center" pad="large" border="all">
+        <Button label="Education" onClick={() => {}} primary />
+      </Box>
+    </LeftColumnLayout>
+  )
+})
+
+storiesOf('Layout/Resume/RightColumn', module).add('Default', () => {
+  return (
+    <RightColumnLayout>
+      <Box align="center" pad="large" border="all">
+        <Button label="Skills" onClick={() => {}} primary />
+      </Box>
+      <Box align="center" pad="large" border="all">
+        <Button label="Interests" onClick={() => {}} primary />
+      </Box>
+      <Box align="center" pad="large" border="all">
+        <Button label="Organizations" onClick={() => {}} primary />
+      </Box>
+      <Box align="center" pad="large" border="all">
+        <Button label="Awards" onClick={() => {}} primary />
+      </Box>
+    </RightColumnLayout>
+  )
+})
 
 storiesOf('Resume/Basics', module).add('Default', () => (
   <Basics {...defaultResume.basics} />
