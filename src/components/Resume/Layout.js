@@ -5,14 +5,15 @@ import { Grid, Box } from 'grommet'
 export const TopLayout = ({ children }) => {
   return (
     <Grid
+      fill
       areas={[
         { name: 'left', start: [0, 0], end: [1, 0] },
         { name: 'right', start: [1, 0], end: [2, 0] },
         { name: 'footer', start: [0, 1], end: [2, 1] },
       ]}
       columns={['small', 'large']}
-      rows={['auto', 'xsmall']}
-      gap="small"
+      rows={['auto', 'auto']}
+      gap="none"
     >
       <Box gridArea="left" background="accent-1" margin="auto">
         {children[0]}

@@ -2,8 +2,6 @@ import React from 'react'
 
 import { Box, Heading } from 'grommet'
 
-import { ResumeSection } from './common'
-
 import Awards from './Awards'
 import { Summary, Picture, Contact } from './Basics'
 import Education from './Education'

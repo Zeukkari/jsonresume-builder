@@ -33,6 +33,7 @@ export const Contact = ({ email, phone, location, website, profiles }) => {
       direction="row"
       background="neutral-2"
       pad={{ vertical: 'small', horizontal: 'large' }}
+      margin="none"
       border={{
         side: 'all',
         color: 'red',
@@ -75,15 +76,17 @@ Contact.defaultProps = {
 
 export const Summary = ({ name, label, summary }) => {
   return (
-    <Box flex wrap background={{ color: 'accent-1' }}>
-      <Heading level={1} size="small" margin="xsmall">
-        {name}
-      </Heading>
-      <Heading level={2} size="small" margin="xsmall">
-        {label}
-      </Heading>
-      <Paragraph size="small">{summary}</Paragraph>
-    </Box>
+    <ResumeSection>
+      <Box basis="auto" fill wrap={false} background={{ color: 'accent-1' }}>
+        <Heading level={1} size="small" margin="xsmall">
+          {name}
+        </Heading>
+        <Heading level={2} size="small" margin="xsmall">
+          {label}
+        </Heading>
+        <Paragraph size="small">{summary}</Paragraph>
+      </Box>
+    </ResumeSection>
   )
 }
 Summary.defaultProps = {
