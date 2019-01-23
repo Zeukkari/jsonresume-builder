@@ -2,27 +2,57 @@
 
 [![Build Status](https://api.travis-ci.org/jsonresume/resume-schema.svg)](http://travis-ci.org/jsonresume/resume-schema) [![codecov](https://codecov.io/gh/Zeukkari/jsonresume-builder/branch/master/graph/badge.svg?token=MAJMdmTjOA)](https://codecov.io/gh/Zeukkari/jsonresume-builder)
 
-React resume/CV builder app using [jsonresume](https://jsonresume.org/).
+Built with Grommet and JSON Resume.
 
-[https://resume-builder.surge.sh](https://resume-builder.surge.sh)
+## Development
 
-## Storybook
+Setup local development:
 
-[https://resume-builder.surge.sh/storybook](https://resume-builder.surge.sh/storybook)
+1. Clone the repo
 
+   ```
+   $ git clone https://github.com/Zeukkari/jsonresume-builder.git
+   ```
 
-## Setup
+2. Install dependencies
 
-To run this application, execute the following commands:
+   ```
+   $ npm install (or yarn install)
+   ```
 
-1. Install NPM modules
+Start webpack dev server:
 
     ```
-    $ npm install (or yarn install)
+    $ npm start
     ```
 
-2. Start the front-end dev server:
+Start Storybook:
 
     ```
-    $ npm run start
+    $ npm run storybook
     ```
+
+Run tests:
+
+    ```
+    $ npm test
+    ```
+
+### DevOps pipeline
+
+GitHub:
+
+https://github.com/Zeukkari/jsonresume-builder
+
+Travis:
+
+https://travis-ci.com/Zeukkari/jsonresume-builder/
+
+Codecov:
+
+https://codecov.io/gh/Zeukkari/jsonresume-builder/
+
+Surge:
+
+https://resume-builder.surge.sh/
+https://resume-builder.surge.sh/storybook/
