@@ -11,10 +11,10 @@ export const TopLayout = ({ children }) => {
         { name: 'footer', start: [0, 1], end: [2, 1] },
       ]}
       columns={['small', 'large']}
-      rows={['small', 'xsmall']}
+      rows={['auto', 'xsmall']}
       gap="small"
     >
-      <Box gridArea="left" background="red">
+      <Box gridArea="left" background="red" margin="auto">
         {children[0]}
       </Box>
 

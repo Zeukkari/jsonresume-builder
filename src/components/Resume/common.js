@@ -3,14 +3,7 @@ import React from 'react'
 import { Box } from 'grommet'
 
 export const ResumeSection = ({ children }) => (
-  <Box
-    align="center"
-    justify="center"
-    direction="column"
-    style={{ zIndex: '99' }}
-  >
-    {children}
-  </Box>
+  <Box align="center">{children}</Box>
 )
 
 export const SubSection = ({ children }) => (

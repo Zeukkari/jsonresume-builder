@@ -1,8 +1,14 @@
 import React from 'react'
 
-import { Grommet, DataTable, Heading, Paragraph, Text } from 'grommet'
-
-import { SubSection, ResumeSection } from './common'
+import {
+  Box,
+  Button,
+  Grommet,
+  DataTable,
+  Heading,
+  Paragraph,
+  Text,
+} from 'grommet'
 
 const columns = [
   {
@@ -20,84 +26,51 @@ const columns = [
   },
 ]
 
-const Basics = ({
-  name,
-  label,
-  picture,
-  email,
-  phone,
-  website,
-  summary,
-  location,
-  profiles,
-}) => {
+export const Picture = ({ picture }) => (
+  <Box align="center" justify="center">
+    <Button label={`KUVA ${picture}`} onClick={() => {}} primary />
+  </Box>
+)
+Picture.defaultProps = {
+  picture: 'N/A',
+}
+
+export const Contact = ({ email, phone, location, website, profiles }) => {
   const locationString = `${location.address} ${location.postalCode} ${
     location.city
   } ${location.countryCode} ${location.region}`
 
   return (
-    <ResumeSection>
-      <SubSection>
-        <Heading> Basics </Heading>
-      </SubSection>
+    <Box
+      align="center"
+      justify="between"
+      direction="row"
+      background="brand"
+      pad={{ vertical: 'small', horizontal: 'large' }}
+    >
+      <Text> email: {email} </Text>
 
-      <SubSection>
-        <SubSection>
-          <Paragraph alignSelf="stretch"> name: {name} </Paragraph>
-        </SubSection>
-      </SubSection>
-      <SubSection>
-        <SubSection>
-          <Paragraph alignSelf="stretch"> label: {label} </Paragraph>
-        </SubSection>
-      </SubSection>
-      <SubSection>
-        <SubSection>
-          <Paragraph alignSelf="stretch"> summary: {summary} </Paragraph>
-        </SubSection>
-      </SubSection>
-      <SubSection>
-        <SubSection alignSelf="stretch">
-          <Paragraph> email: {email} </Paragraph>
-        </SubSection>
-      </SubSection>
-      <SubSection>
-        <SubSection alignSelf="stretch">
-          <Paragraph> website: {website} </Paragraph>
-        </SubSection>
-      </SubSection>
-      <SubSection>
-        <SubSection alignSelf="stretch">
-          <Paragraph> Location: {locationString} </Paragraph>
-        </SubSection>
-      </SubSection>
-      <SubSection>
-        <SubSection alignSelf="stretch">
-          <Paragraph> Picture: {picture} </Paragraph>
-        </SubSection>
-      </SubSection>
-      <SubSection>
-        <SubSection alignSelf="stretch">
-          <Paragraph> Phone: {phone} </Paragraph>
-        </SubSection>
-      </SubSection>
+      <Text> website: {website} </Text>
+
+      <Text> Location: {locationString} </Text>
+
+      <Text> Phone: {phone} </Text>
+
+      {/*
       <Grommet>
-        <SubSection>
+        <Box>
           <DataTable columns={columns} data={profiles} />
-        </SubSection>
+        </Box>
       </Grommet>
-    </ResumeSection>
+      */}
+    </Box>
   )
 }
-
-Basics.defaultProps = {
-  name: 'N/A',
-  label: 'N/A',
-  summary: 'N/A',
+Contact.defaultProps = {
   email: 'N/A',
   phone: 'N/A',
   website: 'N/A',
-  picture: 'N/A',
+
   location: {
     address: 'No address',
     postalCode: '0',
@@ -114,4 +87,21 @@ Basics.defaultProps = {
   ],
 }
 
-export default Basics
+export const Summary = ({ name, label, summary }) => {
+  return (
+    <Box flex wrap background={{ color: 'light-2' }}>
+      <Heading level={1} size="small" margin="xsmall">
+        {name}
+      </Heading>
+      <Heading level={2} size="small" margin="xsmall">
+        {label}
+      </Heading>
+      <Paragraph size="small">{summary}</Paragraph>
+    </Box>
+  )
+}
+Summary.defaultProps = {
+  name: 'N/A',
+  label: 'N/A',
+  summary: 'N/A',
+}

@@ -1,11 +1,9 @@
 import React from 'react'
 
-import { Box, Heading } from 'grommet'
-
-import { ResumeSection } from './common'
+import { Button, Box, Heading } from 'grommet'
 
 import Awards from './Awards'
-import Basics from './Basics'
+import { Summary, Picture, Contact } from './Basics'
 import Education from './Education'
 import Interests from './Interests'
 import Languages from './Languages'
@@ -14,6 +12,13 @@ import References from './References'
 import Skills from './Skills'
 import Volunteer from './Volunteer'
 import Work from './Work'
+
+import {
+  ResumeLayout,
+  TopLayout,
+  LeftColumnLayout,
+  RightColumnLayout,
+} from './Layout'
 
 const Placeholder = ({
   work,
@@ -57,67 +62,60 @@ const Placeholder = ({
   } = basics
 
   return (
-    <Box
-      flex
-      fill
-      direction="column"
-      background="dark-4"
-      align="center"
-      justify="center"
-      overflow="scroll"
-      pad={{ horizontal: 'none', vertical: 'none' }}
-      margin={{ horizontal: 'none', vertical: 'none' }}
-      border={{
-        side: 'all',
-        color: 'border',
-        size: 'xsmall',
-        style: 'solid',
-      }}
-      elevation="medium"
-      style={{ zIndex: '-11' }}
-    >
-      <ResumeSection>
-        <Basics
-          name={name}
-          label={label}
-          picture={picture}
+    <ResumeLayout>
+      <TopLayout>
+        <Box align="center" justify="center">
+          <Picture picture={picture} />
+        </Box>
+
+        <Summary name={name} label={label} summary={summary} />
+
+        <Contact
           email={email}
           phone={phone}
           website={website}
-          summary={summary}
           location={location}
           profiles={profiles}
         />
-      </ResumeSection>
+      </TopLayout>
 
-      <ResumeSection>
-        <Work work={work} />
-      </ResumeSection>
-      <ResumeSection>
-        <Skills skills={skills} />
-      </ResumeSection>
-      <ResumeSection>
-        <Interests interests={interests} />
-      </ResumeSection>
-      <ResumeSection>
-        <Education education={education} />
-      </ResumeSection>
-      <ResumeSection>
-        <Languages languages={languages} />
-      </ResumeSection>
-      <ResumeSection>
-        <Awards awards={awards} />
-      </ResumeSection>
-      <ResumeSection>
-        <Publications publications={publications} />
-      </ResumeSection>
-      <ResumeSection>
-        <References references={references} />
-      </ResumeSection>
-      <ResumeSection>
-        <Volunteer volunteer={volunteer} />
-      </ResumeSection>
-    </Box>
+      <LeftColumnLayout>
+        <Box>
+          <Work work={work} />
+        </Box>
+
+        <Box>
+          <Education education={education} />
+        </Box>
+      </LeftColumnLayout>
+
+      <RightColumnLayout>
+        <Box>
+          <Skills skills={skills} />
+        </Box>
+        <Box>
+          <Interests interests={interests} />
+        </Box>
+
+        <Box>
+          <Awards awards={awards} />
+        </Box>
+
+        <Box>
+          <Volunteer volunteer={volunteer} />
+        </Box>
+
+        <Box>
+          <Publications publications={publications} />
+        </Box>
+        <Box>
+          <Languages languages={languages} />
+        </Box>
+        <Box>
+          <References references={references} />
+        </Box>
+      </RightColumnLayout>
+    </ResumeLayout>
   )
 }
 

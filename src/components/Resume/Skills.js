@@ -1,8 +1,6 @@
 import React from 'react'
 
-import { Grommet, DataTable, Heading, Text } from 'grommet'
-
-import { ResumeSection, SubSection } from './common'
+import { Box, Grommet, DataTable, Heading, Text } from 'grommet'
 
 const columns = [
   {
@@ -30,16 +28,16 @@ const Skills = ({ skills }) => {
   })
 
   return (
-    <ResumeSection>
-      <SubSection>
+    <Box>
+      <Box>
         <Heading> Skills </Heading>
-      </SubSection>
+      </Box>
       <Grommet>
-        <SubSection>
+        <Box>
           <DataTable columns={columns} data={renderItems} />
-        </SubSection>
+        </Box>
       </Grommet>
-    </ResumeSection>
+    </Box>
   )
 }
 
