@@ -4,9 +4,6 @@ import { storiesOf } from '@storybook/react'
 import { Grommet, Box, Button } from 'grommet'
 import { dark } from 'grommet/themes/dark'
 
-import 'brace/mode/json'
-import 'brace/theme/monokai'
-
 import { schema } from 'resume-schema'
 import Ajv from 'ajv'
 
