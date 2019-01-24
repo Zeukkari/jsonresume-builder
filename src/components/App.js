@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Box, Grommet, Layer } from 'grommet'
+import { Box, Grommet, Layer, Tabs, Tab } from 'grommet'
 
 import toPDF from './Printable/PrintButton'
 
@@ -73,60 +73,65 @@ class App extends Component {
               toggleMenu={this.toggleMenu}
               showMenu={this.state.showMenu}
             />
-
-            <Box
-              flex
-              fill
-              gridArea="preview"
-              pad={{ horizontal: 'none', vertical: 'none' }}
-              margin={{ horizontal: 'none', vertical: 'none' }}
-              ref={this.resumeRef}
-            >
-              <Layer position="hidden">
-                <AppContext.Consumer>
-                  {({ data, setData }) => (
-                    <EditorComponent
-                      schema={schema}
-                      validate={validate}
-                      data={data}
-                      setData={setData}
-                    />
-                  )}
-                </AppContext.Consumer>
-              </Layer>
-              <AppContext.Consumer>
-                {({ data }) => {
-                  const {
-                    basics,
-                    work,
-                    volunteer,
-                    education,
-                    awards,
-                    publications,
-                    skills,
-                    languages,
-                    interests,
-                    references,
-                    projects,
-                  } = data.value
-                  return (
-                    <Resume
-                      basics={basics}
-                      work={work}
-                      volunteer={volunteer}
-                      education={education}
-                      awards={awards}
-                      publications={publications}
-                      skills={skills}
-                      languages={languages}
-                      interests={interests}
-                      references={references}
-                      projects={projects}
-                    />
-                  )
-                }}
-              </AppContext.Consumer>
-            </Box>
+            <Tabs>
+              <Tab title="Editor">
+                <Box>
+                  <AppContext.Consumer>
+                    {({ data, setData }) => (
+                      <EditorComponent
+                        schema={schema}
+                        validate={validate}
+                        data={data}
+                        setData={setData}
+                      />
+                    )}
+                  </AppContext.Consumer>
+                </Box>
+              </Tab>
+              <Tab title="Preview">
+                <Box
+                  flex
+                  fill
+                  gridArea="preview"
+                  pad={{ horizontal: 'none', vertical: 'none' }}
+                  margin={{ horizontal: 'none', vertical: 'none' }}
+                  ref={this.resumeRef}
+                >
+                  <AppContext.Consumer>
+                    {({ data }) => {
+                      const {
+                        basics,
+                        work,
+                        volunteer,
+                        education,
+                        awards,
+                        publications,
+                        skills,
+                        languages,
+                        interests,
+                        references,
+                        projects,
+                      } = data.value
+                      return (
+                        <Resume
+                          basics={basics}
+                          work={work}
+                          volunteer={volunteer}
+                          education={education}
+                          awards={awards}
+                          publications={publications}
+                          skills={skills}
+                          languages={languages}
+                          interests={interests}
+                          references={references}
+                          projects={projects}
+                        />
+                      )
+                    }}
+                  </AppContext.Consumer>
+                </Box>
+              </Tab>
+            </Tabs>
           </Box>
         </Grommet>
       </AppContext.Provider>
