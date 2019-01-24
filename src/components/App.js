@@ -109,7 +109,6 @@ class App extends Component {
                     references,
                     projects,
                   } = data.value
-                  const isValid = data.isValid
                   return (
                     <Resume
                       basics={basics}
@@ -123,7 +122,6 @@ class App extends Component {
                       interests={interests}
                       references={references}
                       projects={projects}
-                      isValid={isValid}
                     />
                   )
                 }}
