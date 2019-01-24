@@ -2,7 +2,7 @@
 
 exports[`renders basics section contact info 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 eIRueg"
+  className="StyledBox-sc-13pk1d4-0 bMAySM"
 >
   <span
     className="StyledText-sc-1sadyjn-0 fWSbXS"
@@ -36,7 +36,7 @@ exports[`renders basics section contact info 1`] = `
     className="StyledBox-sc-13pk1d4-0 ffeAql"
   >
     <button
-      className="StyledButton-sc-323bzc-0 gNaNNI"
+      className="StyledButton-sc-323bzc-0 lhIxjU"
       onBlur={[Function]}
       onFocus={[Function]}
       type="button"
@@ -49,10 +49,10 @@ exports[`renders basics section contact info 1`] = `
 
 exports[`renders basics section picture 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 hhTAko"
+  className="StyledBox-sc-13pk1d4-0 dZFMXT"
 >
   <button
-    className="StyledButton-sc-323bzc-0 gNaNNI"
+    className="StyledButton-sc-323bzc-0 lhIxjU"
     onBlur={[Function]}
     onFocus={[Function]}
     type="button"
@@ -67,7 +67,7 @@ exports[`renders basics section summary 1`] = `
   className="StyledBox-sc-13pk1d4-0 lhNMsi"
 >
   <div
-    className="StyledBox-sc-13pk1d4-0 hfQuxz"
+    className="StyledBox-sc-13pk1d4-0 fhsCOz"
   >
     <h1
       className="StyledHeading-sc-1rdh4aw-0 jsirCP"

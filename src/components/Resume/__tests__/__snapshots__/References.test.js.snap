@@ -7,27 +7,23 @@ exports[`renders references section 1`] = `
   <div
     className="StyledBox-sc-13pk1d4-0 lhNMsi"
   >
-    <h3
-      className="StyledHeading-sc-1rdh4aw-0 gBSFmC"
+    <h1
+      className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
       size="medium"
     >
-      <span
-        className="StyledText-sc-1sadyjn-0 fWSbXS"
-      >
-        References
-      </span>
-    </h3>
+      References
+    </h1>
     <div
       className="StyledBox-sc-13pk1d4-0 IRSNj"
     >
       <div
         className="StyledBox-sc-13pk1d4-0 IRSNj"
       >
-        <span
-          className="StyledText-sc-1sadyjn-0 fWSbXS"
+        <h3
+          className="StyledHeading-sc-1rdh4aw-0 gRvHvF"
         >
           Jane Doe
-        </span>
+        </h3>
         <p
           className="StyledParagraph-tbetod-0 kxFtnQ"
         >

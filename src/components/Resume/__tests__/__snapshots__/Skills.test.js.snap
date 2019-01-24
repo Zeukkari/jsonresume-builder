@@ -7,39 +7,40 @@ exports[`renders skills section 1`] = `
   <div
     className="StyledBox-sc-13pk1d4-0 lhNMsi"
   >
-    <h3
-      className="StyledHeading-sc-1rdh4aw-0 gBSFmC"
+    <h1
+      className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
       size="medium"
     >
-      <span
-        className="StyledText-sc-1sadyjn-0 fWSbXS"
-      >
-        Skills
-      </span>
-    </h3>
+      Skills
+    </h1>
     <div
       className="StyledBox-sc-13pk1d4-0 IRSNj"
     >
       <div
         className="StyledBox-sc-13pk1d4-0 IRSNj"
       >
-        <h1
-          className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+        <h3
+          className="StyledHeading-sc-1rdh4aw-0 gRvHvF"
         >
           Web Development
-        </h1>
-        <h1
-          className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+        </h3>
+        <div
+          className="StyledBox-sc-13pk1d4-0 ffeAql"
         >
-          Master
-        </h1>
+          <span
+            className="StyledText-sc-1sadyjn-0 fWSbXS"
+          >
+            Master
+          </span>
+        </div>
         <span
-          className="StyledText-sc-1sadyjn-0 fWSbXS"
+          className="StyledText-sc-1sadyjn-0 dndifk"
+          size="medium"
         >
           Highlights
         </span>
         <div
-          className="StyledBox-sc-13pk1d4-0 IRSNj"
+          className="StyledBox-sc-13pk1d4-0 ffeAql"
         >
           <span
             className="StyledText-sc-1sadyjn-0 fWSbXS"

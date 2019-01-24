@@ -7,32 +7,29 @@ exports[`renders languages section 1`] = `
   <div
     className="StyledBox-sc-13pk1d4-0 lhNMsi"
   >
-    <h3
-      className="StyledHeading-sc-1rdh4aw-0 gBSFmC"
+    <h1
+      className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
       size="medium"
     >
-      <span
-        className="StyledText-sc-1sadyjn-0 fWSbXS"
-      >
-        Languages
-      </span>
-    </h3>
+      Languages
+    </h1>
     <div
       className="StyledBox-sc-13pk1d4-0 IRSNj"
     >
       <div
         className="StyledBox-sc-13pk1d4-0 IRSNj"
       >
-        <h1
-          className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+        <h3
+          className="StyledHeading-sc-1rdh4aw-0 gRvHvF"
         >
           English
-        </h1>
-        <h1
-          className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
+        </h3>
+        <span
+          className="StyledText-sc-1sadyjn-0 dndifk"
+          size="medium"
         >
           Native speaker
-        </h1>
+        </span>
       </div>
     </div>
   </div>
