@@ -15,12 +15,8 @@ exports[`renders header 1`] = `
     >
       <svg
         aria-label="Menu"
-        className="StyledIcon-ofa7kd-0 liAzLb"
-        height="24px"
-        role="img"
-        version="1.1"
+        className="StyledIcon-ofa7kd-0 dyGeKu"
         viewBox="0 0 24 24"
-        width="24px"
       >
         <path
           d="M2,19 L22,19 M2,5 L22,5 M2,12 L22,12"
@@ -49,12 +45,8 @@ exports[`renders header 1`] = `
     >
       <svg
         aria-label="Expand"
-        className="StyledIcon-ofa7kd-0 liAzLb"
-        height="24px"
-        role="img"
-        version="1.1"
+        className="StyledIcon-ofa7kd-0 dyGeKu"
         viewBox="0 0 24 24"
-        width="24px"
       >
         <path
           d="M10,14 L2,22 M1,15 L1,23 L9,23 M22,2 L14,10 M15,1 L23,1 L23,9"
@@ -72,12 +64,8 @@ exports[`renders header 1`] = `
     >
       <svg
         aria-label="Download"
-        className="StyledIcon-ofa7kd-0 liAzLb"
-        height="24px"
-        role="img"
-        version="1.1"
+        className="StyledIcon-ofa7kd-0 dyGeKu"
         viewBox="0 0 24 24"
-        width="24px"
       >
         <path
           d="M1,17 L1,23 L23,23 L23,17 M12,2 L12,19 M5,12 L12,19 L19,12"

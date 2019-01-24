@@ -4,11 +4,10 @@ import { storiesOf } from '@storybook/react'
 import { Grommet, Box, Button } from 'grommet'
 import { dark } from 'grommet/themes/dark'
 
-import ace from 'brace'
 import 'brace/mode/json'
 import 'brace/theme/monokai'
 
-import { schema, validate } from 'resume-schema'
+import { schema } from 'resume-schema'
 import Ajv from 'ajv'
 
 import { JsonEditor as Editor } from 'jsoneditor-react'
