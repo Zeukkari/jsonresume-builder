@@ -180,11 +180,7 @@ export default class Resume extends Component {
         </Box>
       )
     } else {
-      return (
-        <Box align="center" justify="center" height="large" width="large">
-          <Spinning />
-        </Box>
-      )
+      return <Loading />
     }
   }
 }
