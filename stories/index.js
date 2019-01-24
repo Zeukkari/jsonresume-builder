@@ -1,7 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Box, Button } from 'grommet'
+import { Grommet, Box, Button } from 'grommet'
+import { dark } from 'grommet/themes/dark'
 
 import ace from 'brace'
 import 'brace/mode/json'
@@ -14,7 +15,7 @@ import { JsonEditor as Editor } from 'jsoneditor-react'
 
 import Header from '../src/components/Header'
 import EditorComponent from '../src/components/Editor'
-import Resume from '../src/components/Resume'
+import Resume, { Loading } from '../src/components/Resume'
 
 import Awards from '../src/components/Resume/Awards'
 import Basics from '../src/components/Resume/Basics'
@@ -53,28 +54,30 @@ storiesOf('Header', module).add('Default', () => (
 
 storiesOf('Resume', module)
   .add('Default', () => (
-    <Resume
-      basics={defaultResume.basics}
-      work={defaultResume.work}
-      volunteer={defaultResume.volunteer}
-      education={defaultResume.education}
-      awards={defaultResume.awards}
-      publications={defaultResume.publications}
-      skills={defaultResume.skills}
-      languages={defaultResume.languages}
-      interests={defaultResume.interests}
-      references={defaultResume.references}
-      isValid={true}
-    />
+    <Grommet theme={dark} full>
+      <Resume
+        basics={defaultResume.basics}
+        work={defaultResume.work}
+        volunteer={defaultResume.volunteer}
+        education={defaultResume.education}
+        awards={defaultResume.awards}
+        publications={defaultResume.publications}
+        skills={defaultResume.skills}
+        languages={defaultResume.languages}
+        interests={defaultResume.interests}
+        references={defaultResume.references}
+      />
+    </Grommet>
   ))
   .add('Invalid', () => (
-    <Resume
-      visible={true}
-      onClickOutside={() => alert('foo')}
-      data={{
-        isValid: false,
-      }}
-    />
+    <Grommet theme={dark} full>
+      <Resume state="" />
+    </Grommet>
+  ))
+  .add('Loading', () => (
+    <Grommet theme={dark} full>
+      <Loading />
+    </Grommet>
   ))
 
 storiesOf('Layout/Resume', module).add('Default', () => {

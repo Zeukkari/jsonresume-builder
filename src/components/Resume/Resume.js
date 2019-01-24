@@ -4,6 +4,8 @@ import { validate } from 'resume-schema'
 
 import { Box, Heading } from 'grommet'
 
+import { Spinning } from 'grommet-controls'
+
 import Awards from './Awards'
 import { Summary, Picture, Contact } from './Basics'
 import Education from './Education'
@@ -22,10 +24,16 @@ import {
   RightColumnLayout,
 } from './Layout'
 
+export const Loading = () => (
+  <Box margin="auto" align="center" justify="center" height="full" width="full">
+    <Spinning />
+  </Box>
+)
+
 export default class Resume extends Component {
   constructor(props) {
     super(props)
-    this.state = { isValid: false }
+    this.state = { isValid: false, error: undefined }
   }
 
   componentDidMount() {
@@ -153,7 +161,7 @@ export default class Resume extends Component {
           </RightColumnLayout>
         </ResumeLayout>
       )
-    } else {
+    } else if (this.state.error) {
       const errorMessage =
         this.state.error && this.state.error[0].message
           ? this.state.error[0].message
@@ -169,6 +177,12 @@ export default class Resume extends Component {
           border={{ color: 'status-error', size: 'large' }}
         >
           <Heading>`Error: ${errorMessage}`</Heading>
+        </Box>
+      )
+    } else {
+      return (
+        <Box align="center" justify="center" height="large" width="large">
+          <Spinning />
         </Box>
       )
     }

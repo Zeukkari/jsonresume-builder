@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Box, Grommet, Layer, Tabs, Tab } from 'grommet'
+import { Box, Grommet, Tabs, Tab } from 'grommet'
 
 import toPDF from './Printable/PrintButton'
 

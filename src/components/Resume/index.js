@@ -1,3 +1,4 @@
-import Resume from './Resume'
+import Resume, { Loading } from './Resume'
 
+export { Loading }
 export default Resume
