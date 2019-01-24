@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box } from 'grommet'
+import { Box, Heading } from 'grommet'
 
 export const ResumeSection = ({ children }) => (
   <Box
@@ -15,4 +15,10 @@ export const ResumeSection = ({ children }) => (
   >
     {children}
   </Box>
+)
+
+export const SectionTitle = ({ children }) => (
+  <Heading level={1} size="medium" align="left">
+    {children}
+  </Heading>
 )

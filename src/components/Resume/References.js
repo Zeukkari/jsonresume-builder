@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Heading, Text, Paragraph } from 'grommet'
 
-import { ResumeSection } from './common'
+import { ResumeSection, SectionTitle } from './common'
 
 const References = ({ references }) => {
   const renderItems = references.map(item => {
@@ -17,17 +17,7 @@ const References = ({ references }) => {
   return (
     <Box margin="none" pad="none" border="all">
       <ResumeSection>
-        <Heading
-          level={3}
-          size="medium"
-          align="center"
-          alignSelf="center"
-          textAlign="center"
-          margin="none"
-          pad="none"
-        >
-          <Text>References</Text>
-        </Heading>
+        <SectionTitle>References</SectionTitle>
         <Box>{renderItems}</Box>
       </ResumeSection>
     </Box>

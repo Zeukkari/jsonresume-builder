@@ -2,11 +2,11 @@ import React from 'react'
 
 import { Box, Button, Heading, Paragraph, Text } from 'grommet'
 
-import { ResumeSection } from './common'
+import { ResumeSection, SectionTitle } from './common'
 
 export const Picture = ({ picture }) => (
-  <Box align="center" justify="center" background="neutral-4">
-    <Button label={`${picture}`} primary />
+  <Box align="center" justify="center">
+    <Button label={`${picture}`} />
   </Box>
 )
 Picture.defaultProps = {
@@ -15,7 +15,7 @@ Picture.defaultProps = {
 
 const Profiles = ({ profiles }) => {
   const profileButtons = profiles.map(profile => (
-    <Button label={profile.network} key={profile.network} primary />
+    <Button label={profile.network} key={profile.network} />
   ))
 
   return <Box direction="row">{profileButtons}</Box>
@@ -31,7 +31,6 @@ export const Contact = ({ email, phone, location, website, profiles }) => {
       align="center"
       justify="between"
       direction="row"
-      background="neutral-2"
       pad={{ vertical: 'small', horizontal: 'large' }}
       margin="none"
       border={{
@@ -77,7 +76,7 @@ Contact.defaultProps = {
 export const Summary = ({ name, label, summary }) => {
   return (
     <ResumeSection>
-      <Box basis="auto" fill wrap={false} background={{ color: 'accent-1' }}>
+      <Box basis="auto" fill wrap={false}>
         <Heading level={1} size="small" margin="xsmall">
           {name}
         </Heading>

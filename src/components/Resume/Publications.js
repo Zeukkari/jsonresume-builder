@@ -2,14 +2,16 @@ import React from 'react'
 
 import { Box, Paragraph, Heading, Text } from 'grommet'
 
-import { ResumeSection } from './common'
+import { ResumeSection, SectionTitle } from './common'
 
 const Publications = ({ publications }) => {
   const renderItems = publications.map(item => {
     return (
       <Box key="item.company">
-        <Heading>{item.name}</Heading>
-        <Heading>{item.publisher}</Heading>
+        <Heading level={3}>{item.name}</Heading>
+        <Text weight="bold" size="medium">
+          {item.publisher}
+        </Text>
         <Text>{item.releaseDate}</Text>
         <Paragraph>{item.summary}</Paragraph>
       </Box>
@@ -18,17 +20,7 @@ const Publications = ({ publications }) => {
   return (
     <Box margin="none" pad="none" border="all">
       <ResumeSection>
-        <Heading
-          level={3}
-          size="medium"
-          align="center"
-          alignSelf="center"
-          textAlign="center"
-          margin="none"
-          pad="none"
-        >
-          <Text>Work</Text>
-        </Heading>
+        <SectionTitle>Publications</SectionTitle>
         <Box>{renderItems}</Box>
       </ResumeSection>
     </Box>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Box, Grid, Grommet } from 'grommet'
+import { Box, Grid, Grommet, Layer } from 'grommet'
 
 import toPDF from './Printable/PrintButton'
 
@@ -9,15 +9,9 @@ import Header from './Header'
 import EditorComponent from './Editor'
 import defaultResume from '../util/defaultResume.json'
 
-const theme = {
-  global: {
-    font: {
-      family: 'Roboto',
-      size: '14px',
-      height: '20px',
-    },
-  },
-}
+import customTheme from '../themes/tailored'
+
+import { dark } from 'grommet/themes/dark'
 
 const defaultValue = {
   isValid: true,
@@ -65,9 +59,11 @@ class App extends Component {
     const { setData } = this
     const data = this.state.data
 
+    console.log('customTheme: ', customTheme)
+
     return (
       <AppContext.Provider value={{ data, setData }}>
-        <Grommet theme={theme} full>
+        <Grommet theme={dark} full>
           <Box flex direction="column">
             <Header
               flex
@@ -77,17 +73,16 @@ class App extends Component {
               toggleMenu={this.toggleMenu}
               showMenu={this.state.showMenu}
             />
-            <Grid
+
+            <Box
               flex
               fill
-              rows={['flex']}
-              columns={['1/2', '1/2']}
-              areas={[
-                { name: 'editor', start: [0, 0], end: [1, 0] },
-                { name: 'preview', start: [1, 0], end: [2, 0] },
-              ]}
+              gridArea="preview"
+              pad={{ horizontal: 'none', vertical: 'none' }}
+              margin={{ horizontal: 'none', vertical: 'none' }}
+              ref={this.resumeRef}
             >
-              <Box gridArea="editor" direction="row" flex fill>
+              <Layer position="hidden">
                 <AppContext.Consumer>
                   {({ data, setData }) => (
                     <EditorComponent
@@ -98,51 +93,42 @@ class App extends Component {
                     />
                   )}
                 </AppContext.Consumer>
-              </Box>
-              <Box
-                flex
-                fill
-                gridArea="preview"
-                pad={{ horizontal: 'none', vertical: 'none' }}
-                margin={{ horizontal: 'none', vertical: 'none' }}
-                ref={this.resumeRef}
-              >
-                <AppContext.Consumer>
-                  {({ data }) => {
-                    const {
-                      basics,
-                      work,
-                      volunteer,
-                      education,
-                      awards,
-                      publications,
-                      skills,
-                      languages,
-                      interests,
-                      references,
-                      projects,
-                    } = data.value
-                    const isValid = data.isValid
-                    return (
-                      <Resume
-                        basics={basics}
-                        work={work}
-                        volunteer={volunteer}
-                        education={education}
-                        awards={awards}
-                        publications={publications}
-                        skills={skills}
-                        languages={languages}
-                        interests={interests}
-                        references={references}
-                        projects={projects}
-                        isValid={isValid}
-                      />
-                    )
-                  }}
-                </AppContext.Consumer>
-              </Box>
-            </Grid>
+              </Layer>
+              <AppContext.Consumer>
+                {({ data }) => {
+                  const {
+                    basics,
+                    work,
+                    volunteer,
+                    education,
+                    awards,
+                    publications,
+                    skills,
+                    languages,
+                    interests,
+                    references,
+                    projects,
+                  } = data.value
+                  const isValid = data.isValid
+                  return (
+                    <Resume
+                      basics={basics}
+                      work={work}
+                      volunteer={volunteer}
+                      education={education}
+                      awards={awards}
+                      publications={publications}
+                      skills={skills}
+                      languages={languages}
+                      interests={interests}
+                      references={references}
+                      projects={projects}
+                      isValid={isValid}
+                    />
+                  )
+                }}
+              </AppContext.Consumer>
+            </Box>
           </Box>
         </Grommet>
       </AppContext.Provider>

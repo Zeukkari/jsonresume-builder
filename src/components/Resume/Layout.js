@@ -15,17 +15,13 @@ export const TopLayout = ({ children }) => {
       rows={['auto', 'auto']}
       gap="none"
     >
-      <Box gridArea="left" background="accent-1" margin="auto">
+      <Box gridArea="left" margin="auto">
         {children[0]}
       </Box>
 
-      <Box gridArea="right" background="accent-2">
-        {children[1]}
-      </Box>
+      <Box gridArea="right">{children[1]}</Box>
 
-      <Box gridArea="footer" background="accent-3">
-        {children[2]}
-      </Box>
+      <Box gridArea="footer">{children[2]}</Box>
     </Grid>
   )
 }
@@ -54,17 +50,11 @@ export const ResumeLayout = ({ children }) => {
       rows={['small', 'auto']}
       gap="small"
     >
-      <Box gridArea="header" background="neutral-3">
-        {children[0]}
-      </Box>
+      <Box gridArea="header">{children[0]}</Box>
 
-      <Box gridArea="left" background="accent-3">
-        {children[1]}
-      </Box>
+      <Box gridArea="left">{children[1]}</Box>
 
-      <Box gridArea="right" background="accent-4">
-        {children[2]}
-      </Box>
+      <Box gridArea="right">{children[2]}</Box>
     </Grid>
   )
 }

@@ -2,17 +2,20 @@ import React from 'react'
 
 import { Box, Heading, Text } from 'grommet'
 
-import { ResumeSection } from './common'
+import { ResumeSection, SectionTitle } from './common'
 
 const Skills = ({ skills }) => {
   const renderItems = skills.map(item => {
     return (
       <Box key="item.name">
-        <Heading>{item.name}</Heading>
-        <Heading>{item.level}</Heading>
-
-        <Text>Highlights</Text>
-        <Box direction="column">
+        <Heading level={3}>{item.name}</Heading>
+        <Box direction="row">
+          <Text>{item.level}</Text>
+        </Box>
+        <Text weight="bold" size="medium">
+          Highlights
+        </Text>
+        <Box direction="row">
           {item.keywords.map(keyword => (
             <Text key={keyword}>{keyword}</Text>
           ))}
@@ -24,17 +27,7 @@ const Skills = ({ skills }) => {
   return (
     <Box margin="none" pad="none" border="all">
       <ResumeSection>
-        <Heading
-          level={3}
-          size="medium"
-          align="center"
-          alignSelf="center"
-          textAlign="center"
-          margin="none"
-          pad="none"
-        >
-          <Text>Skills</Text>
-        </Heading>
+        <SectionTitle>Skills</SectionTitle>
         <Box direction="column">{renderItems}</Box>
       </ResumeSection>
     </Box>

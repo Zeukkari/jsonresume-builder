@@ -2,19 +2,19 @@ import React from 'react'
 
 import { Box, Heading, Text } from 'grommet'
 
-import { ResumeSection } from './common'
+import { ResumeSection, SectionTitle } from './common'
 
 const Education = ({ education }) => {
   const renderItems = education.map(item => {
     return (
       <Box key={item.startDate}>
-        <Heading>{item.institution}</Heading>
-        <Heading>{item.area}</Heading>
+        <Heading level={3}>{item.institution}</Heading>
+        <Heading level={4}>{item.area}</Heading>
         <Box direction="row">
           {item.startDate} - {item.endDate}
         </Box>
-        <Text>{`gpa: ${item.gap}`}</Text>
-        <Text>{`gpa: ${item.studyType}`}</Text>
+        <Text weight="bold" size="medium">{`gpa: ${item.gap}`}</Text>
+        <Text weight="bold" size="medium">{`gpa: ${item.studyType}`}</Text>
         <Box direction="column">
           {item.courses.map(course => (
             <Text key={course}>{course}</Text>
@@ -27,17 +27,7 @@ const Education = ({ education }) => {
   return (
     <Box margin="none" pad="none" border="all">
       <ResumeSection>
-        <Heading
-          level={3}
-          size="medium"
-          align="center"
-          alignSelf="center"
-          textAlign="center"
-          margin="none"
-          pad="none"
-        >
-          <Text>Education</Text>
-        </Heading>
+        <SectionTitle>Education</SectionTitle>
         <Box>{renderItems}</Box>
       </ResumeSection>
     </Box>
