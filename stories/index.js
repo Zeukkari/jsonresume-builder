@@ -1,10 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-
+import { Resume } from '@resumebuilder/react-resume'
 import { Grommet, Box, Button } from 'grommet'
 import { dark } from 'grommet/themes/dark'
 
-import { Resume } from '@resumebuilder/react-resume'
+
 
 import { schema } from 'resume-schema'
 import Ajv from 'ajv'
