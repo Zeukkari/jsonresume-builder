@@ -2,16 +2,21 @@ import React, { Component } from 'react'
 
 import { Box, Grommet, Tabs, Tab } from 'grommet'
 
-import toPDF from './Printable/PrintButton'
+import resumeSchema from 'resume-schema'
 
-import Resume from './Resume'
+import Resume from '@resumebuilder/react-resume'
+
 import Header from './Header'
 import EditorComponent from './Editor'
+import toPDF from './Printable/PrintButton'
+
 import defaultResume from '../util/defaultResume.json'
 
 import customTheme from '../themes/tailored'
 
 import { dark } from 'grommet/themes/dark'
+
+const { validate, schema } = resumeSchema
 
 const defaultValue = {
   isValid: true,
@@ -54,8 +59,6 @@ class App extends Component {
   }
 
   render() {
-    const { validate, schema } = this.props
-
     const { setData } = this
     const data = this.state.data
 

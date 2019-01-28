@@ -4,6 +4,8 @@ import { storiesOf } from '@storybook/react'
 import { Grommet, Box, Button } from 'grommet'
 import { dark } from 'grommet/themes/dark'
 
+import { Resume } from '@resumebuilder/react-resume'
+
 import { schema } from 'resume-schema'
 import Ajv from 'ajv'
 
@@ -11,8 +13,8 @@ import { JsonEditor as Editor } from 'jsoneditor-react'
 
 import Header from '../src/components/Header'
 import EditorComponent from '../src/components/Editor'
-import Resume, { Loading } from '../src/components/Resume'
 
+/*
 import Awards from '../src/components/Resume/Awards'
 import Basics from '../src/components/Resume/Basics'
 import Education from '../src/components/Resume/Education'
@@ -29,6 +31,7 @@ import {
   LeftColumnLayout,
   RightColumnLayout,
 } from '../src/components/Resume/Layout'
+*/
 import defaultResume from '../src/util/defaultResume.json'
 
 storiesOf('Editor', module).add('Default', () => (
@@ -48,23 +51,23 @@ storiesOf('Header', module).add('Default', () => (
   />
 ))
 
-storiesOf('Resume', module)
-  .add('Default', () => (
-    <Grommet theme={dark} full>
-      <Resume
-        basics={defaultResume.basics}
-        work={defaultResume.work}
-        volunteer={defaultResume.volunteer}
-        education={defaultResume.education}
-        awards={defaultResume.awards}
-        publications={defaultResume.publications}
-        skills={defaultResume.skills}
-        languages={defaultResume.languages}
-        interests={defaultResume.interests}
-        references={defaultResume.references}
-      />
-    </Grommet>
-  ))
+storiesOf('Resume', module).add('Default', () => (
+  <Grommet theme={dark} full>
+    <Resume
+      basics={defaultResume.basics}
+      work={defaultResume.work}
+      volunteer={defaultResume.volunteer}
+      education={defaultResume.education}
+      awards={defaultResume.awards}
+      publications={defaultResume.publications}
+      skills={defaultResume.skills}
+      languages={defaultResume.languages}
+      interests={defaultResume.interests}
+      references={defaultResume.references}
+    />
+  </Grommet>
+))
+/*
   .add('Invalid', () => (
     <Grommet theme={dark} full>
       <Resume state="" />
@@ -203,3 +206,5 @@ storiesOf('Resume/Volunteer', module).add('Default', () => (
 storiesOf('Resume/Work', module).add('Default', () => (
   <Work work={defaultResume.work} />
 ))
+
+*/
