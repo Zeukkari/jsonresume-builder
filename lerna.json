@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "packages/react-resume",
+    "packages/resume-schema",
+    "packages/jsonresume-builder"
+  ],
+  "version": "independent"
+}

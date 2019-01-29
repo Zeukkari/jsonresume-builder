@@ -4,7 +4,26 @@ import { Box, Grommet, Tabs, Tab } from 'grommet'
 
 import resumeSchema from 'resume-schema'
 
-import { Resume } from '@resumebuilder/react-resume'
+import {
+  Resume,
+  Loading,
+  Awards,
+  Picture,
+  Summary,
+  Contact,
+  Education,
+  Interests,
+  Languages,
+  Publications,
+  References,
+  Skills,
+  Volunteer,
+  Work,
+  ResumeLayout,
+  TopLayout,
+  LeftColumnLayout,
+  RightColumnLayout,
+} from '@resumebuilder/react-resume'
 
 import Header from './Header'
 import EditorComponent from './Editor'

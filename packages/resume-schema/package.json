@@ -1,0 +1,34 @@
+{
+  "name": "resume-schema",
+  "private": true,
+  "version": "0.0.16",
+  "description": "JSON Resume Schema",
+  "main": "validator.js",
+  "scripts": {
+    "test": "node ./test/index.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsonresume/resume-schema.git"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/jsonresume/resume-schema/issues"
+  },
+  "files": [
+    "resume.json",
+    "schema.json",
+    "validator.js"
+  ],
+  "dependencies": {
+    "z-schema": "~3.24.2"
+  },
+  "devDependencies": {
+    "promise": "^8.0.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}

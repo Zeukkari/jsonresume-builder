@@ -3,14 +3,14 @@ node_js:
   - 'lts/*'
 branches:
   only:
-  - master
+    - master
 cache:
   directories:
-  - node_modules
+    - node_modules
 before_install:
-- npm update
+  - npm update
 install:
-- npm install
+  - npm install
 script:
   - npm run clean
   - npm run build
