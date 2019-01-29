@@ -10,10 +10,10 @@
   "license": "MIT",
   "scripts": {
     "install": "lerna link --force-local && lerna bootstrap --hoist",
-    "build": "lerna run --scope @resumebuilder/* build",
-    "clean": "lerna run clean",
-    "test": "lerna run test",
-    "test:coverage": "lerna run test:coverage"
+    "build": "lerna run --stream build",
+    "clean": "lerna run --stream clean",
+    "test": "lerna run --stream test",
+    "test:coverage": "lerna run --stream test:coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
