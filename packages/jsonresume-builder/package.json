@@ -1,7 +1,6 @@
 {
-  "name": "@resumebuilder/jsonresume-builder",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@resumebuilder/live-editor",
+  "version": "0.9.2",
   "author": {
     "name": "Timo Aho",
     "email": "timo.aho@pm.me"
@@ -11,7 +10,8 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "npm run build:storybook && npm run build:prod",
+    "build:prod": "webpack --mode production",
     "build:storybook": "cross-env NODE_ENV=development build-storybook -c .storybook -o dist/storybook",
     "check": "npm run lint && npm test",
     "clean": "rimraf dist",

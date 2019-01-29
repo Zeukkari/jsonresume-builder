@@ -13,7 +13,8 @@
   "module": "./dist/react-resume.esm.js",
   "browser": "./dist/react-resume.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "npm run build:storybook && npm run build:components",
+    "build:components": "rollup -c",
     "build:storybook": "build-storybook -c .storybook -o dist/storybook",
     "check": "npm run lint && npm test",
     "clean": "rimraf dist",

@@ -14,8 +14,6 @@ install:
 script:
   - npm run clean
   - npm run build
-  - npm run build:storybook
-  - npm test
   - npm run test:coverage
 on:
   branch: master
