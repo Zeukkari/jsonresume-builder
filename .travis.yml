@@ -23,4 +23,4 @@ deploy:
   provider: surge
   skip_cleanup: true
   domain: https://resume-builder.surge.sh
-  project: ./dist/
+  project: ./packages/jsonresume-builder/dist/
