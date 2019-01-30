@@ -18,9 +18,11 @@
     "build:storybook": "build-storybook -c .storybook -o dist/storybook",
     "check": "npm run lint && npm test",
     "clean": "rimraf dist",
-    "dev": "rollup -c -w",
     "lint": "eslint src",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "lint:fix": "eslint --fix src",
+    "start": "npm run start:dev",
+    "start:dev": "rollup -c -w",
+    "start:storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest src",
     "test:coverage": "jest src --coverage && codecov"
   },

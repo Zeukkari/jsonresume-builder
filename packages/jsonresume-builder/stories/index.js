@@ -1,20 +1,12 @@
 import React from 'react'
 import ReadDOM from 'react-dom'
 import { storiesOf } from '@storybook/react'
-// import ReactResume from '@resumebuilder/react-resume/lib/react-resume'
 
 import { Grommet, Box, Button } from 'grommet'
-
-import { Spinning } from 'grommet-controls'
-
 import { dark } from 'grommet/themes/dark'
-
-// console.log('ReactResume: ', ReactResume)
-console.log('darK: ', dark)
 
 import { schema } from 'resume-schema'
 import Ajv from 'ajv'
-
 import { JsonEditor as Editor } from 'jsoneditor-react'
 
 import Header from '../src/components/Header'
@@ -41,24 +33,6 @@ import {
   RightColumnLayout,
 } from '@resumebuilder/react-resume'
 
-/*
-import Awards from '../src/components/Resume/Awards'
-import Basics from '../src/components/Resume/Basics'
-import Education from '../src/components/Resume/Education'
-import Interests from '../src/components/Resume/Interests'
-import Languages from '../src/components/Resume/Languages'
-import Publications from '../src/components/Resume/Publications'
-import References from '../src/components/Resume/References'
-import Skills from '../src/components/Resume/Skills'
-import Volunteer from '../src/components/Resume/Volunteer'
-import Work from '../src/components/Resume/Work'
-import {
-  ResumeLayout,
-  TopLayout,
-  LeftColumnLayout,
-  RightColumnLayout,
-} from '../src/components/Resume/Layout'
-*/
 import defaultResume from '../src/util/defaultResume.json'
 
 storiesOf('Editor', module).add('Default', () => (
@@ -211,8 +185,26 @@ storiesOf('Layout/Resume/RightColumn', module).add('Default', () => {
   )
 })
 
-storiesOf('Resume/Basics', module).add('Default', () => (
-  <Basics {...defaultResume.basics} />
+storiesOf('Resume/Basics section', module).add('Default', () => (
+  <TopLayout>
+    <Box align="center" justify="center">
+      <Picture picture={defaultResume.basics.picture} />
+    </Box>
+
+    <Summary
+      name={defaultResume.basics.name}
+      label={defaultResume.basics.label}
+      summary={defaultResume.basics.summary}
+    />
+
+    <Contact
+      email={defaultResume.basics.email}
+      phone={defaultResume.basics.phone}
+      website={defaultResume.basics.website}
+      location={defaultResume.basics.location}
+      profiles={defaultResume.basics.profiles}
+    />
+  </TopLayout>
 ))
 
 storiesOf('Resume/Awards', module).add('Default', () => (

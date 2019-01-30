@@ -9,7 +9,10 @@
   "repository": "git@github.com:Zeukkari/jsonresume-builder.git",
   "license": "MIT",
   "scripts": {
+    "check": "lerna run --stream check",
     "install": "lerna link --force-local && lerna bootstrap --hoist",
+    "lint": "lerna run --stream lint",
+    "lint:fix": "lerna run --stream lint:fix",
     "build": "lerna run --stream build",
     "clean": "lerna run --stream clean",
     "test": "lerna run --stream test",
@@ -22,7 +25,15 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
-    "lerna": "^3.10.7"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-parallel": "^0.3.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.12.4",
+    "lerna": "^3.10.7",
+    "pre-commit": "^1.2.2"
   },
   "dependencies": {
     "@babel/runtime": "^7.3.1"
