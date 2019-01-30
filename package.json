@@ -9,13 +9,14 @@
   "repository": "git@github.com:Zeukkari/jsonresume-builder.git",
   "license": "MIT",
   "scripts": {
-    "check": "lerna run --stream check",
     "bootstrap": "lerna bootstrap --hoist",
+    "build": "lerna run --stream build",
+    "check": "lerna run --stream check",
+    "clean": "lerna run --stream clean",
     "install": "lerna link --force-local && npm run bootstrap",
     "lint": "lerna run --stream lint",
     "lint:fix": "lerna run --stream lint:fix",
-    "build": "lerna run --stream build",
-    "clean": "lerna run --stream clean",
+    "storybook": "lerna exec --stream --scope @resumebuilder/live-editor -- npm run start:storybook",
     "test": "lerna run --stream test",
     "test:coverage": "lerna run --stream test:coverage"
   },
