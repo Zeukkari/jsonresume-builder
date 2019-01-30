@@ -10,7 +10,8 @@
   "license": "MIT",
   "scripts": {
     "check": "lerna run --stream check",
-    "install": "lerna link --force-local && lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap --hoist",
+    "install": "lerna link --force-local",
     "lint": "lerna run --stream lint",
     "lint:fix": "lerna run --stream lint:fix",
     "build": "lerna run --stream build",
