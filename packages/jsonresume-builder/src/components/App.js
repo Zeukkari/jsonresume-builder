@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 
 import { Box, Grommet, Tabs, Tab } from 'grommet'
-
-import resumeSchema from 'resume-schema'
+import { dark } from 'grommet/themes/dark'
 
 import {
   Resume,
@@ -13,12 +12,6 @@ import EditorComponent from './Editor'
 import toPDF from './Printable/PrintButton'
 
 import defaultResume from '../util/defaultResume.json'
-
-import customTheme from '../themes/tailored'
-
-import { dark } from 'grommet/themes/dark'
-
-const { validate, schema } = resumeSchema
 
 const defaultValue = {
   isValid: true,
@@ -64,8 +57,6 @@ class App extends Component {
     const { setData } = this
     const data = this.state.data
 
-    console.log('customTheme: ', customTheme)
-
     return (
       <AppContext.Provider value={{ data, setData }}>
         <Grommet theme={dark} full>
@@ -84,8 +75,6 @@ class App extends Component {
                   <AppContext.Consumer>
                     {({ data, setData }) => (
                       <EditorComponent
-                        schema={schema}
-                        validate={validate}
                         data={data}
                         setData={setData}
                       />
