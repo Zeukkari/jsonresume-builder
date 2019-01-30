@@ -5,7 +5,7 @@
     "name": "Timo Aho",
     "email": "timo.aho@pm.me"
   },
-  "description": "JSON Resume Builder",
+  "description": "Live editor for JSON Resume based React component.",
   "repository": "git@github.com:Zeukkari/jsonresume-builder.git",
   "license": "MIT",
   "main": "index.js",

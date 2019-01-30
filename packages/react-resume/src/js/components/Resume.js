@@ -21,7 +21,7 @@ import {
   RightColumnLayout,
 } from './Layout'
 
-const Loading = props => (
+const Loading = () => (
   <Box margin="auto" align="center" justify="center" height="full" width="full">
     Spinning loader
   </Box>
