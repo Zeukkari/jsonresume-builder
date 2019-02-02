@@ -28,11 +28,19 @@ export const TopLayout = ({ children }) => {
 }
 
 export const LeftColumnLayout = ({ children }) => {
-  return <Box direction="column">{children}</Box>
+  return (
+    <Box direction="column" pad="none" margin="none" gap="none">
+      {children}
+    </Box>
+  )
 }
 
 export const RightColumnLayout = ({ children }) => {
-  return <Box direction="column">{children}</Box>
+  return (
+    <Box direction="column" pad="none" margin="none" gap="none">
+      {children}
+    </Box>
+  )
 }
 
 const pageSizeA4 = {
@@ -63,7 +71,7 @@ export const ResumeLayout = ({ children }) => {
           { name: 'right', start: [1, 1], end: [2, 1] },
         ]}
         columns={['1/2', '1/2']}
-        rows={['flex', 'auto']}
+        rows={['auto', 'flex']}
         pad="none"
         margin="none"
         gap="none"

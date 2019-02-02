@@ -26,20 +26,21 @@ const Profiles = ({ profiles }) => {
 export const Contact = ({ email, phone, location, website, profiles }) => {
   const locationString = `${location.address} ${location.postalCode} ${
     location.city
-  } ${location.countryCode} ${location.region}`
+  } ${location.countryCode}`
 
   return (
     <Box
+      flex
       align="center"
       justify="between"
       direction="row"
-      pad={{ vertical: 'small', horizontal: 'large' }}
+      pad="none"
       margin="none"
       border={{
         side: 'all',
         color: 'red',
-        size: 'xsmall',
-        style: 'dashed',
+        size: 'small',
+        style: 'groove',
       }}
     >
       <Text> email: {email} </Text>
@@ -77,16 +78,16 @@ Contact.defaultProps = {
 
 export const Summary = ({ name, label, summary }) => {
   return (
-    <ResumeSection>
-      <Box
-        align="center"
-        border={{
-          side: 'all',
-          color: 'red',
-          size: 'xsmall',
-          style: 'dashed',
-        }}
-      >
+    <Box
+      align="center"
+      border={{
+        side: 'all',
+        color: 'red',
+        size: 'xsmall',
+        style: 'dashed',
+      }}
+    >
+      <ResumeSection>
         <Heading level={1} size="small" margin="xsmall" textAlign="center">
           {name}
         </Heading>
@@ -96,8 +97,8 @@ export const Summary = ({ name, label, summary }) => {
         <Box>
           <Paragraph size="medium">{summary}</Paragraph>
         </Box>
-      </Box>
-    </ResumeSection>
+      </ResumeSection>
+    </Box>
   )
 }
 Summary.defaultProps = {
@@ -117,35 +118,21 @@ export const Basics = ({
   profiles,
   picture,
 }) => (
-  <Box
-    flex
-    basis="auto"
-    align="center"
-    overflow="hidden"
-    margin="large"
-    border={{
-      side: 'all',
-      color: 'green',
-      size: 'xsmall',
-      style: 'dotted',
-    }}
-  >
-    <TopLayout>
-      {picture && (
-        <Box align="center" justify="center">
-          <Picture picture={picture} />
-        </Box>
-      )}
+  <TopLayout>
+    {picture && (
+      <Box align="center" justify="center">
+        <Picture picture={picture} />
+      </Box>
+    )}
 
-      <Summary name={name} label={label} summary={summary} />
+    <Summary name={name} label={label} summary={summary} />
 
-      <Contact
-        email={email}
-        phone={phone}
-        website={website}
-        location={location}
-        profiles={profiles}
-      />
-    </TopLayout>
-  </Box>
+    <Contact
+      email={email}
+      phone={phone}
+      website={website}
+      location={location}
+      profiles={profiles}
+    />
+  </TopLayout>
 )

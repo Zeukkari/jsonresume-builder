@@ -21,7 +21,7 @@ const Skills = ({ skills }) => {
   })
 
   return (
-    <Box margin="small" pad="small" border="all">
+    <Box margin="none" pad="none" border="all">
       <ResumeSection>
         <SectionTitle>Skills</SectionTitle>
         <Box direction="column">{renderItems}</Box>

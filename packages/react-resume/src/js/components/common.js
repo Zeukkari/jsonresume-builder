@@ -17,14 +17,17 @@ export function formatDate(date) {
 
 export const ResumeSection = ({ children }) => (
   <Box
+    flex
+    width="100%"
     border={{
       side: 'all',
-      color: 'red',
-      size: 'xsmall',
+      color: 'cyan',
+      size: 'large',
       style: 'dashed',
     }}
     margin="none"
     pad="none"
+    gap="none"
     overflow="hidden"
   >
     {children}

@@ -103,17 +103,23 @@ class Resume extends Component {
 
       return (
         <ResumeLayout>
-          <Basics
-            name={name}
-            label={label}
-            summary={summary}
-            picture={picture}
-            email={email}
-            phone={phone}
-            website={website}
-            location={location}
-            profiles={profiles}
-          />
+          <TopLayout>
+            {picture && (
+              <Box align="center" justify="center">
+                <Picture picture={picture} />
+              </Box>
+            )}
+
+            <Summary name={name} label={label} summary={summary} />
+
+            <Contact
+              email={email}
+              phone={phone}
+              website={website}
+              location={location}
+              profiles={profiles}
+            />
+          </TopLayout>
 
           <LeftColumnLayout>
             {work.length > 0 && (
