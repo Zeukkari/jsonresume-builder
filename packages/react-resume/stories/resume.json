@@ -1,0 +1,219 @@
+{
+  "basics": {
+    "name": "Timo Aho",
+    "email": "timo.aho@pm.me",
+    "phone": "+358 443 366 242",
+    "label": "Full Stack JavaScript Developer",
+    "summary": "Experienced Software Specialist with a demonstrated history of working in the information technology and services industry. Strong information technology professional skilled in WebGL, Continuous Integration, C#, Scrum, and Web Applications.",
+    "picture": "https://www.gravatar.com/avatar/4797229f434ff9bff9d9848a6b05cc55",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Helsinki",
+      "countryCode": "FI",
+      "region": ""
+    },
+    "profiles": [{
+        "network": "LinkedIn",
+        "username": "zeukkari",
+        "url": "https://www.linkedin.com/in/zeukkari/"
+      },
+      {
+        "network": "GitHub",
+        "username": "zeukkari",
+        "url": "https://github.com/zeukkari/"
+      }
+    ]
+  },
+  "skills": [{
+      "name": "JavaScript",
+      "level": "Expert",
+      "keywords": [
+        "React",
+        "Redux",
+        "ES6",
+        "Webpack",
+        "TypeScript",
+        "Jest",
+        "Node",
+        "Lodash",
+        "Babel"
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "level": "Expert",
+      "keywords": [
+        "Node.js",
+        "REST",
+        "Express",
+        "GraphQL",
+        "Serverless Architectures",
+        "Heroku"
+      ]
+    },
+    {
+      "name": "Frontend Development",
+      "level": "Expert",
+      "keywords": [
+        "HTML5",
+        "CSS3",
+        "Javascript",
+        "WebGL",
+        "WebAssembly"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "keywords": [
+        "C",
+        "C#",
+        "C++",
+        "Bash",
+        "Java",
+        "JavaScript",
+        "Perl",
+        "Python"
+      ]
+    },
+    {
+      "name": "Software Development",
+      "keywords": [
+        "Agile Methodologies",
+        "Kanban",
+        "Scrum",
+        "Test Driven Development",
+        "Continuous Integration",
+        "Continuous Deployment",
+        "JIRA",
+        "Git",
+        "Jenkins"
+      ]
+    }
+  ],
+  "interests": [{
+    "name": "3D Technologies",
+    "keywords": [
+      "Unity Engine",
+      "Unreal Engine",
+      "OpenGL",
+      "Shader Programming",
+      "Graphics Programming",
+      "Photogrammetry",
+      "Computer Vision",
+      "Virtual Reality",
+      "Augmented Reality"
+    ]
+  }],
+
+  "work": [{
+      "company": "Compile Oy",
+      "website": "https://compile.fi",
+      "position": "Software Specialist",
+      "startDate": "2018-10-23",
+      "endDate": "2019-01-02",
+      "summary": "asd",
+      "highlights": []
+    },
+    {
+      "company": "Siili Solutions",
+      "website": "https://siili.com",
+      "position": "Consultant",
+      "startDate": "2017-02-01",
+      "endDate": "2018-10-22",
+      "summary": "asd",
+      "highlights": []
+    },
+    {
+      "company": "Self-employed",
+      "website": "asd",
+      "position": "Various",
+      "startDate": "2016-01-01",
+      "endDate": "2017-01-01",
+      "summary": "Learning new things.",
+      "highlights": [
+        "Virtual Reality content creation with Unreal Engine.",
+        "Back-End development for visual collaboration tool app.",
+        "AR content creation with Unity Engine.",
+        "Zoan Oy, 3D Render Oy, Session Software Ltd, Finnish Virtual Reality Association"
+      ]
+    },
+    {
+      "company": "City of Helsinki",
+      "website": "https://dev.hel.fi/",
+      "position": "Kumppanikoodari (Software Engineer)",
+      "startDate": "2015-06-01",
+      "endDate": "2015-12-01",
+      "summary": "Software developer working primarily on (Service Map)[https://palvelukartta.hel.fi/].",
+      "highlights": [
+        "Software development for Six City Strategy(6Aika). Broad goals were open innovation platforms, open data and interfaces, and open participation and customership.",
+        "Open source: git/github, open source development principles, open source licencing",
+        "Web technologies: JavaScript, CoffeeScript, Node.js, REST API's, GIS."
+      ]
+    },
+    {
+      "company": "Portalify",
+      "website": "http://www.portalify.com/",
+      "position": "Software Engineer",
+      "startDate": "2012-01-01",
+      "endDate": "2014-01-01",
+      "summary": "Lead Front-End Developer. Developed web front-end for TETRA network applications and location tracking.",
+      "highlights": [
+        "GIS Software, Tetra networks, Continuous Integration, Message Queues, Distributed software architectures, Virtualization.",
+        "JavaScript, Perl, Jenkins, Git, RabbitMQ, Jenkins"
+      ]
+    },
+    {
+      "company": "Meshcom Technologies",
+      "position": "Software Engineer",
+      "startDate": "2010-01-01",
+      "endDate": "2012-01-01",
+      "summary": "Work on web based administration tool for an embedded Linux access point device.",
+      "highlights": [
+        "Embedded Linux, Network protocols",
+        "Programming: Bash, C, JavaScript"
+      ]
+    }
+
+  ],
+  "education": [{
+    "institution": "Helsinki University",
+    "gpa": "3.0",
+    "courses": [
+      "Programming fundamentals",
+      "Java",
+      "C",
+      "Databases",
+      "Shell scripting",
+      "Web programming",
+      "Data structures and algorithms",
+      "Networks and Communications",
+      "TCP/IP Protocol stack",
+      "Security",
+      "Software Development Methodologies",
+      "Agile Methodologies",
+      "Usability",
+      "Interface Technologies",
+      "Introduction to Artificial Intelligence",
+      "Introduction to Statistics",
+      "Linearalgebra and Matrix Calculus"
+    ],
+    "startDate": "2004-09-01",
+    "endDate": "2009-06-01",
+    "area": "Department of Computer Science",
+    "studyType": "Bachelor of Science"
+  }],
+  "languages": [{
+      "language": "Finnish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
+  "awards": [],
+  "references": [],
+  "publications": [],
+  "volunteer": []
+}
