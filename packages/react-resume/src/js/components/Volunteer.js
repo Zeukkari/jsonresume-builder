@@ -1,9 +1,13 @@
 import React from 'react'
 
-import { Box, Paragraph, Heading, Text } from 'grommet'
+import { Box } from 'grommet'
 
 import {
   ResumeSection,
+  ResumeDateSection,
+  ResumeHeading,
+  ResumeSubHeading,
+  ResumeParagraph,
   SectionTitle,
   TagSection,
   formatDateRange,
@@ -13,14 +17,14 @@ const Volunteer = ({ volunteer }) => {
   const renderItems = volunteer.map(item => {
     return (
       <Box key={item.company}>
-        <Heading level={3}>{item.company}</Heading>
-        <Text weight="bold" size="medium">
-          {item.position}
-        </Text>
+        <ResumeHeading>{item.company}</ResumeHeading>
+        <ResumeSubHeading>{item.position}</ResumeSubHeading>
         <Box direction="row">
-          {formatDateRange(item.startDate, item.endDate)}
+          <ResumeDateSection>
+            {formatDateRange(item.startDate, item.endDate)}
+          </ResumeDateSection>
         </Box>
-        <Paragraph>{item.summary}</Paragraph>
+        <ResumeParagraph>{item.summary}</ResumeParagraph>
         <TagSection tags={item.highlights}>Highlights</TagSection>
       </Box>
     )

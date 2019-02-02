@@ -1,19 +1,25 @@
 import React from 'react'
 
-import { Box, Paragraph, Heading, Text } from 'grommet'
+import { Box } from 'grommet'
 
-import { ResumeSection, SectionTitle, formatDate } from './common'
+import {
+  ResumeSection,
+  SectionTitle,
+  formatDate,
+  ResumeDateSection,
+  ResumeHeading,
+  ResumeSubHeading,
+  ResumeParagraph,
+} from './common'
 
 const Publications = ({ publications }) => {
   const renderItems = publications.map(item => {
     return (
       <Box key={item.company}>
-        <Heading level={3}>{item.name}</Heading>
-        <Text weight="bold" size="medium">
-          {item.publisher}
-        </Text>
-        <Text>{formatDate(item.releaseDate)}</Text>
-        <Paragraph>{item.summary}</Paragraph>
+        <ResumeHeading>{item.name}</ResumeHeading>
+        <ResumeSubHeading>{item.publisher}</ResumeSubHeading>
+        <ResumeDateSection>{formatDate(item.releaseDate)}</ResumeDateSection>
+        <ResumeParagraph>{item.summary}</ResumeParagraph>
       </Box>
     )
   })

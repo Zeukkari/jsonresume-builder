@@ -1,9 +1,13 @@
 import React from 'react'
 
-import { Box, Heading, Text } from 'grommet'
+import { Box } from 'grommet'
 
 import {
   ResumeSection,
+  ResumeDateSection,
+  ResumeHeading,
+  ResumeSubHeading,
+  TagHeading,
   SectionTitle,
   TagSection,
   formatDateRange,
@@ -13,15 +17,17 @@ const Education = ({ education }) => {
   const renderItems = education.map(item => {
     return (
       <Box key={item.startDate}>
-        <Heading level={3}>{item.institution}</Heading>
-        <Heading level={4}>
+        <ResumeHeading>{item.institution}</ResumeHeading>
+        <ResumeSubHeading>
           {`
           ${item.studyType} / ${item.area}`}
-        </Heading>
+        </ResumeSubHeading>
         <Box direction="row">
-          {formatDateRange(item.startDate, item.endDate)}
+          <ResumeDateSection>
+            {formatDateRange(item.startDate, item.endDate)}
+          </ResumeDateSection>
         </Box>
-        <Text weight="bold" size="medium">{`gpa: ${item.gpa}`}</Text>
+        <TagHeading>{`gpa: ${item.gpa}`}</TagHeading>
 
         <TagSection tags={item.courses}> Courses </TagSection>
       </Box>

@@ -1,10 +1,12 @@
 import React from 'react'
 
-import { Box, Text, Paragraph } from 'grommet'
+import { Box } from 'grommet'
 import { Card } from 'grommet-controls'
 
 import {
   ResumeSection,
+  ResumeDateSection,
+  ResumeParagraph,
   SectionTitle,
   TagSection,
   formatDateRange,
@@ -17,9 +19,11 @@ const Work = ({ work }) => {
         <Card.CardTitle>{item.company}</Card.CardTitle>
         <Card.CardContent>
           <Box direction="row">
-            {formatDateRange(item.startDate, item.endDate)}
+            <ResumeDateSection>
+              {formatDateRange(item.startDate, item.endDate)}
+            </ResumeDateSection>
           </Box>
-          <Paragraph>{item.summary}</Paragraph>
+          <ResumeParagraph>{item.summary}</ResumeParagraph>
           <TagSection tags={item.highlights}>Highlights</TagSection>
         </Card.CardContent>
       </Card>

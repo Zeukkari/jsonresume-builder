@@ -5,7 +5,7 @@ import { Box, Heading } from 'grommet'
 import { Spinning } from 'grommet-controls'
 
 import { Awards } from './Awards'
-import { Basics, Summary, Picture, Contact } from './Basics'
+import { Summary, Picture, Contact } from './Basics'
 import { Education } from './Education'
 import { Interests } from './Interests'
 import { Languages } from './Languages'

@@ -5,12 +5,13 @@ import { Grid, Box } from 'grommet'
 export const TopLayout = ({ children }) => {
   return (
     <Grid
+      fill
       areas={[
         { name: 'left', start: [0, 0], end: [1, 0] },
         { name: 'right', start: [1, 0], end: [2, 0] },
         { name: 'footer', start: [0, 1], end: [2, 1] },
       ]}
-      columns={['small', 'large']}
+      columns={['xsmall', 'medium']}
       rows={['flex', 'auto']}
       pad="none"
       margin="none"
@@ -43,9 +44,11 @@ export const RightColumnLayout = ({ children }) => {
   )
 }
 
+const multiplier = 1.5
+
 const pageSizeA4 = {
-  width: '297mm',
-  height: '210mm',
+  height: `calc(${multiplier}*297mm)`,
+  width: `calc(${multiplier}*210mm)`,
 }
 
 export const ResumeLayout = ({ children }) => {
@@ -65,6 +68,7 @@ export const ResumeLayout = ({ children }) => {
       height={pageSizeA4.height}
     >
       <Grid
+        fill
         areas={[
           { name: 'header', start: [0, 0], end: [2, 0] },
           { name: 'left', start: [0, 1], end: [1, 1] },

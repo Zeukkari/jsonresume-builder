@@ -1,19 +1,25 @@
 import React from 'react'
 
-import { Box, Paragraph, Heading, Text } from 'grommet'
+import { Box } from 'grommet'
 
-import { ResumeSection, SectionTitle, formatDate } from './common'
+import {
+  ResumeSection,
+  ResumeHeading,
+  ResumeSubHeading,
+  ResumeParagraph,
+  ResumeDateSection,
+  SectionTitle,
+  formatDate,
+} from './common'
 
 const Awards = ({ awards }) => {
   const renderItems = awards.map(item => {
     return (
       <Box key={item.title}>
-        <Heading level={3}>{item.title}</Heading>
-        <Heading level={4}>{item.awarder}</Heading>
-        <Text weight="bold" size="medium">
-          {formatDate(item.date)}
-        </Text>
-        <Paragraph>{item.summary}</Paragraph>
+        <ResumeHeading>{item.title}</ResumeHeading>
+        <ResumeSubHeading>{item.awarder}</ResumeSubHeading>
+        <ResumeDateSection>{formatDate(item.date)}</ResumeDateSection>
+        <ResumeParagraph>{item.summary}</ResumeParagraph>
       </Box>
     )
   })
