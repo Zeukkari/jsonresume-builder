@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Paragraph, Heading, Text } from 'grommet'
 
-import { ResumeSection, SectionTitle } from './common'
+import { ResumeSection, SectionTitle, formatDate } from './common'
 
 const Awards = ({ awards }) => {
   const renderItems = awards.map(item => {
@@ -11,7 +11,7 @@ const Awards = ({ awards }) => {
         <Heading level={3}>{item.title}</Heading>
         <Heading level={4}>{item.awarder}</Heading>
         <Text weight="bold" size="medium">
-          {item.date}
+          {formatDate(item.date)}
         </Text>
         <Paragraph>{item.summary}</Paragraph>
       </Box>

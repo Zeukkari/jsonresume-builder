@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Box, Heading, Text } from 'grommet'
+import { Box, Text } from 'grommet'
 import { Card } from 'grommet-controls'
 
-import { ResumeSection, SectionTitle } from './common'
+import { ResumeSection, SectionTitle, TagSection } from './common'
 
 const Skills = ({ skills }) => {
   const renderItems = skills.map(item => {
@@ -14,25 +14,14 @@ const Skills = ({ skills }) => {
           <Box direction="row">
             <Text>{item.level}</Text>
           </Box>
-          {item.keywords && (
-            <Box>
-              <Text weight="bold" size="medium">
-                Keywords
-              </Text>
-              <Box direction="column">
-                {item.keywords.map(keyword => (
-                  <Text key={keyword}>{keyword}</Text>
-                ))}
-              </Box>
-            </Box>
-          )}
+          <TagSection tags={item.keywords}>Keywords</TagSection>
         </Card.CardContent>
       </Card>
     )
   })
 
   return (
-    <Box margin="none" pad="none" border="all">
+    <Box margin="small" pad="small" border="all">
       <ResumeSection>
         <SectionTitle>Skills</SectionTitle>
         <Box direction="column">{renderItems}</Box>

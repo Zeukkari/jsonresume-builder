@@ -2,21 +2,14 @@ import React from 'react'
 
 import { Box, Heading, Text } from 'grommet'
 
-import { ResumeSection, SectionTitle } from './common'
+import { ResumeSection, SectionTitle, TagSection } from './common'
 
 const Interests = ({ interests }) => {
   const renderItems = interests.map(item => {
     return (
       <Box key={item.name}>
         <Heading level={3}>{item.name}</Heading>
-        <Text weight="bold" size="medium">
-          Keywords
-        </Text>
-        <Box direction="column">
-          {item.keywords.map(keyword => (
-            <Text key={keyword}>{keyword}</Text>
-          ))}
-        </Box>
+        <TagSection tags={item.keywords}>Keywords</TagSection>
       </Box>
     )
   })

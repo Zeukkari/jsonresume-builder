@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 
 import { validate } from 'resume-schema'
 import { Box, Heading } from 'grommet'
+import { Spinning } from 'grommet-controls'
 
 import { Awards } from './Awards'
-import { Summary, Picture, Contact } from './Basics'
+import { Basics, Summary, Picture, Contact } from './Basics'
 import { Education } from './Education'
 import { Interests } from './Interests'
 import { Languages } from './Languages'
@@ -23,7 +24,7 @@ import {
 
 const Loading = () => (
   <Box margin="auto" align="center" justify="center" height="full" width="full">
-    Spinning loader
+    <Spinning />
   </Box>
 )
 
@@ -87,8 +88,6 @@ class Resume extends Component {
       references,
     } = this.props
 
-    console.log('work: ', work)
-
     if (this.state.isValid) {
       const {
         name,
@@ -104,23 +103,17 @@ class Resume extends Component {
 
       return (
         <ResumeLayout>
-          <TopLayout>
-            {picture && (
-              <Box align="center" justify="center">
-                <Picture picture={picture} />
-              </Box>
-            )}
-
-            <Summary name={name} label={label} summary={summary} />
-
-            <Contact
-              email={email}
-              phone={phone}
-              website={website}
-              location={location}
-              profiles={profiles}
-            />
-          </TopLayout>
+          <Basics
+            name={name}
+            label={label}
+            summary={summary}
+            picture={picture}
+            email={email}
+            phone={phone}
+            website={website}
+            location={location}
+            profiles={profiles}
+          />
 
           <LeftColumnLayout>
             {work.length > 0 && (
@@ -196,7 +189,7 @@ class Resume extends Component {
           overflow="scroll"
           border={{ color: 'status-error', size: 'large' }}
         >
-          <Heading>`Error: ${errorMessage}`</Heading>
+          <Heading>{`Error: ${errorMessage}`}</Heading>
         </Box>
       )
     } else {

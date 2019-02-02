@@ -2,7 +2,12 @@ import React from 'react'
 
 import { Box, Paragraph, Heading, Text } from 'grommet'
 
-import { ResumeSection, SectionTitle, formatDateRange } from './common'
+import {
+  ResumeSection,
+  SectionTitle,
+  TagSection,
+  formatDateRange,
+} from './common'
 
 const Volunteer = ({ volunteer }) => {
   const renderItems = volunteer.map(item => {
@@ -16,14 +21,7 @@ const Volunteer = ({ volunteer }) => {
           {formatDateRange(item.startDate, item.endDate)}
         </Box>
         <Paragraph>{item.summary}</Paragraph>
-        <Text weight="bold" size="medium">
-          Highlights
-        </Text>
-        <Box direction="column">
-          {item.highlights.map(highlight => (
-            <Text key={highlight}>{highlight}</Text>
-          ))}
-        </Box>
+        <TagSection tags={item.highlights}>Highlights</TagSection>
       </Box>
     )
   })

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Paragraph, Heading, Text } from 'grommet'
 
-import { ResumeSection, SectionTitle } from './common'
+import { ResumeSection, SectionTitle, formatDate } from './common'
 
 const Publications = ({ publications }) => {
   const renderItems = publications.map(item => {
@@ -12,7 +12,7 @@ const Publications = ({ publications }) => {
         <Text weight="bold" size="medium">
           {item.publisher}
         </Text>
-        <Text>{item.releaseDate}</Text>
+        <Text>{formatDate(item.releaseDate)}</Text>
         <Paragraph>{item.summary}</Paragraph>
       </Box>
     )

@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Box, Button, Heading, Paragraph, Text, Image } from 'grommet'
 
+import { TopLayout } from './Layout'
+
 import { ResumeSection } from './common'
 
 export const Picture = ({ picture }) => (
@@ -103,3 +105,47 @@ Summary.defaultProps = {
   label: 'N/A',
   summary: 'N/A',
 }
+
+export const Basics = ({
+  name,
+  label,
+  summary,
+  email,
+  phone,
+  location,
+  website,
+  profiles,
+  picture,
+}) => (
+  <Box
+    flex
+    basis="auto"
+    align="center"
+    overflow="hidden"
+    margin="large"
+    border={{
+      side: 'all',
+      color: 'green',
+      size: 'xsmall',
+      style: 'dotted',
+    }}
+  >
+    <TopLayout>
+      {picture && (
+        <Box align="center" justify="center">
+          <Picture picture={picture} />
+        </Box>
+      )}
+
+      <Summary name={name} label={label} summary={summary} />
+
+      <Contact
+        email={email}
+        phone={phone}
+        website={website}
+        location={location}
+        profiles={profiles}
+      />
+    </TopLayout>
+  </Box>
+)

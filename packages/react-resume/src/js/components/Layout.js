@@ -41,23 +41,32 @@ export const ResumeLayout = ({ children }) => {
   }
 
   return (
-    <Grid
-      areas={[
-        { name: 'header', start: [0, 0], end: [2, 0] },
-        { name: 'left', start: [0, 1], end: [1, 1] },
-        { name: 'right', start: [1, 1], end: [2, 1] },
-      ]}
-      columns={['1/2', '1/2']}
-      rows={['flex', 'auto']}
-      gap="none"
-      pad="none"
-      margin="none"
+    <Box
+      border={{
+        side: 'all',
+        color: 'blue',
+        size: 'medium',
+        style: 'dashed',
+      }}
     >
-      <Box gridArea="header">{children[0]}</Box>
+      <Grid
+        areas={[
+          { name: 'header', start: [0, 0], end: [2, 0] },
+          { name: 'left', start: [0, 1], end: [1, 1] },
+          { name: 'right', start: [1, 1], end: [2, 1] },
+        ]}
+        columns={['1/2', '1/2']}
+        rows={['flex', 'auto']}
+        pad="none"
+        margin="none"
+        gap="none"
+      >
+        <Box gridArea="header">{children[0]}</Box>
 
-      <Box gridArea="left">{children[1]}</Box>
+        <Box gridArea="left">{children[1]}</Box>
 
-      <Box gridArea="right">{children[2]}</Box>
-    </Grid>
+        <Box gridArea="right">{children[2]}</Box>
+      </Grid>
+    </Box>
   )
 }
