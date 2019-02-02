@@ -35,6 +35,11 @@ export const RightColumnLayout = ({ children }) => {
   return <Box direction="column">{children}</Box>
 }
 
+const pageSizeA4 = {
+  width: '297mm',
+  height: '210mm',
+}
+
 export const ResumeLayout = ({ children }) => {
   if (children && children.length && children.length != 3) {
     throw 'Invalid layout children'
@@ -48,6 +53,8 @@ export const ResumeLayout = ({ children }) => {
         size: 'medium',
         style: 'dashed',
       }}
+      width={pageSizeA4.width}
+      height={pageSizeA4.height}
     >
       <Grid
         areas={[
