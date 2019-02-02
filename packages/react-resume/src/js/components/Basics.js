@@ -1,16 +1,16 @@
 import React from 'react'
 
-import { Box, Button, Heading, Paragraph, Text } from 'grommet'
+import { Box, Button, Heading, Paragraph, Text, Image } from 'grommet'
 
 import { ResumeSection } from './common'
 
 export const Picture = ({ picture }) => (
   <Box align="center" justify="center">
-    <Button label={`${picture}`} />
+    <Image src={picture} size="large" />
   </Box>
 )
 Picture.defaultProps = {
-  picture: 'N/A',
+  picture: null,
 }
 
 const Profiles = ({ profiles }) => {
@@ -76,14 +76,24 @@ Contact.defaultProps = {
 export const Summary = ({ name, label, summary }) => {
   return (
     <ResumeSection>
-      <Box basis="auto" fill wrap={false}>
-        <Heading level={1} size="small" margin="xsmall">
+      <Box
+        align="center"
+        border={{
+          side: 'all',
+          color: 'red',
+          size: 'xsmall',
+          style: 'dashed',
+        }}
+      >
+        <Heading level={1} size="small" margin="xsmall" textAlign="center">
           {name}
         </Heading>
-        <Heading level={2} size="small" margin="xsmall">
+        <Heading level={2} size="small" margin="xsmall" textAlign="center">
           {label}
         </Heading>
-        <Paragraph size="small">{summary}</Paragraph>
+        <Box>
+          <Paragraph size="medium">{summary}</Paragraph>
+        </Box>
       </Box>
     </ResumeSection>
   )

@@ -1,27 +1,34 @@
 import React from 'react'
 
-import { Box, Heading, Text, Paragraph } from 'grommet'
+import { Box, Text, Paragraph } from 'grommet'
+import { Card } from 'grommet-controls'
 
-import { ResumeSection, SectionTitle } from './common'
+import { ResumeSection, SectionTitle, formatDateRange } from './common'
 
 const Work = ({ work }) => {
   const renderItems = work.map(item => {
     return (
-      <Box key="item.company">
-        <Heading level={3}>{item.company}</Heading>
-        <Box direction="row">
-          {item.startDate} - {item.endDate}
-        </Box>
-        <Paragraph>{item.summary}</Paragraph>
-        <Text weight="bold" size="medium">
-          Highlights
-        </Text>
-        <Box direction="column">
-          {item.highlights.map(highlight => (
-            <Text key={highlight}>{highlight}</Text>
-          ))}
-        </Box>
-      </Box>
+      <Card gap="medium" key={item.company}>
+        <Card.CardTitle>{item.company}</Card.CardTitle>
+        <Card.CardContent>
+          <Box direction="row">
+            {formatDateRange(item.startDate, item.endDate)}
+          </Box>
+          <Paragraph>{item.summary}</Paragraph>
+          {item.highlights && (
+            <Box>
+              <Text weight="bold" size="medium">
+                Highlights
+              </Text>
+              <Box direction="column">
+                {item.highlights.map(highlight => (
+                  <Text key={highlight}>{highlight}</Text>
+                ))}
+              </Box>
+            </Box>
+          )}
+        </Card.CardContent>
+      </Card>
     )
   })
   return (

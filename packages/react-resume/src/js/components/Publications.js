@@ -7,7 +7,7 @@ import { ResumeSection, SectionTitle } from './common'
 const Publications = ({ publications }) => {
   const renderItems = publications.map(item => {
     return (
-      <Box key="item.company">
+      <Box key={item.company}>
         <Heading level={3}>{item.name}</Heading>
         <Text weight="bold" size="medium">
           {item.publisher}

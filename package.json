@@ -16,6 +16,7 @@
     "install": "lerna link --force-local && npm run bootstrap",
     "lint": "lerna run --stream lint",
     "lint:fix": "lerna run --stream lint:fix",
+    "storybook:resume": "lerna exec --stream --scope @resumebuilder/react-resume -- npm run start:storybook",
     "storybook": "lerna exec --stream --scope @resumebuilder/live-editor -- npm run start:storybook",
     "test": "lerna run --stream test",
     "test:coverage": "lerna run --stream test:coverage"

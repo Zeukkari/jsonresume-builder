@@ -61,6 +61,7 @@ class Resume extends Component {
     }
 
     const cb = (error, report) => {
+      console.log('error: ', error)
       console.log('report: ', report)
       if (error) {
         this.setState({ isValid: false, error: error })
@@ -86,6 +87,8 @@ class Resume extends Component {
       references,
     } = this.props
 
+    console.log('work: ', work)
+
     if (this.state.isValid) {
       const {
         name,
@@ -102,9 +105,11 @@ class Resume extends Component {
       return (
         <ResumeLayout>
           <TopLayout>
-            <Box align="center" justify="center">
-              <Picture picture={picture} />
-            </Box>
+            {picture && (
+              <Box align="center" justify="center">
+                <Picture picture={picture} />
+              </Box>
+            )}
 
             <Summary name={name} label={label} summary={summary} />
 
@@ -118,43 +123,61 @@ class Resume extends Component {
           </TopLayout>
 
           <LeftColumnLayout>
-            <Box>
-              <Work work={work} />
-            </Box>
+            {work.length > 0 && (
+              <Box>
+                <Work work={work} />
+              </Box>
+            )}
 
-            <Box>
-              <Education education={education} />
-            </Box>
+            {education.length > 0 && (
+              <Box>
+                <Education education={education} />
+              </Box>
+            )}
           </LeftColumnLayout>
 
           <RightColumnLayout>
-            <Box>
-              <Skills skills={skills} />
-            </Box>
+            {skills.length > 0 && (
+              <Box>
+                <Skills skills={skills} />
+              </Box>
+            )}
 
-            <Box>
-              <Interests interests={interests} />
-            </Box>
+            {interests.length > 0 && (
+              <Box>
+                <Interests interests={interests} />
+              </Box>
+            )}
 
-            <Box>
-              <Awards awards={awards} />
-            </Box>
+            {awards.length > 0 && (
+              <Box>
+                <Awards awards={awards} />
+              </Box>
+            )}
 
-            <Box>
-              <Volunteer volunteer={volunteer} />
-            </Box>
+            {volunteer.length > 0 && (
+              <Box>
+                <Volunteer volunteer={volunteer} />
+              </Box>
+            )}
 
-            <Box>
-              <Publications publications={publications} />
-            </Box>
+            {publications.length > 0 && (
+              <Box>
+                <Publications publications={publications} />
+              </Box>
+            )}
 
-            <Box>
-              <Languages languages={languages} />
-            </Box>
+            {languages.length > 0 && (
+              <Box>
+                <Languages languages={languages} />
+              </Box>
+            )}
 
-            <Box>
-              <References references={references} />
-            </Box>
+            {references.length > 0 && (
+              <Box>
+                <References references={references} />
+              </Box>
+            )}
           </RightColumnLayout>
         </ResumeLayout>
       )

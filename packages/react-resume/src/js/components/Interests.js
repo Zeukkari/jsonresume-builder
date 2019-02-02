@@ -7,7 +7,7 @@ import { ResumeSection, SectionTitle } from './common'
 const Interests = ({ interests }) => {
   const renderItems = interests.map(item => {
     return (
-      <Box key="item.name">
+      <Box key={item.name}>
         <Heading level={3}>{item.name}</Heading>
         <Text weight="bold" size="medium">
           Keywords

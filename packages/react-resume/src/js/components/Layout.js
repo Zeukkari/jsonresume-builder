@@ -5,14 +5,13 @@ import { Grid, Box } from 'grommet'
 export const TopLayout = ({ children }) => {
   return (
     <Grid
-      fill
       areas={[
         { name: 'left', start: [0, 0], end: [1, 0] },
         { name: 'right', start: [1, 0], end: [2, 0] },
         { name: 'footer', start: [0, 1], end: [2, 1] },
       ]}
       columns={['small', 'large']}
-      rows={['auto', 'auto']}
+      rows={['flex', 'auto']}
       pad="none"
       margin="none"
       gap="none"
@@ -49,7 +48,7 @@ export const ResumeLayout = ({ children }) => {
         { name: 'right', start: [1, 1], end: [2, 1] },
       ]}
       columns={['1/2', '1/2']}
-      rows={['small', 'auto']}
+      rows={['flex', 'auto']}
       gap="none"
       pad="none"
       margin="none"
