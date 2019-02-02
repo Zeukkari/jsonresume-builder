@@ -21,7 +21,9 @@ import {
   LeftColumnLayout,
   RightColumnLayout,
 } from '../src/js/components/Layout'
-import defaultResume from './resume.json'
+
+// import defaultResume from './resume.json'
+import defaultResume from './defaultResume.json'
 
 storiesOf('Resume', module)
   .add('Default', () => (

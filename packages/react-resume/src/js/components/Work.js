@@ -1,9 +1,16 @@
 import React from 'react'
 
-import { Box, Text, Paragraph } from 'grommet'
+import { Box } from 'grommet'
 import { Card } from 'grommet-controls'
 
-import { ResumeSection, SectionTitle, formatDateRange } from './common'
+import {
+  ResumeSection,
+  ResumeDateSection,
+  ResumeParagraph,
+  SectionTitle,
+  TagSection,
+  formatDateRange,
+} from './common'
 
 const Work = ({ work }) => {
   const renderItems = work.map(item => {
@@ -12,21 +19,12 @@ const Work = ({ work }) => {
         <Card.CardTitle>{item.company}</Card.CardTitle>
         <Card.CardContent>
           <Box direction="row">
-            {formatDateRange(item.startDate, item.endDate)}
+            <ResumeDateSection>
+              {formatDateRange(item.startDate, item.endDate)}
+            </ResumeDateSection>
           </Box>
-          <Paragraph>{item.summary}</Paragraph>
-          {item.highlights && (
-            <Box>
-              <Text weight="bold" size="medium">
-                Highlights
-              </Text>
-              <Box direction="column">
-                {item.highlights.map(highlight => (
-                  <Text key={highlight}>{highlight}</Text>
-                ))}
-              </Box>
-            </Box>
-          )}
+          <ResumeParagraph>{item.summary}</ResumeParagraph>
+          <TagSection tags={item.highlights}>Highlights</TagSection>
         </Card.CardContent>
       </Card>
     )
@@ -35,7 +33,7 @@ const Work = ({ work }) => {
     <Box margin="none" pad="none" border="all">
       <ResumeSection>
         <SectionTitle>Work</SectionTitle>
-        <Box>{renderItems}</Box>
+        <Box direction="column">{renderItems}</Box>
       </ResumeSection>
     </Box>
   )

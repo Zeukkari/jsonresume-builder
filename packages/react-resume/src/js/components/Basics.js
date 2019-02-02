@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Box, Button, Heading, Paragraph, Text, Image } from 'grommet'
 
+import { TopLayout } from './Layout'
+
 import { ResumeSection } from './common'
 
 export const Picture = ({ picture }) => (
@@ -24,20 +26,21 @@ const Profiles = ({ profiles }) => {
 export const Contact = ({ email, phone, location, website, profiles }) => {
   const locationString = `${location.address} ${location.postalCode} ${
     location.city
-  } ${location.countryCode} ${location.region}`
+  } ${location.countryCode}`
 
   return (
     <Box
+      flex
       align="center"
       justify="between"
       direction="row"
-      pad={{ vertical: 'small', horizontal: 'large' }}
+      pad="none"
       margin="none"
       border={{
         side: 'all',
         color: 'red',
-        size: 'xsmall',
-        style: 'dashed',
+        size: 'small',
+        style: 'groove',
       }}
     >
       <Text> email: {email} </Text>
@@ -75,16 +78,16 @@ Contact.defaultProps = {
 
 export const Summary = ({ name, label, summary }) => {
   return (
-    <ResumeSection>
-      <Box
-        align="center"
-        border={{
-          side: 'all',
-          color: 'red',
-          size: 'xsmall',
-          style: 'dashed',
-        }}
-      >
+    <Box
+      align="center"
+      border={{
+        side: 'all',
+        color: 'red',
+        size: 'xsmall',
+        style: 'dashed',
+      }}
+    >
+      <ResumeSection>
         <Heading level={1} size="small" margin="xsmall" textAlign="center">
           {name}
         </Heading>
@@ -94,8 +97,8 @@ export const Summary = ({ name, label, summary }) => {
         <Box>
           <Paragraph size="medium">{summary}</Paragraph>
         </Box>
-      </Box>
-    </ResumeSection>
+      </ResumeSection>
+    </Box>
   )
 }
 Summary.defaultProps = {
@@ -103,3 +106,33 @@ Summary.defaultProps = {
   label: 'N/A',
   summary: 'N/A',
 }
+
+export const Basics = ({
+  name,
+  label,
+  summary,
+  email,
+  phone,
+  location,
+  website,
+  profiles,
+  picture,
+}) => (
+  <TopLayout>
+    {picture && (
+      <Box align="center" justify="center">
+        <Picture picture={picture} />
+      </Box>
+    )}
+
+    <Summary name={name} label={label} summary={summary} />
+
+    <Contact
+      email={email}
+      phone={phone}
+      website={website}
+      location={location}
+      profiles={profiles}
+    />
+  </TopLayout>
+)

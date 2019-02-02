@@ -1,15 +1,20 @@
 import React from 'react'
 
-import { Box, Heading, Paragraph } from 'grommet'
+import { Box } from 'grommet'
 
-import { ResumeSection, SectionTitle } from './common'
+import {
+  ResumeSection,
+  SectionTitle,
+  ResumeHeading,
+  ResumeParagraph,
+} from './common'
 
 const References = ({ references }) => {
   const renderItems = references.map(item => {
     return (
       <Box key={item.name}>
-        <Heading level={3}>{item.name}</Heading>
-        <Paragraph>{item.reference}</Paragraph>
+        <ResumeHeading>{item.name}</ResumeHeading>
+        <ResumeParagraph>{item.reference}</ResumeParagraph>
       </Box>
     )
   })

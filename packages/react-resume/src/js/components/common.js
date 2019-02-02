@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Heading } from 'grommet'
+import { Text, Box, Heading, Paragraph } from 'grommet'
 
 import moment from 'moment'
 
@@ -11,26 +11,74 @@ export function formatDateRange(startDate, endDate) {
   return `${start} - ${end}`
 }
 
+export function formatDate(date) {
+  return moment(date, 'YYYY-MM-DD').format('MMM YYYY')
+}
+
 export const ResumeSection = ({ children }) => (
   <Box
+    fill
     flex
-    basis="auto"
     border={{
       side: 'all',
-      color: 'red',
-      size: 'xsmall',
+      color: 'cyan',
+      size: 'large',
       style: 'dashed',
     }}
     margin="none"
     pad="none"
+    gap="none"
     overflow="hidden"
+    background="light-1"
   >
     {children}
   </Box>
 )
 
 export const SectionTitle = ({ children }) => (
-  <Heading level={1} size="medium" align="center" textAlign="center">
+  <Heading level={1} size="small" align="center" textAlign="start">
     {children}
   </Heading>
 )
+
+export const ResumeHeading = ({ children }) => (
+  <Heading level={3} size="small">
+    {children}
+  </Heading>
+)
+
+export const ResumeSubHeading = ({ children }) => (
+  <Heading level={4}>{children}</Heading>
+)
+
+export const ResumeParagraph = ({ children }) => (
+  <Paragraph>{children}</Paragraph>
+)
+
+export const ResumeDateSection = ({ children }) => (
+  <Text weight="bold" size="medium">
+    {children}
+  </Text>
+)
+
+export const TagHeading = ({ children }) => (
+  <Text weight="bold" size="medium">
+    {children}
+  </Text>
+)
+
+export const TagSection = ({ tags, children }) => {
+  if (tags) {
+    return (
+      <Box>
+        <TagHeading>{children}</TagHeading>
+        <Box direction="column">
+          {tags.map(item => (
+            <Text key={item}>{item}</Text>
+          ))}
+        </Box>
+      </Box>
+    )
+  }
+  return <></> // meh
+}

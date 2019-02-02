@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import { validate } from 'resume-schema'
 import { Box, Heading } from 'grommet'
+import { Spinning } from 'grommet-controls'
 
 import { Awards } from './Awards'
 import { Summary, Picture, Contact } from './Basics'
@@ -23,7 +24,7 @@ import {
 
 const Loading = () => (
   <Box margin="auto" align="center" justify="center" height="full" width="full">
-    Spinning loader
+    <Spinning />
   </Box>
 )
 
@@ -86,8 +87,6 @@ class Resume extends Component {
       interests,
       references,
     } = this.props
-
-    console.log('work: ', work)
 
     if (this.state.isValid) {
       const {
@@ -196,7 +195,7 @@ class Resume extends Component {
           overflow="scroll"
           border={{ color: 'status-error', size: 'large' }}
         >
-          <Heading>`Error: ${errorMessage}`</Heading>
+          <Heading>{`Error: ${errorMessage}`}</Heading>
         </Box>
       )
     } else {

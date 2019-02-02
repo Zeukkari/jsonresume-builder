@@ -1,17 +1,14 @@
 import React from 'react'
 
-import { Box, Heading, Text } from 'grommet'
+import { Box } from 'grommet'
 
-import { ResumeSection, SectionTitle } from './common'
+import { ResumeSection, SectionTitle, ResumeHeading } from './common'
 
 const Languages = ({ languages }) => {
   const renderItems = languages.map(item => {
     return (
       <Box key={item.language}>
-        <Heading level={3}>{item.language}</Heading>
-        <Text weight="bold" size="medium">
-          {item.fluency}
-        </Text>
+        <ResumeHeading>{`${item.language}: ${item.fluency}`}</ResumeHeading>
       </Box>
     )
   })
