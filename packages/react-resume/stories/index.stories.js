@@ -10,6 +10,11 @@ import {
   metro,
   light,
 } from 'grommet-controls/themes'
+import { aruba } from 'grommet-theme-aruba'
+import { dxc } from 'grommet-theme-dxc'
+import { hp } from 'grommet-theme-hp'
+import { hpe } from 'grommet-theme-hpe'
+import { v1 } from 'grommet-theme-v1'
 
 import { Resume, Loading } from '../src/js/components/Resume'
 
@@ -137,6 +142,81 @@ storiesOf('Resume', module)
       interests={defaultResume.interests}
       references={defaultResume.references}
       theme={light}
+    />
+  ))
+  .add('Aruba', () => (
+    <Resume
+      basics={defaultResume.basics}
+      work={defaultResume.work}
+      volunteer={defaultResume.volunteer}
+      education={defaultResume.education}
+      awards={defaultResume.awards}
+      publications={defaultResume.publications}
+      skills={defaultResume.skills}
+      languages={defaultResume.languages}
+      interests={defaultResume.interests}
+      references={defaultResume.references}
+      theme={aruba}
+    />
+  ))
+  .add('DXC', () => (
+    <Resume
+      basics={defaultResume.basics}
+      work={defaultResume.work}
+      volunteer={defaultResume.volunteer}
+      education={defaultResume.education}
+      awards={defaultResume.awards}
+      publications={defaultResume.publications}
+      skills={defaultResume.skills}
+      languages={defaultResume.languages}
+      interests={defaultResume.interests}
+      references={defaultResume.references}
+      theme={dxc}
+    />
+  ))
+  .add('HP', () => (
+    <Resume
+      basics={defaultResume.basics}
+      work={defaultResume.work}
+      volunteer={defaultResume.volunteer}
+      education={defaultResume.education}
+      awards={defaultResume.awards}
+      publications={defaultResume.publications}
+      skills={defaultResume.skills}
+      languages={defaultResume.languages}
+      interests={defaultResume.interests}
+      references={defaultResume.references}
+      theme={hp}
+    />
+  ))
+  .add('HPE', () => (
+    <Resume
+      basics={defaultResume.basics}
+      work={defaultResume.work}
+      volunteer={defaultResume.volunteer}
+      education={defaultResume.education}
+      awards={defaultResume.awards}
+      publications={defaultResume.publications}
+      skills={defaultResume.skills}
+      languages={defaultResume.languages}
+      interests={defaultResume.interests}
+      references={defaultResume.references}
+      theme={hpe}
+    />
+  ))
+  .add('V1 Theme', () => (
+    <Resume
+      basics={defaultResume.basics}
+      work={defaultResume.work}
+      volunteer={defaultResume.volunteer}
+      education={defaultResume.education}
+      awards={defaultResume.awards}
+      publications={defaultResume.publications}
+      skills={defaultResume.skills}
+      languages={defaultResume.languages}
+      interests={defaultResume.interests}
+      references={defaultResume.references}
+      theme={v1}
     />
   ))
   .add('Resume loading', () => (
