@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { Box } from 'grommet'
-import { Card } from 'grommet-controls'
 
 import {
   ResumeSection,
@@ -15,9 +14,9 @@ import {
 const Work = ({ work }) => {
   const renderItems = work.map(item => {
     return (
-      <Card gap="medium" key={item.company}>
-        <Card.CardTitle>{item.company}</Card.CardTitle>
-        <Card.CardContent>
+      <Box key={item.company}>
+        <Box>{item.company}</Box>
+        <Box>
           <Box direction="row">
             <ResumeDateSection>
               {formatDateRange(item.startDate, item.endDate)}
@@ -25,8 +24,8 @@ const Work = ({ work }) => {
           </Box>
           <ResumeParagraph>{item.summary}</ResumeParagraph>
           <TagSection tags={item.highlights}>Highlights</TagSection>
-        </Card.CardContent>
-      </Card>
+        </Box>
+      </Box>
     )
   })
   return (

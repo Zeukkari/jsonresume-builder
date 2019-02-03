@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { validate } from 'resume-schema'
-import { Box, Heading } from 'grommet'
+import { Grommet, Box, Heading } from 'grommet'
 import { Spinning } from 'grommet-controls'
 
 import { Awards } from './Awards'
@@ -86,6 +86,7 @@ class Resume extends Component {
       languages,
       interests,
       references,
+      theme,
     } = this.props
 
     if (this.state.isValid) {
@@ -102,83 +103,85 @@ class Resume extends Component {
       } = basics
 
       return (
-        <ResumeLayout>
-          <TopLayout>
-            {picture && (
-              <Box align="center" justify="center">
-                <Picture picture={picture} />
-              </Box>
-            )}
+        <Grommet theme={theme} full>
+          <ResumeLayout>
+            <TopLayout>
+              {picture && (
+                <Box align="center" justify="center">
+                  <Picture picture={picture} />
+                </Box>
+              )}
 
-            <Summary name={name} label={label} summary={summary} />
+              <Summary name={name} label={label} summary={summary} />
 
-            <Contact
-              email={email}
-              phone={phone}
-              website={website}
-              location={location}
-              profiles={profiles}
-            />
-          </TopLayout>
+              <Contact
+                email={email}
+                phone={phone}
+                website={website}
+                location={location}
+                profiles={profiles}
+              />
+            </TopLayout>
 
-          <LeftColumnLayout>
-            {work.length > 0 && (
-              <Box>
-                <Work work={work} />
-              </Box>
-            )}
+            <LeftColumnLayout>
+              {work.length > 0 && (
+                <Box>
+                  <Work work={work} />
+                </Box>
+              )}
 
-            {education.length > 0 && (
-              <Box>
-                <Education education={education} />
-              </Box>
-            )}
-          </LeftColumnLayout>
+              {education.length > 0 && (
+                <Box>
+                  <Education education={education} />
+                </Box>
+              )}
+            </LeftColumnLayout>
 
-          <RightColumnLayout>
-            {skills.length > 0 && (
-              <Box>
-                <Skills skills={skills} />
-              </Box>
-            )}
+            <RightColumnLayout>
+              {skills.length > 0 && (
+                <Box>
+                  <Skills skills={skills} />
+                </Box>
+              )}
 
-            {interests.length > 0 && (
-              <Box>
-                <Interests interests={interests} />
-              </Box>
-            )}
+              {interests.length > 0 && (
+                <Box>
+                  <Interests interests={interests} />
+                </Box>
+              )}
 
-            {awards.length > 0 && (
-              <Box>
-                <Awards awards={awards} />
-              </Box>
-            )}
+              {awards.length > 0 && (
+                <Box>
+                  <Awards awards={awards} />
+                </Box>
+              )}
 
-            {volunteer.length > 0 && (
-              <Box>
-                <Volunteer volunteer={volunteer} />
-              </Box>
-            )}
+              {volunteer.length > 0 && (
+                <Box>
+                  <Volunteer volunteer={volunteer} />
+                </Box>
+              )}
 
-            {publications.length > 0 && (
-              <Box>
-                <Publications publications={publications} />
-              </Box>
-            )}
+              {publications.length > 0 && (
+                <Box>
+                  <Publications publications={publications} />
+                </Box>
+              )}
 
-            {languages.length > 0 && (
-              <Box>
-                <Languages languages={languages} />
-              </Box>
-            )}
+              {languages.length > 0 && (
+                <Box>
+                  <Languages languages={languages} />
+                </Box>
+              )}
 
-            {references.length > 0 && (
-              <Box>
-                <References references={references} />
-              </Box>
-            )}
-          </RightColumnLayout>
-        </ResumeLayout>
+              {references.length > 0 && (
+                <Box>
+                  <References references={references} />
+                </Box>
+              )}
+            </RightColumnLayout>
+          </ResumeLayout>
+        </Grommet>
       )
     } else if (this.state.error) {
       const errorMessage =
@@ -186,20 +189,25 @@ class Resume extends Component {
           ? this.state.error[0].message
           : 'not sure what went wrong'
       return (
-        <Box
-          flex
-          fill
-          justify="center"
-          wrap={true}
-          height="medium"
-          overflow="scroll"
-          border={{ color: 'status-error', size: 'large' }}
-        >
-          <Heading>{`Error: ${errorMessage}`}</Heading>
-        </Box>
+        <Grommet full>
+          <Box
+            flex
+            fill
+            justify="center"
+            wrap={true}
+            height="medium"
+            border={{ color: 'status-error', size: 'large' }}
+          >
+            <Heading>{`Error: ${errorMessage}`}</Heading>
+          </Box>
+        </Grommet>
       )
     } else {
-      return <Loading />
+      return (
+        <Grommet full>
+          <Loading />
+        </Grommet>
+      )
     }
   }
 }

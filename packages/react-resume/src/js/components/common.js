@@ -21,15 +21,13 @@ export const ResumeSection = ({ children }) => (
     flex
     border={{
       side: 'all',
-      color: 'cyan',
-      size: 'large',
+      color: 'red',
+      size: 'xsmall',
       style: 'dashed',
     }}
     margin="none"
     pad="none"
     gap="none"
-    overflow="hidden"
-    background="light-1"
   >
     {children}
   </Box>

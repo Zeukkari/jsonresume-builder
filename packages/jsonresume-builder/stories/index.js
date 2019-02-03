@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 
 import { Grommet, Box, Button } from 'grommet'
 import { dark } from 'grommet/themes/dark'
+import { grommet } from 'grommet/themes/grommet'
 
 import { schema } from 'resume-schema'
 import Ajv from 'ajv'
@@ -55,46 +56,38 @@ storiesOf('Header', module).add('Default', () => (
 const myTheme = {
   global: {
     font: {
-      family: 'Roboto',
+      family: 'Raleway',
     },
   },
 }
 
 storiesOf('Resume', module)
   .add('Default', () => (
-    <Grommet full>
-      <Resume
-        basics={defaultResume.basics}
-        work={defaultResume.work}
-        volunteer={defaultResume.volunteer}
-        education={defaultResume.education}
-        awards={defaultResume.awards}
-        publications={defaultResume.publications}
-        skills={defaultResume.skills}
-        languages={defaultResume.languages}
-        interests={defaultResume.interests}
-        references={defaultResume.references}
-      />
-    </Grommet>
+    <Resume
+      basics={defaultResume.basics}
+      work={defaultResume.work}
+      volunteer={defaultResume.volunteer}
+      education={defaultResume.education}
+      awards={defaultResume.awards}
+      publications={defaultResume.publications}
+      skills={defaultResume.skills}
+      languages={defaultResume.languages}
+      interests={defaultResume.interests}
+      references={defaultResume.references}
+    />
   ))
 
-  .add('Invalid', () => (
-    <Grommet theme={dark} full>
-      <Resume state="" />
-    </Grommet>
-  ))
+  .add('Invalid', () => <Resume state="" />)
   .add('Loading', () => (
-    <Grommet theme={dark} full>
-      <Box
-        margin="auto"
-        align="center"
-        justify="center"
-        height="full"
-        width="full"
-      >
-        <Loading />
-      </Box>
-    </Grommet>
+    <Box
+      margin="auto"
+      align="center"
+      justify="center"
+      height="full"
+      width="full"
+    >
+      <Loading />
+    </Box>
   ))
 
 storiesOf('Layout/Resume', module).add('Default', () => {

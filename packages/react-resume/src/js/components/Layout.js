@@ -45,7 +45,6 @@ export const RightColumnLayout = ({ children }) => {
 }
 
 const multiplier = 1.5
-
 const pageSizeA4 = {
   height: `calc(${multiplier}*297mm)`,
   width: `calc(${multiplier}*210mm)`,
@@ -58,14 +57,8 @@ export const ResumeLayout = ({ children }) => {
 
   return (
     <Box
-      border={{
-        side: 'all',
-        color: 'blue',
-        size: 'medium',
-        style: 'dashed',
-      }}
       width={pageSizeA4.width}
-      height={pageSizeA4.height}
+      // height={pageSizeA4.height}
     >
       <Grid
         fill

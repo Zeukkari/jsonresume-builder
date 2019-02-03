@@ -87,7 +87,7 @@ export const Summary = ({ name, label, summary }) => {
         style: 'dashed',
       }}
     >
-      <ResumeSection>
+      <>
         <Heading level={1} size="small" margin="xsmall" textAlign="center">
           {name}
         </Heading>
@@ -97,7 +97,7 @@ export const Summary = ({ name, label, summary }) => {
         <Box>
           <Paragraph size="medium">{summary}</Paragraph>
         </Box>
-      </ResumeSection>
+      </>
     </Box>
   )
 }

@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 import { Box, Grommet, Tabs, Tab } from 'grommet'
 import { dark } from 'grommet/themes/dark'
 
-import {
-  Resume,
-} from '@resumebuilder/react-resume'
+import { Resume } from '@resumebuilder/react-resume'
 
 import Header from './Header'
 import EditorComponent from './Editor'
@@ -59,75 +57,70 @@ class App extends Component {
 
     return (
       <AppContext.Provider value={{ data, setData }}>
-        <Grommet theme={dark} full>
-          <Box flex direction="column">
-            <Header
-              flex
-              fill
-              justify="center"
-              generatePDF={() => toPDF(this.resumeRef, 'Resume')}
-              toggleMenu={this.toggleMenu}
-              showMenu={this.state.showMenu}
-            />
-            <Tabs>
-              <Tab title="Editor">
-                <Box>
-                  <AppContext.Consumer>
-                    {({ data, setData }) => (
-                      <EditorComponent
-                        data={data}
-                        setData={setData}
+        <Box flex direction="column">
+          <Header
+            flex
+            fill
+            justify="center"
+            generatePDF={() => toPDF(this.resumeRef, 'Resume')}
+            toggleMenu={this.toggleMenu}
+            showMenu={this.state.showMenu}
+          />
+          <Tabs>
+            <Tab title="Editor">
+              <Box>
+                <AppContext.Consumer>
+                  {({ data, setData }) => (
+                    <EditorComponent data={data} setData={setData} />
+                  )}
+                </AppContext.Consumer>
+              </Box>
+            </Tab>
+            <Tab title="Preview">
+              <Box
+                flex
+                fill
+                gridArea="preview"
+                pad={{ horizontal: 'none', vertical: 'none' }}
+                margin={{ horizontal: 'none', vertical: 'none' }}
+                ref={this.resumeRef}
+              >
+                <AppContext.Consumer>
+                  {({ data }) => {
+                    const {
+                      basics,
+                      work,
+                      volunteer,
+                      education,
+                      awards,
+                      publications,
+                      skills,
+                      languages,
+                      interests,
+                      references,
+                      projects,
+                    } = data.value
+                    return (
+                      <Resume
+                        basics={basics}
+                        work={work}
+                        volunteer={volunteer}
+                        education={education}
+                        awards={awards}
+                        publications={publications}
+                        skills={skills}
+                        languages={languages}
+                        interests={interests}
+                        references={references}
+                        projects={projects}
                       />
-                    )}
-                  </AppContext.Consumer>
-                </Box>
-              </Tab>
-              <Tab title="Preview">
-                <Box
-                  flex
-                  fill
-                  gridArea="preview"
-                  pad={{ horizontal: 'none', vertical: 'none' }}
-                  margin={{ horizontal: 'none', vertical: 'none' }}
-                  ref={this.resumeRef}
-                >
-                  <AppContext.Consumer>
-                    {({ data }) => {
-                      const {
-                        basics,
-                        work,
-                        volunteer,
-                        education,
-                        awards,
-                        publications,
-                        skills,
-                        languages,
-                        interests,
-                        references,
-                        projects,
-                      } = data.value
-                      return (
-                        <Resume
-                          basics={basics}
-                          work={work}
-                          volunteer={volunteer}
-                          education={education}
-                          awards={awards}
-                          publications={publications}
-                          skills={skills}
-                          languages={languages}
-                          interests={interests}
-                          references={references}
-                          projects={projects}
-                        />
-                      )
-                    }}
-                  </AppContext.Consumer>
-                </Box>
-              </Tab>
-            </Tabs>
-          </Box>
-        </Grommet>
+                    )
+                  }}
+                </AppContext.Consumer>
+              </Box>
+            </Tab>
+          </Tabs>
+        </Box>
       </AppContext.Provider>
     )
   }
