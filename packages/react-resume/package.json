@@ -13,7 +13,7 @@
   "module": "./dist/react-resume.esm.js",
   "browser": "./dist/react-resume.js",
   "scripts": {
-    "build": "npm run build:storybook && npm run build:components",
+    "build": "npm run build:components && npm run build:storybook",
     "build:components": "rollup -c",
     "build:storybook": "build-storybook -c .storybook -o dist/storybook",
     "check": "npm run lint && npm test",
@@ -83,7 +83,8 @@
     "rollup-plugin-local-resolve": "^1.0.7",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^2.0.3"
+    "rollup-plugin-postcss": "^2.0.3",
+    "uglifyjs-webpack-plugin": "^2.1.1"
   },
   "jest": {
     "transform": {
