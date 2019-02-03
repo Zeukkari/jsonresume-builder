@@ -5,14 +5,17 @@ exports[`renders references section 1`] = `
   className="StyledBox-sc-13pk1d4-0 eRCNqM"
 >
   <div
-    className="StyledBox-sc-13pk1d4-0 lhNMsi"
+    className="StyledBox-sc-13pk1d4-0 igklvm"
   >
     <h1
-      className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
-      size="medium"
+      className="StyledHeading-sc-1rdh4aw-0 hXQZaT"
+      size="small"
     >
       References
     </h1>
+    <div
+      className="StyledBox__StyledBoxGap-sc-13pk1d4-1 jlbBeA"
+    />
     <div
       className="StyledBox-sc-13pk1d4-0 IRSNj"
     >
@@ -20,7 +23,8 @@ exports[`renders references section 1`] = `
         className="StyledBox-sc-13pk1d4-0 IRSNj"
       >
         <h3
-          className="StyledHeading-sc-1rdh4aw-0 gRvHvF"
+          className="StyledHeading-sc-1rdh4aw-0 jXPWRz"
+          size="small"
         >
           Jane Doe
         </h3>

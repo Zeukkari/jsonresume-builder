@@ -2,7 +2,7 @@
 
 exports[`renders basics section contact info 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 bMAySM"
+  className="StyledBox-sc-13pk1d4-0 fRAsXr"
 >
   <span
     className="StyledText-sc-1sadyjn-0 fWSbXS"
@@ -22,7 +22,7 @@ exports[`renders basics section contact info 1`] = `
     className="StyledText-sc-1sadyjn-0 fWSbXS"
   >
      Location: 
-    2712 Broadway St CA 94115 San Francisco US California
+    2712 Broadway St CA 94115 San Francisco US
      
   </span>
   <span
@@ -51,39 +51,36 @@ exports[`renders basics section picture 1`] = `
 <div
   className="StyledBox-sc-13pk1d4-0 dZFMXT"
 >
-  <button
-    className="StyledButton-sc-323bzc-0 lhIxjU"
-    onBlur={[Function]}
-    onFocus={[Function]}
-    type="button"
-  >
-    PUT FACE HERE
-  </button>
+  <img
+    className="StyledImage-ey4zx9-0 jtkYbl"
+    size="large"
+    src="PUT FACE HERE"
+  />
 </div>
 `;
 
 exports[`renders basics section summary 1`] = `
 <div
-  className="StyledBox-sc-13pk1d4-0 lhNMsi"
+  className="StyledBox-sc-13pk1d4-0 kBAEek"
 >
-  <div
-    className="StyledBox-sc-13pk1d4-0 fhsCOz"
+  <h1
+    className="StyledHeading-sc-1rdh4aw-0 kMIJAQ"
+    size="small"
   >
-    <h1
-      className="StyledHeading-sc-1rdh4aw-0 jsirCP"
-      size="small"
-    >
-      John Doe
-    </h1>
-    <h2
-      className="StyledHeading-sc-1rdh4aw-0 gBAiLn"
-      size="small"
-    >
-      Programmer
-    </h2>
+    John Doe
+  </h1>
+  <h2
+    className="StyledHeading-sc-1rdh4aw-0 kUotfP"
+    size="small"
+  >
+    Programmer
+  </h2>
+  <div
+    className="StyledBox-sc-13pk1d4-0 IRSNj"
+  >
     <p
-      className="StyledParagraph-tbetod-0 JlbWj"
-      size="small"
+      className="StyledParagraph-tbetod-0 kxFtnQ"
+      size="medium"
     >
       A summary of John Doe...
     </p>

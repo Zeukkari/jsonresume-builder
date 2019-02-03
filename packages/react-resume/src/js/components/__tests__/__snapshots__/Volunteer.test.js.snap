@@ -5,14 +5,17 @@ exports[`renders volunteer section 1`] = `
   className="StyledBox-sc-13pk1d4-0 eRCNqM"
 >
   <div
-    className="StyledBox-sc-13pk1d4-0 lhNMsi"
+    className="StyledBox-sc-13pk1d4-0 igklvm"
   >
     <h1
-      className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
-      size="medium"
+      className="StyledHeading-sc-1rdh4aw-0 hXQZaT"
+      size="small"
     >
       Volunteer
     </h1>
+    <div
+      className="StyledBox__StyledBoxGap-sc-13pk1d4-1 jlbBeA"
+    />
     <div
       className="StyledBox-sc-13pk1d4-0 IRSNj"
     >
@@ -20,40 +23,47 @@ exports[`renders volunteer section 1`] = `
         className="StyledBox-sc-13pk1d4-0 IRSNj"
       >
         <h3
-          className="StyledHeading-sc-1rdh4aw-0 gRvHvF"
+          className="StyledHeading-sc-1rdh4aw-0 jXPWRz"
+          size="small"
         />
-        <span
-          className="StyledText-sc-1sadyjn-0 dndifk"
-          size="medium"
+        <h4
+          className="StyledHeading-sc-1rdh4aw-0 hlZfma"
         >
           Volunteer
-        </span>
+        </h4>
         <div
           className="StyledBox-sc-13pk1d4-0 ffeAql"
         >
-          2012-01-01
-           - 
-          2013-01-01
+          <span
+            className="StyledText-sc-1sadyjn-0 dndifk"
+            size="medium"
+          >
+            Jan 2012 - Jan 2013
+          </span>
         </div>
         <p
           className="StyledParagraph-tbetod-0 kxFtnQ"
         >
           Description...
         </p>
-        <span
-          className="StyledText-sc-1sadyjn-0 dndifk"
-          size="medium"
-        >
-          Highlights
-        </span>
         <div
           className="StyledBox-sc-13pk1d4-0 IRSNj"
         >
           <span
-            className="StyledText-sc-1sadyjn-0 fWSbXS"
+            className="StyledText-sc-1sadyjn-0 dndifk"
+            size="medium"
           >
-            Awarded 'Volunteer of the Month'
+            Highlights
           </span>
+          <div
+            className="StyledBox-sc-13pk1d4-0 IRSNj"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              Awarded 'Volunteer of the Month'
+            </span>
+          </div>
         </div>
       </div>
     </div>

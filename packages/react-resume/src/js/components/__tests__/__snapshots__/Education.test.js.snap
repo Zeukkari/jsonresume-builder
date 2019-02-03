@@ -5,14 +5,17 @@ exports[`renders education section 1`] = `
   className="StyledBox-sc-13pk1d4-0 eRCNqM"
 >
   <div
-    className="StyledBox-sc-13pk1d4-0 lhNMsi"
+    className="StyledBox-sc-13pk1d4-0 igklvm"
   >
     <h1
-      className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
-      size="medium"
+      className="StyledHeading-sc-1rdh4aw-0 hXQZaT"
+      size="small"
     >
       Education
     </h1>
+    <div
+      className="StyledBox__StyledBoxGap-sc-13pk1d4-1 jlbBeA"
+    />
     <div
       className="StyledBox-sc-13pk1d4-0 IRSNj"
     >
@@ -20,42 +23,51 @@ exports[`renders education section 1`] = `
         className="StyledBox-sc-13pk1d4-0 IRSNj"
       >
         <h3
-          className="StyledHeading-sc-1rdh4aw-0 gRvHvF"
+          className="StyledHeading-sc-1rdh4aw-0 jXPWRz"
+          size="small"
         >
           University
         </h3>
         <h4
           className="StyledHeading-sc-1rdh4aw-0 hlZfma"
         >
-          Software Development
+          
+          Bachelor / Software Development
         </h4>
         <div
           className="StyledBox-sc-13pk1d4-0 ffeAql"
         >
-          2011-01-01
-           - 
-          2013-01-01
+          <span
+            className="StyledText-sc-1sadyjn-0 dndifk"
+            size="medium"
+          >
+            Jan 2011 - Jan 2013
+          </span>
         </div>
         <span
           className="StyledText-sc-1sadyjn-0 dndifk"
           size="medium"
         >
-          gpa: undefined
-        </span>
-        <span
-          className="StyledText-sc-1sadyjn-0 dndifk"
-          size="medium"
-        >
-          gpa: Bachelor
+          gpa: 4.0
         </span>
         <div
           className="StyledBox-sc-13pk1d4-0 IRSNj"
         >
           <span
-            className="StyledText-sc-1sadyjn-0 fWSbXS"
+            className="StyledText-sc-1sadyjn-0 dndifk"
+            size="medium"
           >
-            DB1101 - Basic SQL
+             Courses 
           </span>
+          <div
+            className="StyledBox-sc-13pk1d4-0 IRSNj"
+          >
+            <span
+              className="StyledText-sc-1sadyjn-0 fWSbXS"
+            >
+              DB1101 - Basic SQL
+            </span>
+          </div>
         </div>
       </div>
     </div>

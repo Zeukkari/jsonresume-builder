@@ -5,14 +5,17 @@ exports[`renders awards section 1`] = `
   className="StyledBox-sc-13pk1d4-0 eRCNqM"
 >
   <div
-    className="StyledBox-sc-13pk1d4-0 lhNMsi"
+    className="StyledBox-sc-13pk1d4-0 igklvm"
   >
     <h1
-      className="StyledHeading-sc-1rdh4aw-0 jVpYfH"
-      size="medium"
+      className="StyledHeading-sc-1rdh4aw-0 hXQZaT"
+      size="small"
     >
       Awards
     </h1>
+    <div
+      className="StyledBox__StyledBoxGap-sc-13pk1d4-1 jlbBeA"
+    />
     <div
       className="StyledBox-sc-13pk1d4-0 IRSNj"
     >
@@ -20,7 +23,8 @@ exports[`renders awards section 1`] = `
         className="StyledBox-sc-13pk1d4-0 IRSNj"
       >
         <h3
-          className="StyledHeading-sc-1rdh4aw-0 gRvHvF"
+          className="StyledHeading-sc-1rdh4aw-0 jXPWRz"
+          size="small"
         >
           Award
         </h3>
@@ -33,7 +37,7 @@ exports[`renders awards section 1`] = `
           className="StyledText-sc-1sadyjn-0 dndifk"
           size="medium"
         >
-          2014-11-01
+          Nov 2014
         </span>
         <p
           className="StyledParagraph-tbetod-0 kxFtnQ"
