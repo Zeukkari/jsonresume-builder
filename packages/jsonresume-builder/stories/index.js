@@ -3,8 +3,14 @@ import ReadDOM from 'react-dom'
 import { storiesOf } from '@storybook/react'
 
 import { Grommet, Box, Button } from 'grommet'
-import { dark } from 'grommet/themes/dark'
-import { grommet } from 'grommet/themes/grommet'
+import { grommet, dark } from 'grommet/themes'
+import {
+  black,
+  materiallight,
+  materialdark,
+  metro,
+  light,
+} from 'grommet-controls/themes'
 
 import { schema } from 'resume-schema'
 import Ajv from 'ajv'
@@ -62,20 +68,81 @@ const myTheme = {
 }
 
 storiesOf('Resume', module)
-  .add('Default', () => (
-    <Resume
-      basics={defaultResume.basics}
-      work={defaultResume.work}
-      volunteer={defaultResume.volunteer}
-      education={defaultResume.education}
-      awards={defaultResume.awards}
-      publications={defaultResume.publications}
-      skills={defaultResume.skills}
-      languages={defaultResume.languages}
-      interests={defaultResume.interests}
-      references={defaultResume.references}
-    />
-  ))
+.add('Default', () => (
+  <Resume
+    basics={defaultResume.basics}
+    work={defaultResume.work}
+    volunteer={defaultResume.volunteer}
+    education={defaultResume.education}
+    awards={defaultResume.awards}
+    publications={defaultResume.publications}
+    skills={defaultResume.skills}
+    languages={defaultResume.languages}
+    interests={defaultResume.interests}
+    references={defaultResume.references}
+    theme={grommet}
+  />
+))
+.add('Dark', () => (
+  <Resume
+    basics={defaultResume.basics}
+    work={defaultResume.work}
+    volunteer={defaultResume.volunteer}
+    education={defaultResume.education}
+    awards={defaultResume.awards}
+    publications={defaultResume.publications}
+    skills={defaultResume.skills}
+    languages={defaultResume.languages}
+    interests={defaultResume.interests}
+    references={defaultResume.references}
+    theme={dark}
+  />
+))
+.add('Black', () => (
+  <Resume
+    basics={defaultResume.basics}
+    work={defaultResume.work}
+    volunteer={defaultResume.volunteer}
+    education={defaultResume.education}
+    awards={defaultResume.awards}
+    publications={defaultResume.publications}
+    skills={defaultResume.skills}
+    languages={defaultResume.languages}
+    interests={defaultResume.interests}
+    references={defaultResume.references}
+    theme={black}
+  />
+))
+.add('Material Light', () => (
+  <Resume
+    basics={defaultResume.basics}
+    work={defaultResume.work}
+    volunteer={defaultResume.volunteer}
+    education={defaultResume.education}
+    awards={defaultResume.awards}
+    publications={defaultResume.publications}
+    skills={defaultResume.skills}
+    languages={defaultResume.languages}
+    interests={defaultResume.interests}
+    references={defaultResume.references}
+    theme={materiallight}
+  />
+))
+.add('Material Dark', () => (
+  <Resume
+    basics={defaultResume.basics}
+    work={defaultResume.work}
+    volunteer={defaultResume.volunteer}
+    education={defaultResume.education}
+    awards={defaultResume.awards}
+    publications={defaultResume.publications}
+    skills={defaultResume.skills}
+    languages={defaultResume.languages}
+    interests={defaultResume.interests}
+    references={defaultResume.references}
+    theme={materialdark}
+  />
+))
 
   .add('Invalid', () => <Resume state="" />)
   .add('Loading', () => (

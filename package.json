@@ -13,7 +13,7 @@
     "build": "lerna run --stream build",
     "check": "lerna run --stream check",
     "clean": "lerna run --stream clean",
-    "install": "lerna link --force-local && npm run bootstrap",
+    "install": "lerna link --force-local && npm run bootstrap --hoist",
     "lint": "lerna run --stream lint",
     "lint:fix": "lerna run --stream lint:fix",
     "storybook:resume": "lerna exec --stream --scope @resumebuilder/react-resume -- npm run start:storybook",
@@ -22,8 +22,6 @@
     "test:coverage": "lerna run --stream test:coverage"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.3.0",
     "babel-eslint": "^10.0.1",
     "codecov": "^3.1.0",
     "eslint": "^5.13.0",
