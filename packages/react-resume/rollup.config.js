@@ -22,8 +22,10 @@ const config = {
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM',
-        'resume-schema': 'resumeSchema',
+        'resume-schema': 'resume-schema',
         grommet: 'grommet',
+        'grommet-controls': 'grommet-controls',
+        moment: 'moment',
       },
     },
     {
