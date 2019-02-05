@@ -38,6 +38,8 @@ import {
 // import defaultResume from './resume.json'
 import defaultResume from './defaultResume.json'
 
+console.log("dark: ", dark)
+
 storiesOf('Resume', module)
   .add('Default', () => (
     <Resume

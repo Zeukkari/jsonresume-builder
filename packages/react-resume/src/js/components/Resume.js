@@ -24,7 +24,7 @@ import {
 
 const Loading = () => (
   <Box margin="auto" align="center" justify="center" height="full" width="full">
-    <Spinning />
+    SPINNING LOADER
   </Box>
 )
 
